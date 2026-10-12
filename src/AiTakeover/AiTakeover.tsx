@@ -55,7 +55,7 @@ export const AiTakeover: React.FC<AiTakeoverProps> = (props) => {
   // Beat 2: punch-in on the record button, then a second harder punch
   const punch1 = spring({ frame: frame - 112, fps, config: { damping: 11, stiffness: 180 } });
   const punch2 = spring({ frame: frame - 145, fps, config: { damping: 10, stiffness: 240 } });
-  const dashboardScale = 1 + punch1 * 1.2 + punch2 * 0.5;
+  const dashboardScale = 1 + punch1 * 0.7 + punch2 * 0.3;
 
   // Beat 2 → 3: slide-wipe up from the bottom
   const wipe = interpolate(frame, [WIPE_START, WIPE_END], [0, 1], {
@@ -156,7 +156,7 @@ export const AiTakeover: React.FC<AiTakeoverProps> = (props) => {
         <Recording
           src={props.finalInvoiceCapture}
           label="PDF invoice, full screen"
-          focus={{ x: 50, y: 45 }}
+          focus={props.finalInvoiceFocus}
           scale={finalScale}
         />
       </Sequence>
@@ -166,7 +166,7 @@ export const AiTakeover: React.FC<AiTakeoverProps> = (props) => {
         <Caption text="It's always *watching.*" duration={78} />
       </Sequence>
       <Sequence from={100} durationInFrames={72} name="Caption · record">
-        <Caption text="Then it hits *record.*" duration={72} />
+        <Caption text="Then it *takes* over." duration={72} />
       </Sequence>
       <Sequence from={186} durationInFrames={54} name="Caption · sorted">
         <Caption text="Inbox? *Sorted.*" duration={54} />
@@ -175,7 +175,7 @@ export const AiTakeover: React.FC<AiTakeoverProps> = (props) => {
         <Caption text="Invoices? *Filed.*" duration={56} />
       </Sequence>
       <Sequence from={312} name="Caption · handled">
-        <Caption text="Your workspace, *handled.*" duration={9999} />
+        <Caption text="Your workspace, *handled.*" duration={9999} top={960} />
       </Sequence>
     </AbsoluteFill>
   );

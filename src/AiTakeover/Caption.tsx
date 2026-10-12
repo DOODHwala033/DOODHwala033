@@ -6,10 +6,11 @@ export const YELLOW = "#FFD60A";
 
 // A phrase like "It's always *watching*." — the word in asterisks is the
 // single highlighted keyword (italic yellow). Words bounce in one by one.
-export const Caption: React.FC<{ text: string; duration: number }> = ({
-  text,
-  duration,
-}) => {
+export const Caption: React.FC<{
+  text: string;
+  duration: number;
+  top?: number;
+}> = ({ text, duration, top = 1340 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const words = text.split(" ");
@@ -25,7 +26,7 @@ export const Caption: React.FC<{ text: string; duration: number }> = ({
         position: "absolute",
         left: 60,
         right: 60,
-        top: 1340,
+        top,
         display: "flex",
         flexWrap: "wrap",
         justifyContent: "center",

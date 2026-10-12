@@ -16,16 +16,18 @@ export const aiTakeoverSchema = z.object({
   invoiceRecording: z.string(),
   invoiceFocus: focusPoint,
   finalInvoiceCapture: z.string(),
+  finalInvoiceFocus: focusPoint,
 });
 
 export type AiTakeoverProps = z.infer<typeof aiTakeoverSchema>;
 
 export const aiTakeoverDefaults: AiTakeoverProps = {
-  dashboardRecording: "",
-  recordButtonFocus: { x: 50, y: 50 },
-  inboxRecording: "",
-  inboxFocus: { x: 50, y: 40 },
-  invoiceRecording: "",
-  invoiceFocus: { x: 50, y: 40 },
-  finalInvoiceCapture: "",
+  dashboardRecording: "recordings/receipts.jpg",
+  recordButtonFocus: { x: 70, y: 8 },
+  inboxRecording: "recordings/letters.webp",
+  inboxFocus: { x: 45, y: 55 },
+  invoiceRecording: "recordings/tax-invoice.jpg",
+  invoiceFocus: { x: 30, y: 12 },
+  finalInvoiceCapture: "recordings/tax-invoice.jpg",
+  finalInvoiceFocus: { x: 92, y: 76 },
 };

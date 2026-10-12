@@ -67,7 +67,12 @@ export const Recording: React.FC<{
     );
   }
 
-  const media = { width: "100%", height: "100%", objectFit: "cover" as const };
+  const media = {
+    width: "100%",
+    height: "100%",
+    objectFit: "cover" as const,
+    objectPosition: `${focus.x}% ${focus.y}%`,
+  };
 
   return (
     <AbsoluteFill style={{ backgroundColor: "black", overflow: "hidden" }}>
