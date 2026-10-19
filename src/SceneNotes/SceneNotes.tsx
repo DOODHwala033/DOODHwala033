@@ -23,7 +23,7 @@ import { Reaction, REACTIONS } from "../Reaction/Reaction";
 
 export const FPS = 30;
 const W = 1080;
-const CLIP_W = 990;
+const CLIP_W = 996;
 
 const resolveSrc = (src: string) =>
   /^(https?:|data:|blob:)/.test(src) ? src : staticFile(src);
@@ -36,6 +36,8 @@ export const sceneNotesSchema = z.object({
   clipSeconds: z.number().min(1).max(60),
   clipAspect: z.number().min(1).max(3),
   clipVolume: z.number().min(0).max(1),
+  // Horizontal focus (0-100%) when clipAspect crops a wider source
+  clipFocusX: z.number().min(0).max(100),
   // Moments (seconds into the trimmed clip) that get a punch-in, shake and red flash
   impacts: z.array(z.number().min(0)),
   episode: z.number().int().min(1),
@@ -109,8 +111,8 @@ const ReactionSticker: React.FC<{ text: string; accent: string }> = ({
     <div
       style={{
         position: "absolute",
-        top: 40,
-        right: -30,
+        top: 10,
+        right: -170,
         padding: "8px 26px",
         background: accent,
         border: "6px solid #3A0E2A",
@@ -133,6 +135,7 @@ const Clip: React.FC<SceneNotesProps> = ({
   clipStart,
   clipAspect,
   clipVolume,
+  clipFocusX,
   impacts,
   accent,
   channelName,
@@ -169,6 +172,7 @@ const Clip: React.FC<SceneNotesProps> = ({
             width: "100%",
             height: "100%",
             objectFit: "cover",
+            objectPosition: `${clipFocusX}% 50%`,
             transform: `scale(${1 + hit * 0.12})`,
           }}
         />
@@ -234,9 +238,9 @@ export const SceneNotes: React.FC<SceneNotesProps> = (props) => {
   const borderGlow = interpolate(hit, [0, 1], [0, 1], clamp);
 
   // Vertical layout: the avatar fills whatever space the clip leaves below the footer line
-  const clipTop = 790;
-  const footerTop = clipTop + Math.round(CLIP_W / props.clipAspect) + 50;
-  const avatarTop = footerTop + 100;
+  const clipTop = 690;
+  const footerTop = clipTop + Math.round(CLIP_W / props.clipAspect) + 34;
+  const avatarTop = footerTop + 86;
   const avatarSize = 1920 - 92 - avatarTop;
 
   return (
@@ -257,7 +261,7 @@ export const SceneNotes: React.FC<SceneNotesProps> = (props) => {
       <div
         style={{
           position: "absolute",
-          top: 150,
+          top: 110,
           left: 110,
           display: "flex",
           alignItems: "center",
@@ -292,7 +296,7 @@ export const SceneNotes: React.FC<SceneNotesProps> = (props) => {
       <div
         style={{
           position: "absolute",
-          top: 350,
+          top: 300,
           left: 80,
           right: 80,
           textAlign: "center",

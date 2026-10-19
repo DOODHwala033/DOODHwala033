@@ -8,6 +8,7 @@ export const sceneNotesDefaults: SceneNotesProps = {
   clipSeconds: 8,
   clipAspect: 2.4,
   clipVolume: 1,
+  clipFocusX: 50,
   impacts: [2.0, 3.2, 5.0, 7.0],
   episode: 1,
   headline: "Nowhere to go.\nNo time to react.",
