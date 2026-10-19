@@ -52,6 +52,11 @@ export const sceneNotesSchema = z.object({
   accent: z.string(),
   // Turn off when the clip already carries a watermark
   watermark: z.boolean(),
+  // Optional transparent reaction video (e.g. a keyed green-screen avatar);
+  // when set it replaces the built-in animated avatar
+  reactionVideo: z.string(),
+  reactionVideoAspect: z.number().min(0.3).max(3),
+  reactionVideoVolume: z.number().min(0).max(1),
 });
 
 export type SceneNotesProps = z.infer<typeof sceneNotesSchema>;
@@ -91,6 +96,37 @@ const VerifiedBadge: React.FC = () => (
     />
   </svg>
 );
+
+// Bold label that pops in over the reaction video
+const ReactionSticker: React.FC<{ text: string; accent: string }> = ({
+  text,
+  accent,
+}) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const pop = spring({ frame, fps, config: { damping: 8, stiffness: 220 } });
+  return (
+    <div
+      style={{
+        position: "absolute",
+        top: 40,
+        right: -30,
+        padding: "8px 26px",
+        background: accent,
+        border: "6px solid #3A0E2A",
+        borderRadius: 18,
+        boxShadow: "6px 7px 0 #3A0E2A",
+        color: "#FFF4E6",
+        fontSize: 56,
+        fontWeight: 900,
+        whiteSpace: "nowrap",
+        transform: `scale(${pop}) rotate(${-8 + Math.sin(frame / 6) * 3}deg)`,
+      }}
+    >
+      {text}
+    </div>
+  );
+};
 
 const Clip: React.FC<SceneNotesProps> = ({
   clip,
@@ -340,47 +376,76 @@ export const SceneNotes: React.FC<SceneNotesProps> = (props) => {
         </div>
       </div>
 
-      <div
-        style={{
-          position: "absolute",
-          left: (W - avatarSize) / 2,
-          top: avatarTop,
-          width: avatarSize,
-          height: avatarSize,
-          overflow: "hidden",
-          borderBottom: `4px solid ${accent}`,
-        }}
-      >
-        {/* Reaction is authored at 1080x1080; scale it into the slot */}
+      {props.reactionVideo ? (
         <div
           style={{
-            position: "relative",
-            width: 1080,
-            height: 1080,
-            transform: `scale(${avatarSize / 1080})`,
-            transformOrigin: "0 0",
+            position: "absolute",
+            left: (W - avatarSize * props.reactionVideoAspect) / 2,
+            top: avatarTop,
+            width: avatarSize * props.reactionVideoAspect,
+            height: avatarSize,
+            borderBottom: `4px solid ${accent}`,
           }}
         >
-          <Sequence
-            durationInFrames={Math.round(props.reactionAt * fps)}
-            name="Avatar · idle"
-            layout="none"
-          >
-            <Reaction reaction="idle" label="" screen="black" />
-          </Sequence>
-          <Sequence
-            from={Math.round(props.reactionAt * fps)}
-            name="Avatar · reaction"
-            layout="none"
-          >
-            <Reaction
-              reaction={props.reaction}
-              label={props.reactionLabel}
-              screen="black"
-            />
-          </Sequence>
+          <OffthreadVideo
+            src={resolveSrc(props.reactionVideo)}
+            transparent
+            volume={props.reactionVideoVolume}
+            style={{ width: "100%", height: "100%" }}
+          />
+          {props.reactionLabel ? (
+            <Sequence
+              from={Math.round(props.reactionAt * fps)}
+              name="Reaction sticker"
+              layout="none"
+            >
+              <ReactionSticker text={props.reactionLabel} accent={accent} />
+            </Sequence>
+          ) : null}
         </div>
-      </div>
+      ) : (
+        <div
+          style={{
+            position: "absolute",
+            left: (W - avatarSize) / 2,
+            top: avatarTop,
+            width: avatarSize,
+            height: avatarSize,
+            overflow: "hidden",
+            borderBottom: `4px solid ${accent}`,
+          }}
+        >
+          {/* Reaction is authored at 1080x1080; scale it into the slot */}
+          <div
+            style={{
+              position: "relative",
+              width: 1080,
+              height: 1080,
+              transform: `scale(${avatarSize / 1080})`,
+              transformOrigin: "0 0",
+            }}
+          >
+            <Sequence
+              durationInFrames={Math.round(props.reactionAt * fps)}
+              name="Avatar · idle"
+              layout="none"
+            >
+              <Reaction reaction="idle" label="" screen="black" />
+            </Sequence>
+            <Sequence
+              from={Math.round(props.reactionAt * fps)}
+              name="Avatar · reaction"
+              layout="none"
+            >
+              <Reaction
+                reaction={props.reaction}
+                label={props.reactionLabel}
+                screen="black"
+              />
+            </Sequence>
+          </div>
+        </div>
+      )}
 
       <div
         style={{

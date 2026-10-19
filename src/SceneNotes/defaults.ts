@@ -22,4 +22,7 @@ export const sceneNotesDefaults: SceneNotesProps = {
   accent: "#FF2E88",
   // The demo clip already has the channel watermark burned in
   watermark: false,
+  reactionVideo: "",
+  reactionVideoAspect: 1,
+  reactionVideoVolume: 0,
 };
