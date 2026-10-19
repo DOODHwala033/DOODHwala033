@@ -7,6 +7,14 @@ import { Title } from "./HelloWorld/Title";
 import { aiToolDefaults, gitTrendDefaults } from "./Reels/defaults";
 import { calculateReelMetadata, FPS, Reel } from "./Reels/Reel";
 import { reelSchema } from "./Reels/schema";
+import {
+  CHROMA_GREEN,
+  Reaction,
+  REACTION_FRAMES,
+  REACTION_LABELS,
+  REACTIONS,
+  reactionSchema,
+} from "./Reaction/Reaction";
 
 // Each <Composition> is an entry in the sidebar!
 
@@ -86,6 +94,25 @@ export const RemotionRoot: React.FC = () => {
           defaultProps={aiToolDefaults}
           calculateMetadata={calculateReelMetadata}
         />
+      </Folder>
+      <Folder name="Reactions">
+        {REACTIONS.map((reaction) => (
+          <Composition
+            key={reaction}
+            id={`Reaction-${reaction}`}
+            component={Reaction}
+            durationInFrames={REACTION_FRAMES[reaction]}
+            fps={30}
+            width={1080}
+            height={1080}
+            schema={reactionSchema}
+            defaultProps={{
+              reaction,
+              label: REACTION_LABELS[reaction],
+              screen: CHROMA_GREEN,
+            }}
+          />
+        ))}
       </Folder>
     </>
   );

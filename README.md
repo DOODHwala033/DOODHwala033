@@ -39,6 +39,28 @@ npx remotion render AiToolReel out/tool.mp4 --props=reels/my-tool.json
 Tip: record the voiceover first, then set each scene's `seconds` to match it.
 Use `npm run dev` to tweak props live in Remotion Studio.
 
+## Avatar reaction overlays (green screen)
+
+`Reaction-*` compositions animate the Scene Addict avatar (`public/avatar/avatar.png`)
+on a #00FF00 background, 1080×1080, 30fps. Key them out in CapCut
+(Cutout → Chroma key → pick the green) and lay them over a clip.
+
+| Clip | Length | What happens |
+| --- | --- | --- |
+| `idle` | 10s, loops | gentle breathing, use as the default "watching" layer |
+| `popIn` / `popOut` | 1s / 0.8s | slides up into frame / drops out |
+| `laugh` | 3s | bouncing + "HAHA 😂" |
+| `shocked` | 2.5s | recoil, shake, burst lines + "WHAT?!" |
+| `hype` | 3s | jumping + "LET'S GO!" |
+| `leanIn` | 3.5s | slow push-in and tilt + "👀" |
+| `nod` | 2.5s | nodding + "FACTS ✔" |
+| `nope` | 2.5s | head shake + "NOPE ❌" |
+| `mindBlown` | 3s | blast + shake + "🤯" |
+
+Render all of them with `npm run render:reactions` (output in `out/reactions/`).
+Change a sticker's text in Remotion Studio via the `label` prop, or set it to
+an empty string for no sticker.
+
 ## Remotion basics
 
 <p align="center">
