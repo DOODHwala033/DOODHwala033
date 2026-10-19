@@ -50,6 +50,8 @@ export const sceneNotesSchema = z.object({
   tagline: z.string(),
   dp: z.string(),
   accent: z.string(),
+  // Turn off when the clip already carries a watermark
+  watermark: z.boolean(),
 });
 
 export type SceneNotesProps = z.infer<typeof sceneNotesSchema>;
@@ -98,6 +100,7 @@ const Clip: React.FC<SceneNotesProps> = ({
   impacts,
   accent,
   channelName,
+  watermark,
 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
@@ -149,27 +152,30 @@ const Clip: React.FC<SceneNotesProps> = ({
       {/* Red flash on impacts */}
       <AbsoluteFill
         style={{
-          background: "radial-gradient(circle, transparent 35%, rgba(200,0,0,0.85))",
-          opacity: hit * 0.9,
+          background:
+            "radial-gradient(circle, transparent 35%, rgba(200,0,0,0.85))",
+          opacity: hit * 0.6,
         }}
       />
       {/* Faint channel watermark, like the reference */}
-      <div
-        style={{
-          position: "absolute",
-          top: 18,
-          left: 0,
-          right: 0,
-          textAlign: "center",
-          color: "rgba(255,255,255,0.35)",
-          fontSize: 26,
-          fontWeight: 800,
-          letterSpacing: 3,
-          textTransform: "uppercase",
-        }}
-      >
-        {channelName}
-      </div>
+      {watermark ? (
+        <div
+          style={{
+            position: "absolute",
+            top: 18,
+            left: 0,
+            right: 0,
+            textAlign: "center",
+            color: "rgba(255,255,255,0.35)",
+            fontSize: 26,
+            fontWeight: 800,
+            letterSpacing: 3,
+            textTransform: "uppercase",
+          }}
+        >
+          {channelName}
+        </div>
+      ) : null}
     </div>
   );
 };
@@ -180,7 +186,11 @@ export const SceneNotes: React.FC<SceneNotesProps> = (props) => {
   const { accent, headline, subline, footer, episode } = props;
   const hit = useImpact(props.impacts);
 
-  const slam = spring({ frame: frame - 2, fps, config: { damping: 11, stiffness: 200 } });
+  const slam = spring({
+    frame: frame - 2,
+    fps,
+    config: { damping: 11, stiffness: 200 },
+  });
   const fadeUp = (delay: number) => {
     const t = spring({ frame: frame - delay, fps, config: { damping: 16 } });
     return { opacity: t, transform: `translateY(${(1 - t) * 30}px)` };
@@ -194,7 +204,9 @@ export const SceneNotes: React.FC<SceneNotesProps> = (props) => {
   const avatarSize = 1920 - 92 - avatarTop;
 
   return (
-    <AbsoluteFill style={{ backgroundColor: "black", fontFamily: "Nunito", color: "white" }}>
+    <AbsoluteFill
+      style={{ backgroundColor: "black", fontFamily: "Nunito", color: "white" }}
+    >
       {/* Card border; flashes red on impacts */}
       <div
         style={{
@@ -234,7 +246,9 @@ export const SceneNotes: React.FC<SceneNotesProps> = (props) => {
             </span>
             <VerifiedBadge />
           </div>
-          <div style={{ fontSize: 30, fontWeight: 600, color: "#BBBBBB" }}>{props.tagline}</div>
+          <div style={{ fontSize: 30, fontWeight: 600, color: "#BBBBBB" }}>
+            {props.tagline}
+          </div>
         </div>
       </div>
 
@@ -318,8 +332,12 @@ export const SceneNotes: React.FC<SceneNotesProps> = (props) => {
           ...fadeUp(10),
         }}
       >
-        <div style={{ width: 200, height: 4, background: accent, borderRadius: 2 }} />
-        <div style={{ fontSize: 38, fontWeight: 600, color: "#EDEDED" }}>{footer}</div>
+        <div
+          style={{ width: 200, height: 4, background: accent, borderRadius: 2 }}
+        />
+        <div style={{ fontSize: 38, fontWeight: 600, color: "#EDEDED" }}>
+          {footer}
+        </div>
       </div>
 
       <div
@@ -343,11 +361,23 @@ export const SceneNotes: React.FC<SceneNotesProps> = (props) => {
             transformOrigin: "0 0",
           }}
         >
-          <Sequence durationInFrames={Math.round(props.reactionAt * fps)} name="Avatar · idle" layout="none">
+          <Sequence
+            durationInFrames={Math.round(props.reactionAt * fps)}
+            name="Avatar · idle"
+            layout="none"
+          >
             <Reaction reaction="idle" label="" screen="black" />
           </Sequence>
-          <Sequence from={Math.round(props.reactionAt * fps)} name="Avatar · reaction" layout="none">
-            <Reaction reaction={props.reaction} label={props.reactionLabel} screen="black" />
+          <Sequence
+            from={Math.round(props.reactionAt * fps)}
+            name="Avatar · reaction"
+            layout="none"
+          >
+            <Reaction
+              reaction={props.reaction}
+              label={props.reactionLabel}
+              screen="black"
+            />
           </Sequence>
         </div>
       </div>
