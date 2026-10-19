@@ -6,7 +6,10 @@
     "dev": "remotion studio",
     "build": "remotion bundle",
     "upgrade": "remotion upgrade",
-    "lint": "eslint src && tsc"
+    "lint": "eslint src && tsc",
+    "repo": "node scripts/new-repo-reel.mjs",
+    "render:gittrend": "remotion render GitTrendReel out/gittrend.mp4",
+    "render:aitool": "remotion render AiToolReel out/aitool.mp4"
   },
   "repository": {},
   "license": "UNLICENSED",

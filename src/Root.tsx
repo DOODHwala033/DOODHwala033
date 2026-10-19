@@ -4,6 +4,9 @@ import { aiTakeoverDefaults, aiTakeoverSchema } from "./AiTakeover/schema";
 import { HelloWorld } from "./HelloWorld";
 import { Logo } from "./HelloWorld/Logo";
 import { Title } from "./HelloWorld/Title";
+import { aiToolDefaults, gitTrendDefaults } from "./Reels/defaults";
+import { calculateReelMetadata, FPS, Reel } from "./Reels/Reel";
+import { reelSchema } from "./Reels/schema";
 
 // Each <Composition> is an entry in the sidebar!
 
@@ -62,6 +65,28 @@ export const RemotionRoot: React.FC = () => {
         schema={aiTakeoverSchema}
         defaultProps={aiTakeoverDefaults}
       />
+      <Folder name="Reels">
+        <Composition
+          id="GitTrendReel"
+          component={Reel}
+          fps={FPS}
+          width={1080}
+          height={1920}
+          schema={reelSchema}
+          defaultProps={gitTrendDefaults}
+          calculateMetadata={calculateReelMetadata}
+        />
+        <Composition
+          id="AiToolReel"
+          component={Reel}
+          fps={FPS}
+          width={1080}
+          height={1920}
+          schema={reelSchema}
+          defaultProps={aiToolDefaults}
+          calculateMetadata={calculateReelMetadata}
+        />
+      </Folder>
     </>
   );
 };

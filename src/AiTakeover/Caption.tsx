@@ -10,7 +10,8 @@ export const Caption: React.FC<{
   text: string;
   duration: number;
   top?: number;
-}> = ({ text, duration, top = 1340 }) => {
+  highlight?: string;
+}> = ({ text, duration, top = 1340, highlight = YELLOW }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const words = text.split(" ");
@@ -53,7 +54,7 @@ export const Caption: React.FC<{
             key={i}
             style={{
               display: "inline-block",
-              color: highlighted ? YELLOW : "white",
+              color: highlighted ? highlight : "white",
               fontStyle: highlighted ? "italic" : "normal",
               transform: `translateY(${(1 - pop) * 70}px) scale(${0.3 + pop * 0.7}) rotate(${(1 - pop) * (i % 2 ? 8 : -8)}deg)`,
               opacity: Math.min(1, pop * 2),
