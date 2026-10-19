@@ -15,6 +15,12 @@ import {
   REACTIONS,
   reactionSchema,
 } from "./Reaction/Reaction";
+import { sceneNotesDefaults } from "./SceneNotes/defaults";
+import {
+  calculateSceneNotesMetadata,
+  SceneNotes,
+  sceneNotesSchema,
+} from "./SceneNotes/SceneNotes";
 
 // Each <Composition> is an entry in the sidebar!
 
@@ -95,6 +101,16 @@ export const RemotionRoot: React.FC = () => {
           calculateMetadata={calculateReelMetadata}
         />
       </Folder>
+      <Composition
+        id="SceneNotes"
+        component={SceneNotes}
+        fps={30}
+        width={1080}
+        height={1920}
+        schema={sceneNotesSchema}
+        defaultProps={sceneNotesDefaults}
+        calculateMetadata={calculateSceneNotesMetadata}
+      />
       <Folder name="Reactions">
         {REACTIONS.map((reaction) => (
           <Composition
