@@ -2,6 +2,8 @@ import { Composition, Folder } from "remotion";
 import { AiTakeover, AI_TAKEOVER_DURATION } from "./AiTakeover/AiTakeover";
 import { aiTakeoverDefaults, aiTakeoverSchema } from "./AiTakeover/schema";
 import { HelloWorld } from "./HelloWorld";
+import { Motion3D, MOTION_3D_DURATION } from "./Motion3D/Motion3D";
+import { motion3DDefaults, motion3DSchema } from "./Motion3D/schema";
 import { Logo } from "./HelloWorld/Logo";
 import { Title } from "./HelloWorld/Title";
 
@@ -61,6 +63,16 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         schema={aiTakeoverSchema}
         defaultProps={aiTakeoverDefaults}
+      />
+      <Composition
+        id="Motion3D"
+        component={Motion3D}
+        durationInFrames={MOTION_3D_DURATION}
+        fps={30}
+        width={1920}
+        height={1080}
+        schema={motion3DSchema}
+        defaultProps={motion3DDefaults}
       />
     </>
   );

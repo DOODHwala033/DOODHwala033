@@ -11,6 +11,14 @@
 
 Welcome to your Remotion project!
 
+## 3D animation stack
+
+3D videos use one stack: **Three.js** (through `@remotion/three` + React Three Fiber) for the scene, **Remotion** for captions (`@remotion/captions`) and audio (`@remotion/media`). `src/Motion3D/` is the starter. Copy it for each new 3D video. See `CLAUDE.md` for the rules.
+
+- Swap the music: drop a file in `public/motion3d/` and set `audioFile` in the Studio props panel.
+- Captions from a voiceover: `npm run transcribe -- public/motion3d/voiceover.mp3`, then set `captionsFile` to `motion3d/voiceover.json`.
+- Render: `npx remotion render Motion3D out/motion3d.mp4` (add `--gl=swangle` on machines without a GPU).
+
 ## Commands
 
 **Install Dependencies**

@@ -8,3 +8,7 @@ import { Config } from "@remotion/cli/config";
 Config.setRspack(true);
 Config.setVideoImageFormat("jpeg");
 Config.setOverwriteOutput(true);
+
+// Three.js needs a GPU-backed WebGL context. "angle" works on most machines;
+// on a headless server without a GPU, pass --gl=swangle instead.
+Config.setChromiumOpenGlRenderer("angle");
