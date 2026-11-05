@@ -1,0 +1,298 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Anton;src:url(node_modules/@fontsource/anton/files/anton-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:JBM;src:url(node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-600-normal.woff2) format('woff2')}
+html,body{margin:0;width:1080px;height:1920px;overflow:hidden;background:#0b1a2a}
+canvas{display:block}
+#ui{position:absolute;inset:0;pointer-events:none;font-family:Anton,Impact,sans-serif}
+#year{position:absolute;top:150px;left:50%;transform:translateX(-50%);font:600 64px/1 JBM,monospace;color:#14212b;background:#fff;padding:16px 34px;border-radius:14px;box-shadow:0 10px 40px rgba(0,0,0,.45);letter-spacing:4px}
+#cap{position:absolute;top:1040px;left:0;right:0;text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px}
+.w{font-size:128px;line-height:1.02;color:#fff;-webkit-text-stroke:10px #000;paint-order:stroke fill;letter-spacing:2px;text-shadow:0 10px 30px rgba(0,0,0,.5)}
+.w.y{color:#ffc62b}
+#sub{position:absolute;top:1430px;left:50%;transform:translateX(-50%);font:600 46px/1 JBM,monospace;color:#fff;background:rgba(20,40,90,.85);border:3px solid #fff;padding:14px 26px;border-radius:10px;white-space:nowrap}
+#vig{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 55%,rgba(0,0,0,.45) 100%)}
+</style>
+<script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js"}}</script>
+</head><body>
+<div id="ui"><div id="vig"></div><div id="year">1812</div>
+<div id="cap"><div class="w" id="w1">NAPOLEON</div><div class="w" id="w2">MARCHES ON</div><div class="w y" id="w3">RUSSIA</div></div>
+<div id="sub">600,000 SOLDIERS</div></div>
+<script type="module">
+import * as THREE from 'three';
+console.log('start');await document.fonts.load('100px Anton');console.log('fonts'); await document.fonts.load('40px JBM');
+const map = await (await fetch('map.json')).json();
+const W = 1080, H = 1920;
+const S = 10; // map px per world unit
+const mx = x => (x - map.W / 2) / S, mz = y => (y - map.H / 2) / S;
+
+const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
+renderer.setPixelRatio(1); renderer.setSize(W, H);
+renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.05;
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+document.body.prepend(renderer.domElement);
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color('#0b1a2a');
+scene.fog = new THREE.Fog('#0e2236', 28, 75);
+const camera = new THREE.PerspectiveCamera(42, W / H, 0.1, 300);
+
+scene.add(new THREE.HemisphereLight('#cfe6ff', '#2a3a2a', 0.9));
+const sun = new THREE.DirectionalLight('#fff1d6', 2.4);
+sun.castShadow = true; sun.shadow.mapSize.set(2048, 2048);
+const sc = sun.shadow.camera; sc.left = -14; sc.right = 14; sc.top = 14; sc.bottom = -14; sc.near = 1; sc.far = 80;
+sun.shadow.bias = -0.0005; sun.shadow.normalBias = 0.02;
+scene.add(sun, sun.target);
+
+/* ---------- map texture ---------- */
+const COL = { france: '#7466e8', russia: '#3f9b55', austria: '#d6b24a', britain: '#c8463f', ottoman: '#b9824f', neutral: '#a9b48c' };
+const TS = 3; // texture px per map px
+const tc = document.createElement('canvas'); tc.width = map.W * TS; tc.height = map.H * TS;
+const g = tc.getContext('2d', { willReadFrequently: true }); g.scale(TS, TS);
+const sg = g.createLinearGradient(0, 0, 0, map.H); sg.addColorStop(0, '#16557e'); sg.addColorStop(1, '#114468');
+g.fillStyle = sg; g.fillRect(0, 0, map.W, map.H);
+const pathOf = rs => { const p = new Path2D(); for (const r of rs) { p.moveTo(r[0][0], r[0][1]); for (const q of r) p.lineTo(q[0], q[1]); p.closePath(); } return p; };
+const landPath = new Path2D(); for (const c of map.countries) landPath.addPath(pathOf(c.rings));
+// coastal shallows: layered wide strokes instead of blur
+g.lineJoin = 'round';
+for (const [w, a] of [[16, .10], [10, .14], [5, .2]]) { g.strokeStyle = `rgba(110,200,230,${a})`; g.lineWidth = w; g.stroke(landPath); }
+for (const c of map.countries) { g.fillStyle = COL[c.group]; g.fill(pathOf(c.rings)); }
+// terrain mottling, kept on land with one source-atop pass
+let s = 3; const r = () => (s = (s * 16807) % 2147483647) / 2147483647;
+const nz = document.createElement('canvas'); nz.width = tc.width; nz.height = tc.height;
+const ng = nz.getContext('2d', { willReadFrequently: true }); ng.scale(TS, TS);
+for (let i = 0; i < 7000; i++) { ng.fillStyle = r() < .5 ? 'rgba(0,0,0,.06)' : 'rgba(255,255,255,.06)'; ng.beginPath(); ng.arc(r() * map.W, r() * map.H, 1 + r() * 6, 0, 7); ng.fill(); }
+const mask = document.createElement('canvas'); mask.width = tc.width; mask.height = tc.height;
+const mg = mask.getContext('2d', { willReadFrequently: true }); mg.scale(TS, TS); mg.fillStyle = '#000'; mg.fill(landPath);
+mg.setTransform(1, 0, 0, 1, 0, 0); mg.globalCompositeOperation = 'source-in'; mg.drawImage(nz, 0, 0);
+g.save(); g.setTransform(1, 0, 0, 1, 0, 0); g.drawImage(mask, 0, 0); g.restore();
+// borders
+g.lineJoin = 'round';
+for (const c of map.countries) { g.strokeStyle = 'rgba(255,255,255,.45)'; g.lineWidth = .5; g.stroke(pathOf(c.rings)); }
+for (const k of ['france', 'russia']) {
+  const p = new Path2D(); for (const c of map.countries.filter(c => c.group === k)) p.addPath(pathOf(c.rings));
+  for (const [w, a] of [[7, .12], [4, .25]]) { g.strokeStyle = k === 'france' ? `rgba(160,195,255,${a})` : `rgba(190,255,180,${a})`; g.lineWidth = w; g.stroke(p); }
+  g.strokeStyle = '#ffffff'; g.lineWidth = 1.6; g.stroke(p);
+}
+// labels
+const label = (t, x, y, size, rot = 0, a = .85) => { g.save(); g.translate(x, y); g.rotate(rot); g.font = `${size}px Anton`; g.textAlign = 'center';
+  g.letterSpacing = `${size * .18}px`; g.fillStyle = `rgba(255,255,255,${a})`; g.strokeStyle = 'rgba(0,0,0,.35)'; g.lineWidth = size * .08; g.strokeText(t, 0, 0); g.fillText(t, 0, 0); g.restore(); };
+label('RUSSIAN EMPIRE', 760, 255, 26, -0.08);
+label('FRENCH EMPIRE', 330, 420, 22, 0.05);
+label('DUCHY OF WARSAW', 545, 405, 11);
+label('AUSTRIA', 495, 465, 14);
+label('OTTOMAN EMPIRE', 650, 560, 16);
+for (const [n, [x, y]] of Object.entries(map.cities)) {
+  const cap = n === 'Moscow' || n === 'Paris';
+  g.fillStyle = '#fff'; g.strokeStyle = '#111'; g.lineWidth = 1;
+  g.beginPath(); g.arc(x, y, cap ? 3.2 : 2, 0, 7); g.fill(); g.stroke();
+  if (cap) { g.beginPath(); g.arc(x, y, 5.5, 0, 7); g.strokeStyle = '#fff'; g.lineWidth = 1.2; g.stroke(); }
+  g.font = `${cap ? 13 : 9}px JBM`; g.fillStyle = '#fff'; g.strokeStyle = 'rgba(0,0,0,.7)'; g.lineWidth = 2.5; g.textAlign = 'left';
+  g.strokeText(n.toUpperCase(), x + 7, y - 5); g.fillText(n.toUpperCase(), x + 7, y - 5);
+}
+console.log('texture drawn');const tex = new THREE.CanvasTexture(tc); tex.colorSpace = THREE.SRGBColorSpace; tex.anisotropy = 4;
+
+// sea plane uses the full texture
+const sea = new THREE.Mesh(new THREE.PlaneGeometry(map.W / S, map.H / S),
+  new THREE.MeshStandardMaterial({ map: tex, roughness: .55, metalness: 0 }));
+sea.rotation.x = -Math.PI / 2; sea.position.y = -0.02; sea.receiveShadow = true; scene.add(sea);
+// outer ocean
+const ocean = new THREE.Mesh(new THREE.PlaneGeometry(400, 400), new THREE.MeshStandardMaterial({ color: '#174f7a', roughness: .6 }));
+ocean.rotation.x = -Math.PI / 2; ocean.position.y = -0.05; scene.add(ocean);
+
+// extruded land slabs; top faces sample the same texture via world UVs
+const topMat = new THREE.MeshStandardMaterial({ map: tex, roughness: .85 });
+const WW = map.W / S, HH = map.H / S;
+const sideMats = Object.fromEntries(Object.entries(COL).map(([k, c]) => [k, new THREE.MeshStandardMaterial({ color: new THREE.Color(c).multiplyScalar(.55), roughness: .9 })]));
+const LAND_H = 0.35;
+for (const c of map.countries) {
+  const shapes = c.rings.map(rg => new THREE.Shape(rg.map(([x, y]) => new THREE.Vector2(mx(x), -mz(y)))));
+  const geo = new THREE.ExtrudeGeometry(shapes, { depth: LAND_H, bevelEnabled: false });
+  geo.rotateX(-Math.PI / 2);
+  { const p = geo.attributes.position, uv = geo.attributes.uv; for (let i = 0; i < p.count; i++) uv.setXY(i, (p.getX(i) + WW / 2) / WW, (HH / 2 - p.getZ(i)) / HH); }
+  const m = new THREE.Mesh(geo, [topMat, sideMats[c.group]]);
+  m.position.y = -0.02; m.castShadow = true; m.receiveShadow = true; scene.add(m);
+}
+const TOP = LAND_H - 0.02;console.log('land');
+
+/* ---------- mountains & forests ---------- */
+{
+  const geo = new THREE.ConeGeometry(1, 1, 6); geo.translate(0, .5, 0);
+  const snow = new THREE.ConeGeometry(1, 1, 6); snow.translate(0, .5, 0);
+  const mm = new THREE.InstancedMesh(geo, new THREE.MeshStandardMaterial({ color: '#7c6d58', flatShading: true, roughness: 1 }), map.mountains.length);
+  const sm = new THREE.InstancedMesh(snow, new THREE.MeshStandardMaterial({ color: '#f4f7fb', flatShading: true }), map.mountains.length);
+  const o = new THREE.Object3D();
+  map.mountains.forEach(([x, y, h], i) => {
+    o.position.set(mx(x), TOP, mz(y)); o.scale.set(h * .45, h * .9, h * .45); o.rotation.y = i; o.updateMatrix(); mm.setMatrixAt(i, o.matrix);
+    o.position.y = TOP + h * .9 * .62; o.scale.set(h * .45 * .38, h * .9 * .38, h * .45 * .38); o.updateMatrix(); sm.setMatrixAt(i, o.matrix);
+  });
+  mm.castShadow = sm.castShadow = true; mm.receiveShadow = true; scene.add(mm, sm);
+
+  const tg = new THREE.ConeGeometry(.11, .34, 5); tg.translate(0, .17 + .05, 0);
+  const tr = new THREE.InstancedMesh(tg, new THREE.MeshStandardMaterial({ color: '#1f5a2c', flatShading: true }), map.trees.length);
+  map.trees.forEach(([x, y, k], i) => { o.position.set(mx(x), TOP, mz(y)); o.scale.setScalar(k); o.rotation.y = i; o.updateMatrix(); tr.setMatrixAt(i, o.matrix);
+    tr.setColorAt(i, new THREE.Color().setHSL(.36 + (i % 7) * .006, .45, .2 + (i % 5) * .02)); });
+  tr.castShadow = true; scene.add(tr);
+}
+
+/* ---------- route arrow ---------- */
+const routePts = map.route.map(([x, y]) => new THREE.Vector3(mx(x), TOP + .03, mz(y)));
+const curve = new THREE.CatmullRomCurve3(routePts, false, 'centripetal');
+const ARROW_SEG = 400;
+const arrowGeo = new THREE.TubeGeometry(curve, ARROW_SEG, .16, 8, false);
+arrowGeo.scale(1, .35, 1);
+// keep tube flat on the map: rebuild positions relative to curve height
+const arrowMat = new THREE.MeshStandardMaterial({ color: '#2f63e0', emissive: '#1d3fa0', emissiveIntensity: .6, roughness: .4 });
+const arrow = new THREE.Mesh(new THREE.TubeGeometry(curve, ARROW_SEG, .16, 8, false), arrowMat);
+arrow.scale.y = .3; arrow.position.y = (TOP + .03) * .7 + .06; arrow.castShadow = true; scene.add(arrow);
+const arrowEdge = new THREE.Mesh(new THREE.TubeGeometry(curve, ARROW_SEG, .22, 8, false), new THREE.MeshBasicMaterial({ color: '#ffffff' }));
+arrowEdge.scale.y = .15; arrowEdge.position.y = (TOP + .03) * .85 + .01; scene.add(arrowEdge);
+const head = new THREE.Mesh(new THREE.ConeGeometry(.45, .9, 3), arrowMat); head.castShadow = true; scene.add(head);
+const headEdge = new THREE.Mesh(new THREE.ConeGeometry(.56, 1.05, 3), new THREE.MeshBasicMaterial({ color: '#fff' })); scene.add(headEdge);
+const IDX_PER_SEG = 8 * 6; // radialSegments * 6 indices
+
+/* ---------- soldiers ---------- */
+function flagTexture(kind) {
+  const c = document.createElement('canvas'); c.width = 96; c.height = 64; const x = c.getContext('2d');
+  if (kind === 'fr') { ['#1f3f9e', '#ffffff', '#d23a2f'].forEach((col, i) => { x.fillStyle = col; x.fillRect(i * 32, 0, 32, 64); }); x.fillStyle = '#e6b422'; x.font = 'bold 22px serif'; x.textAlign = 'center'; x.fillText('N', 48, 40); }
+  else { x.fillStyle = '#fff'; x.fillRect(0, 0, 96, 64); x.strokeStyle = '#1f4fb0'; x.lineWidth = 12; x.beginPath(); x.moveTo(0, 0); x.lineTo(96, 64); x.moveTo(96, 0); x.lineTo(0, 64); x.stroke(); }
+  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t;
+}
+function makeArmy(n, coat, trousers, hat, flagKind, flags) {
+  const parts = {
+    torso: [new THREE.BoxGeometry(.2, .24, .12), coat],
+    belt: [new THREE.BoxGeometry(.205, .04, .125), '#f2f2f2'],
+    head: [new THREE.SphereGeometry(.07, 10, 8), '#e7b996'],
+    hat: [new THREE.CylinderGeometry(.06, .055, .13, 10), hat],
+    plume: [new THREE.SphereGeometry(.025, 6, 6), '#d23a2f'],
+    legL: [new THREE.BoxGeometry(.075, .22, .08).translate(0, -.11, 0), trousers],
+    legR: [new THREE.BoxGeometry(.075, .22, .08).translate(0, -.11, 0), trousers],
+    armL: [new THREE.BoxGeometry(.06, .2, .06).translate(0, -.1, 0), coat],
+    armR: [new THREE.BoxGeometry(.06, .2, .06).translate(0, -.1, 0), coat],
+    pack: [new THREE.BoxGeometry(.15, .15, .07), '#8a6a43'],
+    musket: [new THREE.BoxGeometry(.022, .5, .022), '#5a3b22'],
+    bayonet: [new THREE.BoxGeometry(.01, .12, .01), '#d9dde2'],
+  };
+  const meshes = {};
+  for (const [k, [geo, col]] of Object.entries(parts)) {
+    const m = new THREE.InstancedMesh(geo, new THREE.MeshStandardMaterial({ color: col, roughness: .7, metalness: k === 'bayonet' ? .8 : 0 }), n);
+    m.castShadow = true; m.instanceMatrix.setUsage(THREE.DynamicDrawUsage); m.frustumCulled = false; scene.add(m); meshes[k] = m;
+  }
+  const flagMeshes = [];
+  const ft = flagTexture(flagKind);
+  for (let i = 0; i < flags; i++) {
+    const pole = new THREE.Mesh(new THREE.CylinderGeometry(.012, .012, .95, 6), new THREE.MeshStandardMaterial({ color: '#3a2a1a' }));
+    const fg = new THREE.PlaneGeometry(.42, .28, 12, 4); fg.translate(.21, 0, 0);
+    const fl = new THREE.Mesh(fg, new THREE.MeshStandardMaterial({ map: ft, side: THREE.DoubleSide, roughness: .8 }));
+    const eagle = new THREE.Mesh(new THREE.SphereGeometry(.03, 8, 6), new THREE.MeshStandardMaterial({ color: '#e6b422', metalness: .7, roughness: .3 }));
+    pole.castShadow = fl.castShadow = true; scene.add(pole, fl, eagle);
+    flagMeshes.push({ pole, fl, eagle, base: fg.attributes.position.array.slice() });
+  }
+  return { n, meshes, flagMeshes };
+}
+const SCALE = 1.25;
+const french = makeArmy(160, '#22408f', '#eeeeee', '#151515', 'fr', 4);
+const russian = makeArmy(84, '#2d5a32', '#e8e4d6', '#1a1a1a', 'ru', 3);
+
+const M = new THREE.Matrix4(), L = new THREE.Matrix4(), Q = new THREE.Quaternion(), E = new THREE.Euler(), V = new THREE.Vector3(), ONE = new THREE.Vector3(1, 1, 1);
+const local = (base, x, y, z, rx = 0, ry = 0, rz = 0) => { Q.setFromEuler(E.set(rx, ry, rz)); L.compose(V.set(x, y, z), Q, ONE); return new THREE.Matrix4().multiplyMatrices(base, L); };
+function poseSoldier(army, i, pos, yaw, walk, aim = 0) {
+  const base = new THREE.Matrix4().compose(pos, Q.setFromAxisAngle(new THREE.Vector3(0, 1, 0), yaw), new THREE.Vector3(SCALE, SCALE, SCALE));
+  const sw = Math.sin(walk) * .6 * (aim ? 0 : 1), bob = Math.abs(Math.cos(walk)) * .02 * (aim ? 0 : 1);
+  const m = army.meshes;
+  m.legL.setMatrixAt(i, local(base, -.05, .22 + bob, 0, sw));
+  m.legR.setMatrixAt(i, local(base, .05, .22 + bob, 0, -sw));
+  m.torso.setMatrixAt(i, local(base, 0, .34 + bob, 0));
+  m.belt.setMatrixAt(i, local(base, 0, .3 + bob, 0));
+  m.head.setMatrixAt(i, local(base, 0, .53 + bob, 0));
+  m.hat.setMatrixAt(i, local(base, 0, .63 + bob, 0));
+  m.plume.setMatrixAt(i, local(base, 0, .71 + bob, .02));
+  m.pack.setMatrixAt(i, local(base, 0, .37 + bob, -.095));
+  m.armL.setMatrixAt(i, local(base, -.13, .45 + bob, 0, -sw * .8));
+  // right arm holds musket on shoulder (marching) or levelled forward (aim)
+  m.armR.setMatrixAt(i, local(base, .13, .45 + bob, 0, aim ? -1.4 : -.3));
+  const mus = aim ? local(base, .12, .42, .2, Math.PI / 2) : local(base, .14, .55 + bob, -.02, -.25);
+  m.musket.setMatrixAt(i, mus);
+  m.bayonet.setMatrixAt(i, aim ? local(base, .12, .42, .5, Math.PI / 2) : local(base, .14, .86 + bob, -.1, -.25));
+}
+function commit(army) { for (const m of Object.values(army.meshes)) m.instanceMatrix.needsUpdate = true; }
+function waveFlag(f, pos, yaw, t, ph) {
+  f.pole.position.set(pos.x, pos.y + .47 * SCALE + .2, pos.z); f.pole.scale.setScalar(SCALE);
+  f.fl.position.set(pos.x, pos.y + .82 * SCALE + .2, pos.z); f.fl.rotation.set(0, yaw + Math.PI / 2, 0); f.fl.scale.setScalar(SCALE * 1.2);
+  f.eagle.position.set(pos.x, pos.y + 1.0 * SCALE + .2, pos.z);
+  const p = f.fl.geometry.attributes.position, b = f.base;
+  for (let k = 0; k < p.count; k++) { const x = b[k * 3]; p.array[k * 3 + 2] = Math.sin(x * 14 - t * 9 + ph) * .05 * (x / .42); }
+  p.needsUpdate = true; f.fl.geometry.computeVertexNormals();
+}
+
+/* ---------- timeline ---------- */
+const LEN = curve.getLength();
+const ease = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const pop = (el, t0, t) => { const k = clamp((t - t0) / .25); const sc = k < 1 ? .6 + .55 * Math.sin(k * Math.PI / 2) - .15 * Math.sin(k * Math.PI) : 1; el.style.opacity = k; el.style.transform = `scale(${t < t0 ? .6 : sc})`; };
+const tmpP = new THREE.Vector3(), tmpT = new THREE.Vector3();
+const DUR = 5;
+
+window.renderAt = (t) => {
+  // camera: chase from behind the column, flying east toward Moscow and dropping lower
+  const k = ease(clamp(t / DUR));
+  const headU = .12 + (t / DUR) * .56;
+  const lookU = headU - .05 + k * .09;
+  curve.getPointAt(clamp(lookU), tmpT);
+  const k2 = ease(clamp((t - 2.6) / 2.4));
+  camera.position.set(tmpT.x - 2.6 + k2 * 1.2, 8.6 + k2 * 1.4, tmpT.z + 7.6 + k2 * .6);
+  camera.lookAt(tmpT.x - 1.3 + k2 * 2.6, 0, tmpT.z - .9 - k2 * 1.0);
+  sun.position.set(tmpT.x - 10, 22, tmpT.z + 8); sun.target.position.set(tmpT.x, 0, tmpT.z); sun.target.updateMatrixWorld();
+
+  
+  const au = clamp(.14 + t / 4.6 * .86, 0, 1);
+  const segs = Math.max(1, Math.floor(au * ARROW_SEG));
+  arrow.geometry.setDrawRange(0, segs * IDX_PER_SEG); arrowEdge.geometry.setDrawRange(0, segs * IDX_PER_SEG);
+  curve.getPointAt(au, tmpP); const tan = curve.getTangentAt(au);
+  const yawA = Math.atan2(tan.x, tan.z);
+  for (const [h, lift] of [[head, .1], [headEdge, .04]]) { h.position.set(tmpP.x, TOP + lift, tmpP.z); h.rotation.set(Math.PI / 2, 0, -yawA + Math.PI, 'YXZ'); h.rotation.set(0, yawA, 0); h.rotateX(Math.PI / 2); h.scale.set(1, 1, .3); }
+
+  
+  const ROWS = 20, COLS = 8, SP = .36;
+  for (let i = 0; i < french.n; i++) {
+    const row = Math.floor(i / COLS), col = i % COLS;
+    const u = clamp(headU - (row * SP) / LEN, .001, .999);
+    curve.getPointAt(u, tmpP); const tg = curve.getTangentAt(u);
+    const yaw = Math.atan2(tg.x, tg.z);
+    const side = (col - (COLS - 1) / 2) * SP;
+    const pos = new THREE.Vector3(tmpP.x + Math.cos(yaw) * side, TOP, tmpP.z - Math.sin(yaw) * side);
+    poseSoldier(french, i, pos, yaw, t * 9 + row * .8);
+  }
+  commit(french);
+  french.flagMeshes.forEach((f, j) => {
+    const u = clamp(headU - ((j * 5 + .5) * SP) / LEN + .7 / LEN, .001, .999);
+    curve.getPointAt(u, tmpP); const tg = curve.getTangentAt(u); const yaw = Math.atan2(tg.x, tg.z);
+    const side = (j % 2 ? 1 : -1) * (COLS / 2 + .6) * SP;
+    waveFlag(f, new THREE.Vector3(tmpP.x + Math.cos(yaw) * side, TOP, tmpP.z - Math.sin(yaw) * side), yaw, t, j);
+  });
+
+  
+  curve.getPointAt(.86, tmpP); const tgR = curve.getTangentAt(.86); const yawR = Math.atan2(-tgR.x, -tgR.z);
+  for (let i = 0; i < russian.n; i++) {
+    const row = Math.floor(i / 14), col = i % 14;
+    const side = (col - 6.5) * .4, back = row * .45;
+    const pos = new THREE.Vector3(tmpP.x + Math.cos(yawR) * side - Math.sin(yawR) * back, TOP, tmpP.z - Math.sin(yawR) * side - Math.cos(yawR) * back);
+    poseSoldier(russian, i, pos, yawR, 0, row < 2 ? 1 : 0);
+  }
+  commit(russian);
+  russian.flagMeshes.forEach((f, j) => {
+    const side = (j - 1) * 2.4, back = 6 * .45 + .5;
+    waveFlag(f, new THREE.Vector3(tmpP.x + Math.cos(yawR) * side - Math.sin(yawR) * back, TOP, tmpP.z - Math.sin(yawR) * side - Math.cos(yawR) * back), yawR, t, j + 2);
+  });
+
+  
+  pop(document.getElementById('year'), .15, t);
+  pop(document.getElementById('w1'), .7, t); pop(document.getElementById('w2'), 1.35, t); pop(document.getElementById('w3'), 2.0, t);
+  pop(document.getElementById('sub'), 3.1, t);
+
+  renderer.render(scene, camera);
+};
+window.dbg={renderer,scene,camera,THREE};
+window.ready = true;
+</script></body></html>

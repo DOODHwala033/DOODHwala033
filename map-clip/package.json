@@ -1,0 +1,18 @@
+{
+  "name": "map-clip",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "prep": "node prep.mjs",
+    "test-frames": "node render.cjs test",
+    "render": "node render.cjs all 30"
+  },
+  "dependencies": {
+    "three": "0.160.0",
+    "world-atlas": "2.0.2",
+    "topojson-client": "3.1.0",
+    "d3-geo": "3.1.0",
+    "@fontsource/anton": "5.0.8",
+    "@fontsource/jetbrains-mono": "5.0.18"
+  }
+}
