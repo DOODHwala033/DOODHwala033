@@ -1,0 +1,12 @@
+{
+  "name": "doodhwala033",
+  "owner": { "name": "doodhwala033" },
+  "plugins": [
+    {
+      "name": "cartoon-audio-short",
+      "source": "./plugins/cartoon-audio-short",
+      "description": "Vertical 2D animated cartoon shorts from your voiceover (ideas, script, render, music, SFX).",
+      "version": "1.0.0"
+    }
+  ]
+}
