@@ -1,0 +1,182 @@
+[
+  {
+    "text": "What",
+    "startMs": 200,
+    "endMs": 450,
+    "timestampMs": 200,
+    "confidence": null
+  },
+  {
+    "text": " happens",
+    "startMs": 450,
+    "endMs": 850,
+    "timestampMs": 450,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "if",
+    "startMs": 850,
+    "endMs": 1000,
+    "timestampMs": 850,
+    "confidence": null
+  },
+  {
+    "text": " you",
+    "startMs": 1000,
+    "endMs": 1150,
+    "timestampMs": 1000,
+    "confidence": null
+  },
+  {
+    "text": " swallow",
+    "startMs": 1150,
+    "endMs": 1750,
+    "timestampMs": 1150,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "gum?",
+    "startMs": 1750,
+    "endMs": 2700,
+    "timestampMs": 1750,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "Your",
+    "startMs": 3100,
+    "endMs": 3300,
+    "timestampMs": 3100,
+    "confidence": null
+  },
+  {
+    "text": " stomach",
+    "startMs": 3300,
+    "endMs": 3950,
+    "timestampMs": 3300,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "can't",
+    "startMs": 3950,
+    "endMs": 4400,
+    "timestampMs": 3950,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "break",
+    "startMs": 4400,
+    "endMs": 4750,
+    "timestampMs": 4400,
+    "confidence": null
+  },
+  {
+    "text": " it",
+    "startMs": 4750,
+    "endMs": 4900,
+    "timestampMs": 4750,
+    "confidence": null
+  },
+  {
+    "text": " down,",
+    "startMs": 4900,
+    "endMs": 5800,
+    "timestampMs": 4900,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "but",
+    "startMs": 6600,
+    "endMs": 6800,
+    "timestampMs": 6600,
+    "confidence": null
+  },
+  {
+    "text": " it",
+    "startMs": 6800,
+    "endMs": 6950,
+    "timestampMs": 6800,
+    "confidence": null
+  },
+  {
+    "text": " won't",
+    "startMs": 6950,
+    "endMs": 7350,
+    "timestampMs": 6950,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "stay",
+    "startMs": 7350,
+    "endMs": 7750,
+    "timestampMs": 7350,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "seven",
+    "startMs": 7750,
+    "endMs": 8200,
+    "timestampMs": 7750,
+    "confidence": null
+  },
+  {
+    "text": " years.",
+    "startMs": 8200,
+    "endMs": 9000,
+    "timestampMs": 8200,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "It",
+    "startMs": 9100,
+    "endMs": 9250,
+    "timestampMs": 9100,
+    "confidence": null
+  },
+  {
+    "text": " slides",
+    "startMs": 9250,
+    "endMs": 9750,
+    "timestampMs": 9250,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "right",
+    "startMs": 9750,
+    "endMs": 10050,
+    "timestampMs": 9750,
+    "confidence": null
+  },
+  {
+    "text": " through",
+    "startMs": 10050,
+    "endMs": 10600,
+    "timestampMs": 10050,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "in",
+    "startMs": 10650,
+    "endMs": 10850,
+    "timestampMs": 10650,
+    "confidence": null
+  },
+  {
+    "text": " days.",
+    "startMs": 10850,
+    "endMs": 11800,
+    "timestampMs": 10850,
+    "confidence": null,
+    "pageBreakAfter": true
+  }
+]

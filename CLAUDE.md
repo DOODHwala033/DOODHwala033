@@ -16,6 +16,10 @@ libraries, or a separate video editor. Start new 3D videos by copying
 `src/Motion3D/` (scene, captions and audio already wired) and registering the
 new composition in `src/Root.tsx`.
 
+For 9:16 "Deep Dive" explainer Shorts (Zack D. Films-like: sunlit 3D people,
+x-ray cutaways, camera journeys inside the body, 1-3 word captions), copy
+`src/DeepDive/` instead and follow `docs/deep-dive-shorts.md`.
+
 ## Rules for Three.js inside Remotion
 
 - Wrap all 3D content in `<ThreeCanvas width={width} height={height}>` from `@remotion/three`, with lighting.

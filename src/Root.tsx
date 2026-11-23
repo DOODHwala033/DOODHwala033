@@ -1,6 +1,8 @@
 import { Composition, Folder } from "remotion";
 import { AiTakeover, AI_TAKEOVER_DURATION } from "./AiTakeover/AiTakeover";
 import { aiTakeoverDefaults, aiTakeoverSchema } from "./AiTakeover/schema";
+import { DeepDive, DEEP_DIVE_DURATION } from "./DeepDive/DeepDive";
+import { deepDiveDefaults, deepDiveSchema } from "./DeepDive/schema";
 import { HelloWorld } from "./HelloWorld";
 import { Motion3D, MOTION_3D_DURATION } from "./Motion3D/Motion3D";
 import { motion3DDefaults, motion3DSchema } from "./Motion3D/schema";
@@ -73,6 +75,16 @@ export const RemotionRoot: React.FC = () => {
         height={1080}
         schema={motion3DSchema}
         defaultProps={motion3DDefaults}
+      />
+      <Composition
+        id="DeepDive"
+        component={DeepDive}
+        durationInFrames={DEEP_DIVE_DURATION}
+        fps={30}
+        width={1080}
+        height={1920}
+        schema={deepDiveSchema}
+        defaultProps={deepDiveDefaults}
       />
     </>
   );
