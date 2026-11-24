@@ -23,6 +23,13 @@ import {
   turntableSchema,
   viewSchema,
 } from "./InkMan/Turntable";
+import {
+  SUN_DURATION,
+  SUN_FPS,
+  SunEnvironment,
+  SunView,
+  sunViewSchema,
+} from "./InkMan/SunEnvironment";
 import { Motion3D, MOTION_3D_DURATION } from "./Motion3D/Motion3D";
 import { motion3DDefaults, motion3DSchema } from "./Motion3D/schema";
 import { Logo } from "./HelloWorld/Logo";
@@ -113,6 +120,22 @@ export const RemotionRoot: React.FC = () => {
           height={1920}
           schema={viewSchema}
           defaultProps={{ view: "front" as const, character: "base" as const }}
+        />
+        <Composition
+          id="SunEnvironment"
+          component={SunEnvironment}
+          durationInFrames={SUN_DURATION}
+          fps={SUN_FPS}
+          width={1080}
+          height={1920}
+        />
+        <Still
+          id="SunView"
+          component={SunView}
+          width={1080}
+          height={1920}
+          schema={sunViewSchema}
+          defaultProps={{ view: "horizon" as const }}
         />
       </Folder>
       <Composition
