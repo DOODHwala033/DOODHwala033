@@ -20,6 +20,7 @@ import {
   InkManView,
   TURNTABLE_DURATION,
   TURNTABLE_FPS,
+  turntableSchema,
   viewSchema,
 } from "./InkMan/Turntable";
 import { Motion3D, MOTION_3D_DURATION } from "./Motion3D/Motion3D";
@@ -102,6 +103,8 @@ export const RemotionRoot: React.FC = () => {
           fps={TURNTABLE_FPS}
           width={1080}
           height={1920}
+          schema={turntableSchema}
+          defaultProps={{ character: "base" as const }}
         />
         <Still
           id="InkManView"
@@ -109,7 +112,7 @@ export const RemotionRoot: React.FC = () => {
           width={1080}
           height={1920}
           schema={viewSchema}
-          defaultProps={{ view: "front" as const }}
+          defaultProps={{ view: "front" as const, character: "base" as const }}
         />
       </Folder>
       <Composition

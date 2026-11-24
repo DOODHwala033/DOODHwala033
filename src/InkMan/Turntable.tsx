@@ -8,8 +8,13 @@ import {
 } from "remotion";
 import { z } from "zod";
 import { CameraRig } from "../DeepDive/CameraRig";
-import { BaseCharacter, idlePose } from "./BaseCharacter";
-import { NEUTRAL } from "./face";
+import { BaseCharacter } from "./BaseCharacter";
+import {
+  CHARACTER_IDS,
+  CHARACTERS,
+  CharacterDef,
+  CharacterId,
+} from "./characters";
 
 export const TURNTABLE_FPS = 30;
 export const TURNTABLE_DURATION = 300; // 10 s, one full rotation
@@ -57,7 +62,29 @@ const blinkAt = (f: number, fps: number) => {
 };
 
 // 360° turntable: character turns once, alive (idle); camera orbits slowly and pushes in.
-export const InkManTurntable: React.FC = () => {
+export const turntableSchema = z.object({ character: z.enum(CHARACTER_IDS) });
+
+const Actor: React.FC<{ id: CharacterId; t: number; blink: number }> = ({
+  id,
+  t,
+  blink,
+}) => {
+  const c: CharacterDef = CHARACTERS[id];
+  return (
+    <BaseCharacter
+      skin={c.skin}
+      pose={c.pose(t)}
+      face={{ ...c.face, blink }}
+      headSlot={c.headSlot}
+      handLSlot={c.handLSlot}
+      handRSlot={c.handRSlot}
+    />
+  );
+};
+
+export const InkManTurntable: React.FC<z.infer<typeof turntableSchema>> = ({
+  character,
+}) => {
   const f = useCurrentFrame();
   const { fps, width, height, durationInFrames } = useVideoConfig();
   const t = f / fps;
@@ -80,22 +107,25 @@ export const InkManTurntable: React.FC = () => {
         />
         <Lights />
         <group rotation={[0, spin, 0]}>
-          <BaseCharacter
-            pose={idlePose(t)}
-            face={{ ...NEUTRAL, blink: blinkAt(f, fps) }}
-          />
+          <Actor id={character} t={t} blink={blinkAt(f, fps)} />
         </group>
       </ThreeCanvas>
     </Studio>
   );
 };
 
-export const viewSchema = z.object({ view: z.enum(["front", "side", "back"]) });
+export const viewSchema = z.object({
+  view: z.enum(["front", "side", "back"]),
+  character: z.enum(CHARACTER_IDS),
+});
 
 const YAW = { front: 0, side: Math.PI / 2, back: Math.PI } as const;
 
 // Locked reference stills (no idle motion, no camera move).
-export const InkManView: React.FC<z.infer<typeof viewSchema>> = ({ view }) => {
+export const InkManView: React.FC<z.infer<typeof viewSchema>> = ({
+  view,
+  character,
+}) => {
   const { width, height } = useVideoConfig();
   return (
     <Studio>
@@ -103,7 +133,7 @@ export const InkManView: React.FC<z.infer<typeof viewSchema>> = ({ view }) => {
         <CameraRig position={[0, 1.05, 4.9]} target={[0, 0.92, 0]} fov={28} />
         <Lights />
         <group rotation={[0, YAW[view], 0]}>
-          <BaseCharacter pose={idlePose(0)} face={NEUTRAL} />
+          <Actor id={character} t={0} blink={0} />
         </group>
       </ThreeCanvas>
       <div
