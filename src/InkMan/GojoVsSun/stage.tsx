@@ -138,6 +138,21 @@ export const Stage: React.FC<{
           <group position={sun.position ?? [0, 0, 0]} scale={sun.scale ?? 1}>
             <SunSet tint={sun.tint} flares={sun.flares} embers={sun.embers} />
           </group>
+        ) : null}
+        {sun ? (
+          // neutral key + fill so characters keep their true colours on the Sun
+          <>
+            <directionalLight
+              position={[2.5, 6, 6]}
+              intensity={1.5}
+              color="#FFFFFF"
+            />
+            <directionalLight
+              position={[-3, 2, 4]}
+              intensity={0.6}
+              color="#FFF3E6"
+            />
+          </>
         ) : (
           <>
             <hemisphereLight args={["#FFFFFF", "#7A86C8", 1.1]} />

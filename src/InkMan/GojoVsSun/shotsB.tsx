@@ -72,7 +72,7 @@ export const Shot11: React.FC<ShotProps> = ({ len }) => {
 const GOJO_F: Vec3 = [0, R + FLOAT, 0];
 const HAND_R: Vec3 = [-0.42, R + FLOAT + 1.0, -0.25];
 const HAND_L: Vec3 = [0.42, R + FLOAT + 1.0, -0.25];
-const IMPACT: Vec3 = [0, surfY(0, -3.5), -3.5];
+const IMPACT: Vec3 = [0, surfY(0, -2.3), -2.3];
 
 // 12 · Red blasts a crater.
 export const Shot12: React.FC<ShotProps> = () => {
@@ -83,7 +83,7 @@ export const Shot12: React.FC<ShotProps> = () => {
   const fly = clamp01((f - FIRE) / (HIT - FIRE));
   const orbPos = lerp3(HAND_R, IMPACT, fly * fly);
   const crater = clamp01((f - HIT) / 8);
-  const cam: Cam = { p: [0.7, R + 2.5, 2.3], t: [0, R + 0.3, -5], fov: 55 };
+  const cam: Cam = { p: [1.0, R + 3.4, 1.9], t: IMPACT, fov: 55 };
   return (
     <Stage
       cam={cam}
@@ -110,11 +110,7 @@ export const Shot12: React.FC<ShotProps> = () => {
 export const Shot13: React.FC<ShotProps> = ({ len }) => {
   const { f, t, fps, w, h } = useT();
   const k = f / len;
-  const cam: Cam = {
-    p: [3.4, R + 1.6, -0.3],
-    t: [0, IMPACT[1], -3.2],
-    fov: 50,
-  };
+  const cam: Cam = { p: [2.9, R + 2.9, 1.6], t: IMPACT, fov: 55 };
   const head = project(
     [GOJO_F[0], GOJO_F[1] + HEAD_H + 0.35, GOJO_F[2]],
     cam,
@@ -127,8 +123,8 @@ export const Shot13: React.FC<ShotProps> = ({ len }) => {
       overlay={
         <Sticker
           text="?"
-          x={head.x}
-          y={head.y - 30}
+          x={Math.min(Math.max(head.x, 160), w - 160)}
+          y={Math.min(Math.max(head.y - 30, 260), h - 400)}
           at={Math.round(0.4 * fps)}
           size={170}
         />
@@ -234,7 +230,7 @@ export const Shot15: React.FC<ShotProps> = ({ len }) => {
   );
 };
 
-const VOID_SUN = { scale: 0.32, flares: true, embers: false };
+const VOID_SUN = { scale: 0.3, flares: true, embers: false };
 
 // 16 · Domain Expansion: Infinite Void.
 export const Shot16: React.FC<ShotProps> = ({ len }) => {
@@ -255,7 +251,7 @@ export const Shot16: React.FC<ShotProps> = ({ len }) => {
     >
       <Gojo
         t={t}
-        position={[1.6, -1.6, 2.6]}
+        position={[1.1, -1.7, 3.2]}
         yaw={-0.5}
         pose={{ armR: { z: 0.2, x: -2.6, elbow: -0.9 }, headPitch: -0.1 }}
         appleR={null}
@@ -269,7 +265,7 @@ export const Shot17: React.FC<ShotProps> = () => {
   const { f, t, fps, w, h } = useT();
   const cam: Cam = { p: [0, 0.2, 7.4], t: [0, 0, 0], fov: 40 };
   const c = project([0, 0, 1.9], cam, w, h);
-  const gojoHead = project([2.3, -1.4 + HEAD_H, 2.2], cam, w, h);
+  const gojoHead = project([0.75, -1.9 + HEAD_H, 3.2], cam, w, h);
   const blink = f % 45 < 4 ? 0.15 : 1;
   return (
     <Stage
@@ -321,7 +317,7 @@ export const Shot17: React.FC<ShotProps> = () => {
         </>
       }
     >
-      <Gojo t={t} position={[2.3, -1.4, 2.2]} yaw={-0.9} appleR={null} />
+      <Gojo t={t} position={[0.75, -1.9, 3.2]} yaw={-0.9} appleR={null} />
     </Stage>
   );
 };

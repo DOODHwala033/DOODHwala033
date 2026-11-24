@@ -487,18 +487,18 @@ export const Shot10: React.FC<ShotProps> = ({ len }) => {
       {cracks > 0
         ? Array.from({ length: 9 }, (_, i) => {
             const a = (i / 9) * Math.PI * 2 + 0.3;
-            const L = cracks * (0.8 + (i % 3) * 0.35);
+            const L = cracks * (0.45 + (i % 3) * 0.18);
             return (
               <mesh
                 key={i}
                 position={[
                   Math.cos(a) * L * 0.5,
-                  R + 0.012,
+                  surfY(Math.cos(a) * L * 0.5, Math.sin(a) * L * 0.5) + 0.004,
                   Math.sin(a) * L * 0.5,
                 ]}
                 rotation={[0, -a, 0]}
               >
-                <boxGeometry args={[L, 0.01, 0.05]} />
+                <boxGeometry args={[L, 0.004, 0.022]} />
                 <meshBasicMaterial color="#1A0500" />
               </mesh>
             );
