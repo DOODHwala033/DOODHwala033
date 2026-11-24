@@ -53,6 +53,8 @@ Then reply with:
 - A one-paragraph visual plan (the shots you'll animate).
 - Recording tips: one steady, warm narrator voice; ElevenLabs works well (a deep narrator voice, speed about 1.05-1.1, stability about 45-55 %). Mp3 or wav is fine. Leave natural pauses at sentence ends. Export without music.
 - The ask: **"Upload the voiceover when it's ready and I'll make the full video."**
+- **No recording?** Offer the free local voice instead (Kokoro, CPU, no GPU): run `bash <skill>/kit/tools/setup_voice.sh` once, then `~/.venvs/kokoro/bin/python <skill>/kit/tools/kokoro_voice.py script.txt --voice am_michael --speed 1.1`. It writes `voice.mp3` plus `work/phrases.json` and `work/words.json` (caption timings), so Stage 4.1 is already done. Voices: `am_michael`, `am_adam`, `am_onyx`, `bm_george`, `bm_lewis` for narration; `af_heart`, `bf_emma` for a lighter read; Hindi is `--lang hi` with `hf_alpha`, `hf_beta`, `hm_omega` or `hm_psi`.
+- **More emotion on specific lines:** run Chatterbox or Orpheus *separately* (they need a GPU and are not installed here). Add `--ext 3,7` (0-based sentence numbers) to `kokoro_voice.py`; it writes `voice/EXTERNAL.md` listing those lines. Render them in Chatterbox/Orpheus, save as `voice/ext/s3.wav`, `s7.wav`, and re-run the same command: the files replace Kokoro's audio and every timing is recomputed. Use one engine/voice per line, and never edit or re-time a finished voice track.
 Keep the final script text. It drives the timing in Stage 4, so no speech recognition is needed. If they recorded a changed version, ask for the final text.
 
 ## Stage 4: Build the video (after the voiceover is uploaded)
@@ -73,6 +75,7 @@ Run `python3 timing.py voice.mp3 script.txt --out work`.
 - Otherwise it aligns script phrases (split at punctuation) to silence-detected speech segments, with a DP that matches syllables to duration and penalises sentence ends inside a segment and long gaps inside a phrase.
 - With no ASR and no script, ask for the script. Claude cannot hear audio.
 - Check `work/phrases.json`: pauses should fall at sentence ends. Total frames = round(duration × 30).
+- **Kokoro route:** `kokoro_voice.py` already wrote `work/phrases.json` + `work/words.json`, so skip `timing.py`. Sentence start/end times are exact (each sentence is synthesised alone); clause and word times inside a sentence come from the audio's real pauses (when they match the commas) or syllable counts. Measured against `timing.py` on the same audio, clause boundaries agree to a mean 0.09 s (about 3 frames). Kokoro's ONNX build has no per-word durations, so for captions that must be word-perfect run a forced alignment (Whisper/MFA) on `voice.wav`. Then `python3 gen_timing.py` turns the JSON into `web/timing.js` (frames @30) for `story.js`.
 
 ### 4.2 Shot plan (`work/PLAN.md` before code)
 Make one row per shot: frames, words, setting, light, camera move, characters/poses/expressions, effects and SFX cue.
