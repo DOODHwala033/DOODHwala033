@@ -38,6 +38,17 @@ overlay, captions) and follow `docs/alcatraz-reference-analysis.md`.
 - Put audio, captions JSON, models and textures in `public/` and load them with `staticFile()`.
 - One captions JSON per voiceover, e.g. `public/motion3d/voiceover.mp3` → `public/motion3d/voiceover.json`.
 
+## Voiceover
+
+- **Main voice: ElevenLabs** (connector). Current InkMan voice: "Joe - Cool Presenter"
+  (`ExKxkRpZWnl4ImIPkTZL`), model `eleven_v4`. Verify every take word-for-word
+  with ElevenLabs Scribe and build captions from its word timings.
+- **Free local voice + caption timings: Kokoro** (installed in `~/.venvs/tts`, Python 3.12):
+  `~/.venvs/tts/bin/python scripts/kokoro_tts.py <script.txt> <out> --voice am_michael --speed 1.1`
+  writes `<out>.wav` and a `Caption[]` JSON from Kokoro's own word timestamps.
+- **More emotion (optional, separate run): Chatterbox** (CPU-capable, slow) or
+  **Orpheus** (3B, needs a GPU; not practical in the cloud container).
+
 ## Checks and rendering
 
 - `npm run lint` (eslint + tsc) must pass.
