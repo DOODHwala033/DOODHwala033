@@ -1,0 +1,76 @@
+[
+  {
+    "text": "could",
+    "startMs": 0,
+    "endMs": 233,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": " ayanokoji",
+    "startMs": 233,
+    "endMs": 1033,
+    "timestampMs": 233,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "escape",
+    "startMs": 1033,
+    "endMs": 1633,
+    "timestampMs": 1033,
+    "confidence": null
+  },
+  {
+    "text": " alcatraz?",
+    "startMs": 1633,
+    "endMs": 2867,
+    "timestampMs": 1633,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "alcatraz",
+    "startMs": 2867,
+    "endMs": 3383,
+    "timestampMs": 2867,
+    "confidence": null
+  },
+  {
+    "text": " sits",
+    "startMs": 3383,
+    "endMs": 3667,
+    "timestampMs": 3383,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "in",
+    "startMs": 3667,
+    "endMs": 3900,
+    "timestampMs": 3667,
+    "confidence": null
+  },
+  {
+    "text": " ice-cold",
+    "startMs": 3900,
+    "endMs": 4500,
+    "timestampMs": 3900,
+    "confidence": null
+  },
+  {
+    "text": " water",
+    "startMs": 4500,
+    "endMs": 4880,
+    "timestampMs": 4500,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "off",
+    "startMs": 4880,
+    "endMs": 5000,
+    "timestampMs": 4880,
+    "confidence": null
+  }
+]

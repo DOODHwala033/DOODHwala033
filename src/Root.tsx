@@ -1,6 +1,17 @@
-import { Composition, Folder } from "remotion";
+import { Composition, Folder, Still } from "remotion";
 import { AiTakeover, AI_TAKEOVER_DURATION } from "./AiTakeover/AiTakeover";
 import { aiTakeoverDefaults, aiTakeoverSchema } from "./AiTakeover/schema";
+import {
+  ALCATRAZ_DURATION,
+  ALCATRAZ_FPS,
+  AlcatrazIntro,
+} from "./AlcatrazIntro/AlcatrazIntro";
+import {
+  CharacterSheet,
+  SHEET_H,
+  SHEET_W,
+} from "./AlcatrazIntro/CharacterSheet";
+import { alcatrazDefaults, alcatrazSchema } from "./AlcatrazIntro/schema";
 import { DeepDive, DEEP_DIVE_DURATION } from "./DeepDive/DeepDive";
 import { deepDiveDefaults, deepDiveSchema } from "./DeepDive/schema";
 import { HelloWorld } from "./HelloWorld";
@@ -75,6 +86,22 @@ export const RemotionRoot: React.FC = () => {
         height={1080}
         schema={motion3DSchema}
         defaultProps={motion3DDefaults}
+      />
+      <Composition
+        id="AlcatrazIntro"
+        component={AlcatrazIntro}
+        durationInFrames={ALCATRAZ_DURATION}
+        fps={ALCATRAZ_FPS}
+        width={1080}
+        height={1920}
+        schema={alcatrazSchema}
+        defaultProps={alcatrazDefaults}
+      />
+      <Still
+        id="CharacterSheet"
+        component={CharacterSheet}
+        width={SHEET_W}
+        height={SHEET_H}
       />
       <Composition
         id="DeepDive"

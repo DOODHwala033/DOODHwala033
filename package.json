@@ -12,6 +12,7 @@
   "repository": {},
   "license": "UNLICENSED",
   "dependencies": {
+    "@fontsource/inter": "5.2.8",
     "@fontsource/nunito": "^5.3.0",
     "@react-three/fiber": "9.8.2",
     "@remotion/captions": "4.0.534",

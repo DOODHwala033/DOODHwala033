@@ -20,6 +20,11 @@ For 9:16 "Deep Dive" explainer Shorts (Zack D. Films-like: sunlit 3D people,
 x-ray cutaways, camera journeys inside the body, 1-3 word captions), copy
 `src/DeepDive/` instead and follow `docs/deep-dive-shorts.md`.
 
+For narrated 9:16 story shorts with named 3D characters, cuts every ~1-2 s and
+accumulating yellow captions (the "Could X escape Y?" style), copy
+`src/AlcatrazIntro/` (procedural `Humanoid`, cell/island environments, frost
+overlay, captions) and follow `docs/alcatraz-reference-analysis.md`.
+
 ## Rules for Three.js inside Remotion
 
 - Wrap all 3D content in `<ThreeCanvas width={width} height={height}>` from `@remotion/three`, with lighting.
