@@ -101,11 +101,22 @@ const Blindfold: React.FC = () => (
 );
 
 // Props 2 & 3: an apple resting on each palm.
-const Apple: React.FC = () => (
-  <group position={[0, -0.035, 0.075]}>
-    <mesh castShadow scale={[1, 0.9, 1]}>
+export const Apple: React.FC<{
+  baked?: boolean;
+  lift?: number;
+  bite?: number;
+}> = ({ baked = false, lift = 0, bite = 0 }) => (
+  <group position={[0, -0.035, 0.075 + lift]}>
+    <mesh
+      castShadow
+      scale={[1 - bite * 0.35, 0.9 - bite * 0.2, 1 - bite * 0.35]}
+    >
       <sphereGeometry args={[0.048, 14, 10]} />
-      <meshPhysicalMaterial color="#C8141B" roughness={0.35} clearcoat={0.6} />
+      <meshPhysicalMaterial
+        color={baked ? "#7A3A12" : "#C8141B"}
+        roughness={baked ? 0.25 : 0.35}
+        clearcoat={baked ? 1 : 0.6}
+      />
     </mesh>
     <mesh position={[0, 0.05, 0]}>
       <cylinderGeometry args={[0.004, 0.004, 0.025, 5]} />

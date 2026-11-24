@@ -38,6 +38,9 @@ export type Pose = {
   armR?: Arm;
   kneeL?: number;
   kneeR?: number;
+  // hip swing; negative = leg forward
+  thighL?: number;
+  thighR?: number;
 };
 
 // Proportions: 1.80 m tall, head 0.28 m → ~6.4 heads.
@@ -115,12 +118,13 @@ const Seg: React.FC<{
   </group>
 );
 
-const Leg: React.FC<{ side: 1 | -1; knee: number; s: Skin }> = ({
+const Leg: React.FC<{ side: 1 | -1; knee: number; thigh: number; s: Skin }> = ({
   side,
   knee,
+  thigh,
   s,
 }) => (
-  <group position={[side * 0.092, D.hipY, 0]}>
+  <group position={[side * 0.092, D.hipY, 0]} rotation={[thigh, 0, 0]}>
     <Seg len={D.thigh} r0={0.068} r1={0.054} color={s.pants} />
     <group position={[0, -D.thigh, 0]} rotation={[knee, 0, 0]}>
       <Seg len={D.shin} r0={0.052} r1={0.042} color={s.pants} />
@@ -193,8 +197,8 @@ export const BaseCharacter: React.FC<{
 
   return (
     <group>
-      <Leg side={1} knee={pose.kneeL ?? 0} s={s} />
-      <Leg side={-1} knee={pose.kneeR ?? 0} s={s} />
+      <Leg side={1} knee={pose.kneeL ?? 0} thigh={pose.thighL ?? 0} s={s} />
+      <Leg side={-1} knee={pose.kneeR ?? 0} thigh={pose.thighR ?? 0} s={s} />
       {/* hips carry the weight shift; everything above follows */}
       <group
         position={[pose.hipShift ?? 0, D.hipY, 0]}

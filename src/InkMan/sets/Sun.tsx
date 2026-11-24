@@ -212,11 +212,21 @@ const Embers: React.FC<{ t: number }> = ({ t }) => {
   );
 };
 
-export const SunSet: React.FC = () => {
+let lavaCache: CanvasTexture | null = null;
+const getLava = () => {
+  if (!lavaCache) lavaCache = lavaTexture();
+  return lavaCache;
+};
+
+export const SunSet: React.FC<{
+  tint?: string;
+  flares?: boolean;
+  embers?: boolean;
+}> = ({ tint = "#ffffff", flares = true, embers = true }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = frame / fps;
-  const lava = useMemo(() => lavaTexture(), []);
+  const lava = getLava();
   // slow surface drift + a gentle breathing glow
   lava.offset.x = t * 0.004;
   const pulse = 1 + Math.sin(t * 2.1) * 0.06;
@@ -234,8 +244,9 @@ export const SunSet: React.FC = () => {
         <sphereGeometry args={[SUN_R, 160, 110]} />
         <meshStandardMaterial
           map={lava}
+          color={tint}
           emissiveMap={lava}
-          emissive="#ffffff"
+          emissive={tint}
           emissiveIntensity={0.85 * pulse}
           bumpMap={lava}
           bumpScale={1.6}
@@ -253,10 +264,10 @@ export const SunSet: React.FC = () => {
           depthWrite={false}
         />
       </mesh>
-      {PROMINENCES.map((p, i) => (
-        <Prominence key={i} p={p} i={i} t={t} />
-      ))}
-      <Embers t={t} />
+      {flares
+        ? PROMINENCES.map((p, i) => <Prominence key={i} p={p} i={i} t={t} />)
+        : null}
+      {embers ? <Embers t={t} /> : null}
     </group>
   );
 };

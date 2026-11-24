@@ -16,6 +16,11 @@ import { DeepDive, DEEP_DIVE_DURATION } from "./DeepDive/DeepDive";
 import { deepDiveDefaults, deepDiveSchema } from "./DeepDive/schema";
 import { HelloWorld } from "./HelloWorld";
 import {
+  GOJO_VS_SUN_DURATION,
+  GOJO_VS_SUN_FPS,
+  GojoVsSun,
+} from "./InkMan/GojoVsSun/GojoVsSun";
+import {
   InkManTurntable,
   InkManView,
   TURNTABLE_DURATION,
@@ -120,6 +125,14 @@ export const RemotionRoot: React.FC = () => {
           height={1920}
           schema={viewSchema}
           defaultProps={{ view: "front" as const, character: "base" as const }}
+        />
+        <Composition
+          id="GojoVsSun"
+          component={GojoVsSun}
+          durationInFrames={GOJO_VS_SUN_DURATION}
+          fps={GOJO_VS_SUN_FPS}
+          width={1080}
+          height={1920}
         />
         <Composition
           id="SunEnvironment"
