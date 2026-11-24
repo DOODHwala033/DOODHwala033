@@ -1,0 +1,1459 @@
+[
+ {
+  "text": "what",
+  "startMs": 0,
+  "endMs": 240,
+  "timestampMs": 0,
+  "confidence": null
+ },
+ {
+  "text": " if",
+  "startMs": 320,
+  "endMs": 400,
+  "timestampMs": 320,
+  "confidence": null
+ },
+ {
+  "text": " gojo",
+  "startMs": 560,
+  "endMs": 1040,
+  "timestampMs": 560,
+  "confidence": null
+ },
+ {
+  "text": " fought",
+  "startMs": 1120,
+  "endMs": 1280,
+  "timestampMs": 1120,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "the",
+  "startMs": 1360,
+  "endMs": 1440,
+  "timestampMs": 1360,
+  "confidence": null
+ },
+ {
+  "text": " sun?",
+  "startMs": 1520,
+  "endMs": 2280,
+  "timestampMs": 1520,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "the",
+  "startMs": 2640,
+  "endMs": 2720,
+  "timestampMs": 2640,
+  "confidence": null
+ },
+ {
+  "text": " sun",
+  "startMs": 2800,
+  "endMs": 3120,
+  "timestampMs": 2800,
+  "confidence": null
+ },
+ {
+  "text": " is",
+  "startMs": 3200,
+  "endMs": 3360,
+  "timestampMs": 3200,
+  "confidence": null
+ },
+ {
+  "text": " one",
+  "startMs": 3440,
+  "endMs": 3600,
+  "timestampMs": 3440,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "hundred",
+  "startMs": 3680,
+  "endMs": 3920,
+  "timestampMs": 3680,
+  "confidence": null
+ },
+ {
+  "text": " and",
+  "startMs": 4000,
+  "endMs": 4080,
+  "timestampMs": 4000,
+  "confidence": null
+ },
+ {
+  "text": " nine",
+  "startMs": 4160,
+  "endMs": 4320,
+  "timestampMs": 4160,
+  "confidence": null
+ },
+ {
+  "text": " times",
+  "startMs": 4480,
+  "endMs": 4800,
+  "timestampMs": 4480,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "wider",
+  "startMs": 4960,
+  "endMs": 5280,
+  "timestampMs": 4960,
+  "confidence": null
+ },
+ {
+  "text": " than",
+  "startMs": 5360,
+  "endMs": 5440,
+  "timestampMs": 5360,
+  "confidence": null
+ },
+ {
+  "text": " earth.",
+  "startMs": 5520,
+  "endMs": 6080,
+  "timestampMs": 5520,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "you",
+  "startMs": 6240,
+  "endMs": 6320,
+  "timestampMs": 6240,
+  "confidence": null
+ },
+ {
+  "text": " could",
+  "startMs": 6400,
+  "endMs": 6480,
+  "timestampMs": 6400,
+  "confidence": null
+ },
+ {
+  "text": " fit",
+  "startMs": 6560,
+  "endMs": 6720,
+  "timestampMs": 6560,
+  "confidence": null
+ },
+ {
+  "text": " one",
+  "startMs": 6880,
+  "endMs": 6960,
+  "timestampMs": 6880,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "point",
+  "startMs": 7120,
+  "endMs": 7360,
+  "timestampMs": 7120,
+  "confidence": null
+ },
+ {
+  "text": " three",
+  "startMs": 7440,
+  "endMs": 7520,
+  "timestampMs": 7440,
+  "confidence": null
+ },
+ {
+  "text": " million",
+  "startMs": 7840,
+  "endMs": 8240,
+  "timestampMs": 7840,
+  "confidence": null
+ },
+ {
+  "text": " earths",
+  "startMs": 8320,
+  "endMs": 8640,
+  "timestampMs": 8320,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "inside",
+  "startMs": 8840,
+  "endMs": 9040,
+  "timestampMs": 8840,
+  "confidence": null
+ },
+ {
+  "text": " it.",
+  "startMs": 9120,
+  "endMs": 9520,
+  "timestampMs": 9120,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "its",
+  "startMs": 9640,
+  "endMs": 9760,
+  "timestampMs": 9640,
+  "confidence": null
+ },
+ {
+  "text": " surface",
+  "startMs": 10000,
+  "endMs": 10240,
+  "timestampMs": 10000,
+  "confidence": null
+ },
+ {
+  "text": " is",
+  "startMs": 10320,
+  "endMs": 10400,
+  "timestampMs": 10320,
+  "confidence": null
+ },
+ {
+  "text": " five",
+  "startMs": 10560,
+  "endMs": 10720,
+  "timestampMs": 10560,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "thousand",
+  "startMs": 10880,
+  "endMs": 11280,
+  "timestampMs": 10880,
+  "confidence": null
+ },
+ {
+  "text": " five",
+  "startMs": 11360,
+  "endMs": 11520,
+  "timestampMs": 11360,
+  "confidence": null
+ },
+ {
+  "text": " hundred",
+  "startMs": 11680,
+  "endMs": 11920,
+  "timestampMs": 11680,
+  "confidence": null
+ },
+ {
+  "text": " degrees.",
+  "startMs": 12080,
+  "endMs": 12960,
+  "timestampMs": 12080,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "its",
+  "startMs": 13040,
+  "endMs": 13120,
+  "timestampMs": 13040,
+  "confidence": null
+ },
+ {
+  "text": " core?",
+  "startMs": 13200,
+  "endMs": 13920,
+  "timestampMs": 13200,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "fifteen",
+  "startMs": 13960,
+  "endMs": 14400,
+  "timestampMs": 13960,
+  "confidence": null
+ },
+ {
+  "text": " million.",
+  "startMs": 14720,
+  "endMs": 15600,
+  "timestampMs": 14720,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "anything",
+  "startMs": 15800,
+  "endMs": 16000,
+  "timestampMs": 15800,
+  "confidence": null
+ },
+ {
+  "text": " normal",
+  "startMs": 16080,
+  "endMs": 16480,
+  "timestampMs": 16080,
+  "confidence": null
+ },
+ {
+  "text": " would",
+  "startMs": 16560,
+  "endMs": 16720,
+  "timestampMs": 16560,
+  "confidence": null
+ },
+ {
+  "text": " vaporize",
+  "startMs": 16800,
+  "endMs": 17440,
+  "timestampMs": 16800,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "instantly.",
+  "startMs": 17520,
+  "endMs": 18560,
+  "timestampMs": 17520,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "but",
+  "startMs": 18640,
+  "endMs": 18720,
+  "timestampMs": 18640,
+  "confidence": null
+ },
+ {
+  "text": " gojo",
+  "startMs": 18960,
+  "endMs": 19360,
+  "timestampMs": 18960,
+  "confidence": null
+ },
+ {
+  "text": " isn't",
+  "startMs": 19440,
+  "endMs": 19680,
+  "timestampMs": 19440,
+  "confidence": null
+ },
+ {
+  "text": " normal.",
+  "startMs": 19880,
+  "endMs": 20400,
+  "timestampMs": 19880,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "his",
+  "startMs": 20480,
+  "endMs": 20560,
+  "timestampMs": 20480,
+  "confidence": null
+ },
+ {
+  "text": " infinity",
+  "startMs": 20640,
+  "endMs": 21200,
+  "timestampMs": 20640,
+  "confidence": null
+ },
+ {
+  "text": " makes",
+  "startMs": 21360,
+  "endMs": 21520,
+  "timestampMs": 21360,
+  "confidence": null
+ },
+ {
+  "text": " anything",
+  "startMs": 21600,
+  "endMs": 22000,
+  "timestampMs": 21600,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "coming",
+  "startMs": 22120,
+  "endMs": 22240,
+  "timestampMs": 22120,
+  "confidence": null
+ },
+ {
+  "text": " at",
+  "startMs": 22320,
+  "endMs": 22400,
+  "timestampMs": 22320,
+  "confidence": null
+ },
+ {
+  "text": " him",
+  "startMs": 22480,
+  "endMs": 22720,
+  "timestampMs": 22480,
+  "confidence": null
+ },
+ {
+  "text": " slow",
+  "startMs": 22840,
+  "endMs": 22960,
+  "timestampMs": 22840,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "down",
+  "startMs": 23040,
+  "endMs": 23360,
+  "timestampMs": 23040,
+  "confidence": null
+ },
+ {
+  "text": " forever.",
+  "startMs": 23520,
+  "endMs": 24240,
+  "timestampMs": 23520,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "flames,",
+  "startMs": 24320,
+  "endMs": 25040,
+  "timestampMs": 24320,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "plasma,",
+  "startMs": 25120,
+  "endMs": 25840,
+  "timestampMs": 25120,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "even",
+  "startMs": 25920,
+  "endMs": 26000,
+  "timestampMs": 25920,
+  "confidence": null
+ },
+ {
+  "text": " a",
+  "startMs": 26080,
+  "endMs": 26160,
+  "timestampMs": 26080,
+  "confidence": null
+ },
+ {
+  "text": " solar",
+  "startMs": 26240,
+  "endMs": 26480,
+  "timestampMs": 26240,
+  "confidence": null
+ },
+ {
+  "text": " flare",
+  "startMs": 26640,
+  "endMs": 27280,
+  "timestampMs": 26640,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "never",
+  "startMs": 27440,
+  "endMs": 27600,
+  "timestampMs": 27440,
+  "confidence": null
+ },
+ {
+  "text": " reach",
+  "startMs": 27680,
+  "endMs": 27840,
+  "timestampMs": 27680,
+  "confidence": null
+ },
+ {
+  "text": " him.",
+  "startMs": 27920,
+  "endMs": 28480,
+  "timestampMs": 27920,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "fans",
+  "startMs": 28560,
+  "endMs": 28880,
+  "timestampMs": 28560,
+  "confidence": null
+ },
+ {
+  "text": " still",
+  "startMs": 29040,
+  "endMs": 29200,
+  "timestampMs": 29040,
+  "confidence": null
+ },
+ {
+  "text": " argue",
+  "startMs": 29280,
+  "endMs": 29600,
+  "timestampMs": 29280,
+  "confidence": null
+ },
+ {
+  "text": " if",
+  "startMs": 29640,
+  "endMs": 29680,
+  "timestampMs": 29640,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "infinity",
+  "startMs": 29760,
+  "endMs": 30240,
+  "timestampMs": 29760,
+  "confidence": null
+ },
+ {
+  "text": " blocks",
+  "startMs": 30320,
+  "endMs": 30640,
+  "timestampMs": 30320,
+  "confidence": null
+ },
+ {
+  "text": " light",
+  "startMs": 30800,
+  "endMs": 31040,
+  "timestampMs": 30800,
+  "confidence": null
+ },
+ {
+  "text": " and",
+  "startMs": 31080,
+  "endMs": 31120,
+  "timestampMs": 31080,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "radiation.",
+  "startMs": 31200,
+  "endMs": 32080,
+  "timestampMs": 31200,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "but",
+  "startMs": 32200,
+  "endMs": 32320,
+  "timestampMs": 32200,
+  "confidence": null
+ },
+ {
+  "text": " he",
+  "startMs": 32400,
+  "endMs": 32560,
+  "timestampMs": 32400,
+  "confidence": null
+ },
+ {
+  "text": " breathes",
+  "startMs": 32640,
+  "endMs": 32960,
+  "timestampMs": 32640,
+  "confidence": null
+ },
+ {
+  "text": " and",
+  "startMs": 33040,
+  "endMs": 33120,
+  "timestampMs": 33040,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "walks",
+  "startMs": 33240,
+  "endMs": 33440,
+  "timestampMs": 33240,
+  "confidence": null
+ },
+ {
+  "text": " just",
+  "startMs": 33520,
+  "endMs": 33680,
+  "timestampMs": 33520,
+  "confidence": null
+ },
+ {
+  "text": " fine,",
+  "startMs": 33840,
+  "endMs": 34240,
+  "timestampMs": 33840,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "so",
+  "startMs": 34320,
+  "endMs": 34560,
+  "timestampMs": 34320,
+  "confidence": null
+ },
+ {
+  "text": " it",
+  "startMs": 34640,
+  "endMs": 34720,
+  "timestampMs": 34640,
+  "confidence": null
+ },
+ {
+  "text": " filters",
+  "startMs": 34800,
+  "endMs": 35120,
+  "timestampMs": 34800,
+  "confidence": null
+ },
+ {
+  "text": " what's",
+  "startMs": 35200,
+  "endMs": 35360,
+  "timestampMs": 35200,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "harmful.",
+  "startMs": 35440,
+  "endMs": 36240,
+  "timestampMs": 35440,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "one",
+  "startMs": 36320,
+  "endMs": 36480,
+  "timestampMs": 36320,
+  "confidence": null
+ },
+ {
+  "text": " problem.",
+  "startMs": 36560,
+  "endMs": 37280,
+  "timestampMs": 36560,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "the",
+  "startMs": 37360,
+  "endMs": 37440,
+  "timestampMs": 37360,
+  "confidence": null
+ },
+ {
+  "text": " sun's",
+  "startMs": 37560,
+  "endMs": 37760,
+  "timestampMs": 37560,
+  "confidence": null
+ },
+ {
+  "text": " gravity",
+  "startMs": 37840,
+  "endMs": 38240,
+  "timestampMs": 37840,
+  "confidence": null
+ },
+ {
+  "text": " is",
+  "startMs": 38320,
+  "endMs": 38480,
+  "timestampMs": 38320,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "twenty-eight",
+  "startMs": 38560,
+  "endMs": 39120,
+  "timestampMs": 38560,
+  "confidence": null
+ },
+ {
+  "text": " times",
+  "startMs": 39360,
+  "endMs": 39600,
+  "timestampMs": 39360,
+  "confidence": null
+ },
+ {
+  "text": " earth's.",
+  "startMs": 39680,
+  "endMs": 40320,
+  "timestampMs": 39680,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "he'd",
+  "startMs": 40360,
+  "endMs": 40560,
+  "timestampMs": 40360,
+  "confidence": null
+ },
+ {
+  "text": " weigh",
+  "startMs": 40640,
+  "endMs": 40720,
+  "timestampMs": 40640,
+  "confidence": null
+ },
+ {
+  "text": " about",
+  "startMs": 40920,
+  "endMs": 41120,
+  "timestampMs": 40920,
+  "confidence": null
+ },
+ {
+  "text": " two",
+  "startMs": 41200,
+  "endMs": 41280,
+  "timestampMs": 41200,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "tonnes",
+  "startMs": 41360,
+  "endMs": 42240,
+  "timestampMs": 41360,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "so",
+  "startMs": 42320,
+  "endMs": 42480,
+  "timestampMs": 42320,
+  "confidence": null
+ },
+ {
+  "text": " he",
+  "startMs": 42720,
+  "endMs": 42960,
+  "timestampMs": 42720,
+  "confidence": null
+ },
+ {
+  "text": " floats",
+  "startMs": 43120,
+  "endMs": 43360,
+  "timestampMs": 43120,
+  "confidence": null
+ },
+ {
+  "text": " on",
+  "startMs": 43440,
+  "endMs": 43520,
+  "timestampMs": 43440,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "blue.",
+  "startMs": 43680,
+  "endMs": 44240,
+  "timestampMs": 43680,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "then",
+  "startMs": 44320,
+  "endMs": 44560,
+  "timestampMs": 44320,
+  "confidence": null
+ },
+ {
+  "text": " he",
+  "startMs": 44720,
+  "endMs": 44800,
+  "timestampMs": 44720,
+  "confidence": null
+ },
+ {
+  "text": " attacks.",
+  "startMs": 45120,
+  "endMs": 45520,
+  "timestampMs": 45120,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "red",
+  "startMs": 45840,
+  "endMs": 46160,
+  "timestampMs": 45840,
+  "confidence": null
+ },
+ {
+  "text": " blasts",
+  "startMs": 46240,
+  "endMs": 46640,
+  "timestampMs": 46240,
+  "confidence": null
+ },
+ {
+  "text": " a",
+  "startMs": 46720,
+  "endMs": 46800,
+  "timestampMs": 46720,
+  "confidence": null
+ },
+ {
+  "text": " crater",
+  "startMs": 46880,
+  "endMs": 47200,
+  "timestampMs": 46880,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "the",
+  "startMs": 47280,
+  "endMs": 47360,
+  "timestampMs": 47280,
+  "confidence": null
+ },
+ {
+  "text": " size",
+  "startMs": 47480,
+  "endMs": 47600,
+  "timestampMs": 47480,
+  "confidence": null
+ },
+ {
+  "text": " of",
+  "startMs": 47680,
+  "endMs": 47733,
+  "timestampMs": 47680,
+  "confidence": null
+ },
+ {
+  "text": " a",
+  "startMs": 47787,
+  "endMs": 47840,
+  "timestampMs": 47787,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "city",
+  "startMs": 47920,
+  "endMs": 48080,
+  "timestampMs": 47920,
+  "confidence": null
+ },
+ {
+  "text": " block",
+  "startMs": 48240,
+  "endMs": 48880,
+  "timestampMs": 48240,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "and",
+  "startMs": 48920,
+  "endMs": 48960,
+  "timestampMs": 48920,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 49040,
+  "endMs": 49120,
+  "timestampMs": 49040,
+  "confidence": null
+ },
+ {
+  "text": " sun",
+  "startMs": 49200,
+  "endMs": 49520,
+  "timestampMs": 49200,
+  "confidence": null
+ },
+ {
+  "text": " fills",
+  "startMs": 49680,
+  "endMs": 49920,
+  "timestampMs": 49680,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "it",
+  "startMs": 50000,
+  "endMs": 50080,
+  "timestampMs": 50000,
+  "confidence": null
+ },
+ {
+  "text": " back",
+  "startMs": 50200,
+  "endMs": 50320,
+  "timestampMs": 50200,
+  "confidence": null
+ },
+ {
+  "text": " in",
+  "startMs": 50400,
+  "endMs": 50560,
+  "timestampMs": 50400,
+  "confidence": null
+ },
+ {
+  "text": " seconds.",
+  "startMs": 50720,
+  "endMs": 51520,
+  "timestampMs": 50720,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "so",
+  "startMs": 51600,
+  "endMs": 51840,
+  "timestampMs": 51600,
+  "confidence": null
+ },
+ {
+  "text": " he",
+  "startMs": 52000,
+  "endMs": 52160,
+  "timestampMs": 52000,
+  "confidence": null
+ },
+ {
+  "text": " goes",
+  "startMs": 52240,
+  "endMs": 52560,
+  "timestampMs": 52240,
+  "confidence": null
+ },
+ {
+  "text": " all",
+  "startMs": 52640,
+  "endMs": 52800,
+  "timestampMs": 52640,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "in.",
+  "startMs": 52880,
+  "endMs": 53280,
+  "timestampMs": 52880,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "hollow",
+  "startMs": 53440,
+  "endMs": 53760,
+  "timestampMs": 53440,
+  "confidence": null
+ },
+ {
+  "text": " purple,",
+  "startMs": 53840,
+  "endMs": 54480,
+  "timestampMs": 53840,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "erasing",
+  "startMs": 54560,
+  "endMs": 55040,
+  "timestampMs": 54560,
+  "confidence": null
+ },
+ {
+  "text": " everything",
+  "startMs": 55120,
+  "endMs": 55600,
+  "timestampMs": 55120,
+  "confidence": null
+ },
+ {
+  "text": " in",
+  "startMs": 55640,
+  "endMs": 55680,
+  "timestampMs": 55640,
+  "confidence": null
+ },
+ {
+  "text": " its",
+  "startMs": 55760,
+  "endMs": 55840,
+  "timestampMs": 55760,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "path.",
+  "startMs": 55920,
+  "endMs": 56560,
+  "timestampMs": 55920,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "it's",
+  "startMs": 56640,
+  "endMs": 56760,
+  "timestampMs": 56640,
+  "confidence": null
+ },
+ {
+  "text": " like",
+  "startMs": 56800,
+  "endMs": 56960,
+  "timestampMs": 56800,
+  "confidence": null
+ },
+ {
+  "text": " poking",
+  "startMs": 57040,
+  "endMs": 57360,
+  "timestampMs": 57040,
+  "confidence": null
+ },
+ {
+  "text": " an",
+  "startMs": 57440,
+  "endMs": 57520,
+  "timestampMs": 57440,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "ocean",
+  "startMs": 57600,
+  "endMs": 57920,
+  "timestampMs": 57600,
+  "confidence": null
+ },
+ {
+  "text": " with",
+  "startMs": 58000,
+  "endMs": 58080,
+  "timestampMs": 58000,
+  "confidence": null
+ },
+ {
+  "text": " a",
+  "startMs": 58120,
+  "endMs": 58160,
+  "timestampMs": 58120,
+  "confidence": null
+ },
+ {
+  "text": " needle.",
+  "startMs": 58240,
+  "endMs": 58960,
+  "timestampMs": 58240,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "domain",
+  "startMs": 59160,
+  "endMs": 59360,
+  "timestampMs": 59160,
+  "confidence": null
+ },
+ {
+  "text": " expansion:",
+  "startMs": 59440,
+  "endMs": 60080,
+  "timestampMs": 59440,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "infinite",
+  "startMs": 60160,
+  "endMs": 60480,
+  "timestampMs": 60160,
+  "confidence": null
+ },
+ {
+  "text": " void",
+  "startMs": 60640,
+  "endMs": 60960,
+  "timestampMs": 60640,
+  "confidence": null
+ },
+ {
+  "text": " floods",
+  "startMs": 61120,
+  "endMs": 61440,
+  "timestampMs": 61120,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 61480,
+  "endMs": 61520,
+  "timestampMs": 61480,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "target's",
+  "startMs": 61600,
+  "endMs": 62000,
+  "timestampMs": 61600,
+  "confidence": null
+ },
+ {
+  "text": " mind",
+  "startMs": 62160,
+  "endMs": 62320,
+  "timestampMs": 62160,
+  "confidence": null
+ },
+ {
+  "text": " with",
+  "startMs": 62440,
+  "endMs": 62560,
+  "timestampMs": 62440,
+  "confidence": null
+ },
+ {
+  "text": " infinite",
+  "startMs": 62640,
+  "endMs": 62960,
+  "timestampMs": 62640,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "information.",
+  "startMs": 63040,
+  "endMs": 64080,
+  "timestampMs": 63040,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "but",
+  "startMs": 64160,
+  "endMs": 64240,
+  "timestampMs": 64160,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 64320,
+  "endMs": 64400,
+  "timestampMs": 64320,
+  "confidence": null
+ },
+ {
+  "text": " sun",
+  "startMs": 64480,
+  "endMs": 65120,
+  "timestampMs": 64480,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "doesn't",
+  "startMs": 65240,
+  "endMs": 65520,
+  "timestampMs": 65240,
+  "confidence": null
+ },
+ {
+  "text": " have",
+  "startMs": 65600,
+  "endMs": 65760,
+  "timestampMs": 65600,
+  "confidence": null
+ },
+ {
+  "text": " a",
+  "startMs": 65800,
+  "endMs": 65840,
+  "timestampMs": 65800,
+  "confidence": null
+ },
+ {
+  "text": " mind.",
+  "startMs": 66000,
+  "endMs": 66560,
+  "timestampMs": 66000,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "so",
+  "startMs": 66680,
+  "endMs": 66800,
+  "timestampMs": 66680,
+  "confidence": null
+ },
+ {
+  "text": " it's",
+  "startMs": 67040,
+  "endMs": 67160,
+  "timestampMs": 67040,
+  "confidence": null
+ },
+ {
+  "text": " a",
+  "startMs": 67200,
+  "endMs": 67280,
+  "timestampMs": 67200,
+  "confidence": null
+ },
+ {
+  "text": " stalemate.",
+  "startMs": 67320,
+  "endMs": 68080,
+  "timestampMs": 67320,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "it",
+  "startMs": 68160,
+  "endMs": 68320,
+  "timestampMs": 68160,
+  "confidence": null
+ },
+ {
+  "text": " can't",
+  "startMs": 68360,
+  "endMs": 68560,
+  "timestampMs": 68360,
+  "confidence": null
+ },
+ {
+  "text": " touch",
+  "startMs": 68680,
+  "endMs": 68800,
+  "timestampMs": 68680,
+  "confidence": null
+ },
+ {
+  "text": " him,",
+  "startMs": 68880,
+  "endMs": 69200,
+  "timestampMs": 68880,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "and",
+  "startMs": 69280,
+  "endMs": 69360,
+  "timestampMs": 69280,
+  "confidence": null
+ },
+ {
+  "text": " he",
+  "startMs": 69480,
+  "endMs": 69600,
+  "timestampMs": 69480,
+  "confidence": null
+ },
+ {
+  "text": " can't",
+  "startMs": 69680,
+  "endMs": 69840,
+  "timestampMs": 69680,
+  "confidence": null
+ },
+ {
+  "text": " put",
+  "startMs": 69920,
+  "endMs": 70000,
+  "timestampMs": 69920,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "it",
+  "startMs": 70080,
+  "endMs": 70160,
+  "timestampMs": 70080,
+  "confidence": null
+ },
+ {
+  "text": " out.",
+  "startMs": 70280,
+  "endMs": 70800,
+  "timestampMs": 70280,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "five",
+  "startMs": 70880,
+  "endMs": 71120,
+  "timestampMs": 70880,
+  "confidence": null
+ },
+ {
+  "text": " billion",
+  "startMs": 71360,
+  "endMs": 71680,
+  "timestampMs": 71360,
+  "confidence": null
+ },
+ {
+  "text": " years",
+  "startMs": 71760,
+  "endMs": 72000,
+  "timestampMs": 71760,
+  "confidence": null
+ },
+ {
+  "text": " later,",
+  "startMs": 72080,
+  "endMs": 72560,
+  "timestampMs": 72080,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "the",
+  "startMs": 72640,
+  "endMs": 72800,
+  "timestampMs": 72640,
+  "confidence": null
+ },
+ {
+  "text": " sun",
+  "startMs": 73000,
+  "endMs": 73200,
+  "timestampMs": 73000,
+  "confidence": null
+ },
+ {
+  "text": " swells",
+  "startMs": 73320,
+  "endMs": 73680,
+  "timestampMs": 73320,
+  "confidence": null
+ },
+ {
+  "text": " into",
+  "startMs": 73800,
+  "endMs": 73920,
+  "timestampMs": 73800,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "a",
+  "startMs": 74000,
+  "endMs": 74080,
+  "timestampMs": 74000,
+  "confidence": null
+ },
+ {
+  "text": " red",
+  "startMs": 74200,
+  "endMs": 74320,
+  "timestampMs": 74200,
+  "confidence": null
+ },
+ {
+  "text": " giant",
+  "startMs": 74400,
+  "endMs": 75120,
+  "timestampMs": 74400,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "and",
+  "startMs": 75200,
+  "endMs": 75280,
+  "timestampMs": 75200,
+  "confidence": null
+ },
+ {
+  "text": " gojo's",
+  "startMs": 75360,
+  "endMs": 75840,
+  "timestampMs": 75360,
+  "confidence": null
+ },
+ {
+  "text": " still",
+  "startMs": 76000,
+  "endMs": 76160,
+  "timestampMs": 76000,
+  "confidence": null
+ },
+ {
+  "text": " there.",
+  "startMs": 76240,
+  "endMs": 76880,
+  "timestampMs": 76240,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "so",
+  "startMs": 77120,
+  "endMs": 77360,
+  "timestampMs": 77120,
+  "confidence": null
+ },
+ {
+  "text": " who",
+  "startMs": 77440,
+  "endMs": 77680,
+  "timestampMs": 77440,
+  "confidence": null
+ },
+ {
+  "text": " really",
+  "startMs": 77760,
+  "endMs": 78000,
+  "timestampMs": 77760,
+  "confidence": null
+ },
+ {
+  "text": " wins?",
+  "startMs": 78080,
+  "endMs": 78800,
+  "timestampMs": 78080,
+  "confidence": null,
+  "pageBreakAfter": true
+ }
+]
