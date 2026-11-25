@@ -20,8 +20,8 @@ const RED_K = ['slasher', 'butcher', 'trapmaker', 'chudail', 'rakshasa', 'pret']
 const RED_F = [[-13, 6], [-10.5, 3.2], [-8, 6.6], [-5.6, 3.8], [-11.8, 9.6], [-7.3, 10]];
 const BLUE_F = [[13, 5], [10.5, 2.4], [8, 5.6], [5.6, 3], [11.8, 8.6], [7.3, 9]];
 const HERO_R = [[-10, 4], [-6, 4], [-2, 4], [-12, 7], [-8, 7], [-4, 7]], HERO_B = [[10, 4], [6, 4], [2, 4], [12, 7], [8, 7], [4, 7]];
-const CFG = { slasher: { d: 6.2, ly: 1.35 }, butcher: { d: 6.8, ly: 1.4 }, trapmaker: { d: 6.6, ly: 1.5 }, chudail: { d: 6.2, ly: 1.5 }, rakshasa: { d: 9.8, ly: 2.0 }, pret: { d: 5.8, ly: 1.2 },
-  werewolf: { d: 7.8, ly: 1.7 }, vampire: { d: 6.4, ly: 1.4 }, giant: { d: 9.4, ly: 1.9 }, vetala: { d: 6.8, ly: 1.6 }, nagin: { d: 6.6, ly: 1.5 }, mummy: { d: 6.4, ly: 1.4 } };
+const CFG = { slasher: { d: 6.2, ly: 1.35 }, butcher: { d: 6.8, ly: 1.4 }, trapmaker: { d: 7.2, ly: 1.6 }, chudail: { d: 7.4, ly: 1.75 }, rakshasa: { d: 9.8, ly: 2.0 }, pret: { d: 6.6, ly: 1.3 },
+  werewolf: { d: 7.8, ly: 1.7 }, vampire: { d: 6.4, ly: 1.4 }, giant: { d: 9.4, ly: 1.9 }, vetala: { d: 7.6, ly: 1.7 }, nagin: { d: 6.6, ly: 1.5 }, mummy: { d: 6.4, ly: 1.4 } };
 const kindOf = (team, i) => (team === 'r' ? RED_K : BLUE_K)[i];
 const HOVER = new Set(['chudail', 'vetala']);
 const heroOf = (S) => (S.id.startsWith('hr') ? { team: 'r', i: +S.id[2] } : S.id.startsWith('hb') ? { team: 'b', i: +S.id[2] } : null);
@@ -154,7 +154,7 @@ export const crowdAt = (f) => {
   if (id === 'bluecome') return [...squad(f, 'r', {}), ...squad(f, 'b', { adv: () => -10 * (1 - smooth(clamp(t * 1.15))), walk: true })];
   if (h) {
     const [hx, hz] = heroBase(h), kind = kindOf(h.team, h.i), tt = t, wt = clamp(tt / 0.5), act = ramp(tt, 0.5, 0.92);
-    const camX = h.team === 'r' ? hx : hx; const z = hz + 3.2 * (1 - smooth(wt)), hover = HOVER.has(kind);
+    const camX = h.team === 'r' ? hx : hx; const z = hz + 1.4 * (1 - smooth(wt)), hover = HOVER.has(kind);
     const walkAmp = hover ? 0 : 0.95 * (1 - smooth(ramp(tt, 0.38, 0.52)));
     const pose = { walk: walkPhase(f), amp: walkAmp, lean: 0, roar: 0, atk: 0 };
     if (kind === 'slasher') pose.atk = act; if (kind === 'butcher') pose.roar = act * 0.7; if (kind === 'trapmaker') pose.roar = act * 0.3; if (kind === 'chudail') pose.lean = -0.12 * act;
