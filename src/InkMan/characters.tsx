@@ -11,6 +11,7 @@ export type CharacterDef = {
   headSlot?: React.ReactNode;
   handLSlot?: React.ReactNode;
   handRSlot?: React.ReactNode;
+  backSlot?: React.ReactNode;
   props: string[]; // listed so the 3-prop limit is easy to check
   pose: (t: number) => Pose;
 };
@@ -100,6 +101,27 @@ const Blindfold: React.FC = () => (
   </mesh>
 );
 
+// Saitama prop 1: white cape hanging from the shoulders (inside the chest
+// group, origin at the top of the pelvis). `sway` lets shots animate it.
+export const Cape: React.FC<{ sway?: number }> = ({ sway = 0 }) => (
+  <group position={[0, 0.43, 0.085]} rotation={[0.04 + sway, 0, 0]}>
+    <mesh position={[0, -0.42, 0]} castShadow>
+      <cylinderGeometry
+        args={[0.225, 0.32, 0.86, 18, 1, true, Math.PI - 1.2, 2.4]}
+      />
+      <meshPhysicalMaterial color="#F4F4F1" roughness={0.7} side={2} />
+    </mesh>
+  </group>
+);
+
+// Saitama props 2 & 3: red gloves over the hands.
+export const Glove: React.FC = () => (
+  <mesh position={[0, -0.005, 0]} castShadow>
+    <boxGeometry args={[0.074, 0.11, 0.09]} />
+    <meshPhysicalMaterial color="#C9222A" roughness={0.45} clearcoat={0.4} />
+  </mesh>
+);
+
 // Props 2 & 3: an apple resting on each palm.
 export const Apple: React.FC<{
   baked?: boolean;
@@ -173,7 +195,34 @@ export const CHARACTERS = {
       };
     },
   },
+  saitama: {
+    name: "Saitama",
+    skin: {
+      skin: "#F0D9C2",
+      jacket: "#F2C21B",
+      pants: "#EDBB15",
+      shirt: "#F2C21B", // one-piece yellow suit, no shirt V
+      tie: null,
+      shoes: "#C9222A",
+    },
+    // the bored stare: half-shut eyes, flat mouth
+    face: { ...NEUTRAL, eyeOpen: 0.5 },
+    handLSlot: <Glove />,
+    handRSlot: <Glove />,
+    backSlot: <Cape />,
+    props: ["cape", "glove", "glove"],
+    pose: (t: number) => ({ ...idlePose(t), headPitch: -0.03 }),
+  },
 } satisfies Record<string, CharacterDef>;
+
+// Saitama's serious face (decal swap) for the Serious Punch.
+export const SAITAMA_SERIOUS: FaceState = {
+  ...NEUTRAL,
+  eyeOpen: 0.85,
+  browTilt: -0.35,
+  browLift: -8,
+  mouth: "frown",
+};
 
 export type CharacterId = keyof typeof CHARACTERS;
 export const CHARACTER_IDS = Object.keys(CHARACTERS) as [

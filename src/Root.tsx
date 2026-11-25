@@ -16,6 +16,12 @@ import { DeepDive, DEEP_DIVE_DURATION } from "./DeepDive/DeepDive";
 import { deepDiveDefaults, deepDiveSchema } from "./DeepDive/schema";
 import { HelloWorld } from "./HelloWorld";
 import {
+  SAITAMA_DURATION,
+  SAITAMA_FPS,
+  SaitamaVsMoon,
+  saitamaSchema,
+} from "./InkMan/SaitamaVsMoon/SaitamaVsMoon";
+import {
   GOJO_VS_SUN_DURATION,
   GOJO_VS_SUN_FPS,
   GojoVsSun,
@@ -133,6 +139,19 @@ export const RemotionRoot: React.FC = () => {
           fps={GOJO_VS_SUN_FPS}
           width={1080}
           height={1920}
+        />
+        <Composition
+          id="SaitamaVsMoon"
+          component={SaitamaVsMoon}
+          durationInFrames={SAITAMA_DURATION}
+          fps={SAITAMA_FPS}
+          width={1080}
+          height={1920}
+          schema={saitamaSchema}
+          defaultProps={{
+            voiceFile: "inkman/saitama-vs-moon/voiceover-draft.mp3",
+            captionsFile: "inkman/saitama-vs-moon/voiceover-draft.json",
+          }}
         />
         <Composition
           id="SunEnvironment"

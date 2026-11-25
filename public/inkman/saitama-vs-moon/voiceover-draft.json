@@ -1,0 +1,1356 @@
+[
+ {
+  "text": "what",
+  "startMs": 261,
+  "endMs": 391,
+  "timestampMs": 261,
+  "confidence": null
+ },
+ {
+  "text": " if",
+  "startMs": 391,
+  "endMs": 522,
+  "timestampMs": 391,
+  "confidence": null
+ },
+ {
+  "text": " saitama",
+  "startMs": 522,
+  "endMs": 913,
+  "timestampMs": 522,
+  "confidence": null
+ },
+ {
+  "text": " punched",
+  "startMs": 913,
+  "endMs": 1163,
+  "timestampMs": 913,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "the",
+  "startMs": 1163,
+  "endMs": 1239,
+  "timestampMs": 1163,
+  "confidence": null
+ },
+ {
+  "text": " moon",
+  "startMs": 1239,
+  "endMs": 1761,
+  "timestampMs": 1239,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "the",
+  "startMs": 2343,
+  "endMs": 2430,
+  "timestampMs": 2343,
+  "confidence": null
+ },
+ {
+  "text": " moon",
+  "startMs": 2430,
+  "endMs": 2735,
+  "timestampMs": 2430,
+  "confidence": null
+ },
+ {
+  "text": " is",
+  "startMs": 2735,
+  "endMs": 2877,
+  "timestampMs": 2735,
+  "confidence": null
+ },
+ {
+  "text": " three",
+  "startMs": 2877,
+  "endMs": 3083,
+  "timestampMs": 2877,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "thousand",
+  "startMs": 3083,
+  "endMs": 3419,
+  "timestampMs": 3083,
+  "confidence": null
+ },
+ {
+  "text": " four",
+  "startMs": 3419,
+  "endMs": 3648,
+  "timestampMs": 3419,
+  "confidence": null
+ },
+ {
+  "text": " hundred",
+  "startMs": 3648,
+  "endMs": 3930,
+  "timestampMs": 3648,
+  "confidence": null
+ },
+ {
+  "text": " kilometers",
+  "startMs": 3930,
+  "endMs": 4442,
+  "timestampMs": 3930,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "wide",
+  "startMs": 4442,
+  "endMs": 5017,
+  "timestampMs": 4442,
+  "confidence": null
+ },
+ {
+  "text": " and",
+  "startMs": 5104,
+  "endMs": 5213,
+  "timestampMs": 5104,
+  "confidence": null
+ },
+ {
+  "text": " weighs",
+  "startMs": 5213,
+  "endMs": 5485,
+  "timestampMs": 5213,
+  "confidence": null
+ },
+ {
+  "text": " about",
+  "startMs": 5485,
+  "endMs": 5898,
+  "timestampMs": 5485,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "seventy-three",
+  "startMs": 5898,
+  "endMs": 6517,
+  "timestampMs": 5898,
+  "confidence": null
+ },
+ {
+  "text": " quintillion",
+  "startMs": 6517,
+  "endMs": 7061,
+  "timestampMs": 6517,
+  "confidence": null
+ },
+ {
+  "text": " tonnes",
+  "startMs": 7061,
+  "endMs": 7691,
+  "timestampMs": 7061,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "it",
+  "startMs": 8252,
+  "endMs": 8361,
+  "timestampMs": 8252,
+  "confidence": null
+ },
+ {
+  "text": " floats",
+  "startMs": 8361,
+  "endMs": 8654,
+  "timestampMs": 8361,
+  "confidence": null
+ },
+ {
+  "text": " three",
+  "startMs": 8654,
+  "endMs": 8861,
+  "timestampMs": 8654,
+  "confidence": null
+ },
+ {
+  "text": " hundred",
+  "startMs": 8861,
+  "endMs": 9198,
+  "timestampMs": 8861,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "eighty-four",
+  "startMs": 9198,
+  "endMs": 9677,
+  "timestampMs": 9198,
+  "confidence": null
+ },
+ {
+  "text": " thousand",
+  "startMs": 9677,
+  "endMs": 10035,
+  "timestampMs": 9677,
+  "confidence": null
+ },
+ {
+  "text": " kilometers",
+  "startMs": 10035,
+  "endMs": 10578,
+  "timestampMs": 10035,
+  "confidence": null
+ },
+ {
+  "text": " away",
+  "startMs": 10578,
+  "endMs": 11143,
+  "timestampMs": 10578,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "but",
+  "startMs": 11704,
+  "endMs": 11813,
+  "timestampMs": 11704,
+  "confidence": null
+ },
+ {
+  "text": " saitama",
+  "startMs": 11813,
+  "endMs": 12291,
+  "timestampMs": 11813,
+  "confidence": null
+ },
+ {
+  "text": " has",
+  "startMs": 12291,
+  "endMs": 12465,
+  "timestampMs": 12291,
+  "confidence": null
+ },
+ {
+  "text": " been",
+  "startMs": 12465,
+  "endMs": 12617,
+  "timestampMs": 12465,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "there",
+  "startMs": 12617,
+  "endMs": 12791,
+  "timestampMs": 12617,
+  "confidence": null
+ },
+ {
+  "text": " before",
+  "startMs": 12791,
+  "endMs": 13443,
+  "timestampMs": 12791,
+  "confidence": null
+ },
+ {
+  "text": " when",
+  "startMs": 13530,
+  "endMs": 13661,
+  "timestampMs": 13530,
+  "confidence": null
+ },
+ {
+  "text": " boros",
+  "startMs": 13661,
+  "endMs": 14139,
+  "timestampMs": 13661,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "kicked",
+  "startMs": 14139,
+  "endMs": 14346,
+  "timestampMs": 14139,
+  "confidence": null
+ },
+ {
+  "text": " him",
+  "startMs": 14346,
+  "endMs": 14465,
+  "timestampMs": 14346,
+  "confidence": null
+ },
+ {
+  "text": " to",
+  "startMs": 14465,
+  "endMs": 14541,
+  "timestampMs": 14465,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 14541,
+  "endMs": 14639,
+  "timestampMs": 14541,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "moon",
+  "startMs": 14639,
+  "endMs": 15009,
+  "timestampMs": 14639,
+  "confidence": null
+ },
+ {
+  "text": " he",
+  "startMs": 15074,
+  "endMs": 15183,
+  "timestampMs": 15074,
+  "confidence": null
+ },
+ {
+  "text": " just",
+  "startMs": 15183,
+  "endMs": 15378,
+  "timestampMs": 15183,
+  "confidence": null
+ },
+ {
+  "text": " jumped",
+  "startMs": 15378,
+  "endMs": 15639,
+  "timestampMs": 15378,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "back",
+  "startMs": 15639,
+  "endMs": 16117,
+  "timestampMs": 15639,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "his",
+  "startMs": 16678,
+  "endMs": 16819,
+  "timestampMs": 16678,
+  "confidence": null
+ },
+ {
+  "text": " secret",
+  "startMs": 16819,
+  "endMs": 17352,
+  "timestampMs": 16819,
+  "confidence": null
+ },
+ {
+  "text": " one",
+  "startMs": 17450,
+  "endMs": 17613,
+  "timestampMs": 17450,
+  "confidence": null
+ },
+ {
+  "text": " hundred",
+  "startMs": 17613,
+  "endMs": 17917,
+  "timestampMs": 17613,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "push-ups",
+  "startMs": 17917,
+  "endMs": 18309,
+  "timestampMs": 17917,
+  "confidence": null
+ },
+ {
+  "text": " one",
+  "startMs": 18352,
+  "endMs": 18504,
+  "timestampMs": 18352,
+  "confidence": null
+ },
+ {
+  "text": " hundred",
+  "startMs": 18504,
+  "endMs": 18819,
+  "timestampMs": 18504,
+  "confidence": null
+ },
+ {
+  "text": " sit-ups",
+  "startMs": 18819,
+  "endMs": 19200,
+  "timestampMs": 18819,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "one",
+  "startMs": 19265,
+  "endMs": 19439,
+  "timestampMs": 19265,
+  "confidence": null
+ },
+ {
+  "text": " hundred",
+  "startMs": 19439,
+  "endMs": 19743,
+  "timestampMs": 19439,
+  "confidence": null
+ },
+ {
+  "text": " squats",
+  "startMs": 19743,
+  "endMs": 20113,
+  "timestampMs": 19743,
+  "confidence": null
+ },
+ {
+  "text": " and",
+  "startMs": 20145,
+  "endMs": 20233,
+  "timestampMs": 20145,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "a",
+  "startMs": 20233,
+  "endMs": 20297,
+  "timestampMs": 20233,
+  "confidence": null
+ },
+ {
+  "text": " ten",
+  "startMs": 20297,
+  "endMs": 20526,
+  "timestampMs": 20297,
+  "confidence": null
+ },
+ {
+  "text": " kilometer",
+  "startMs": 20526,
+  "endMs": 21026,
+  "timestampMs": 20526,
+  "confidence": null
+ },
+ {
+  "text": " run",
+  "startMs": 21026,
+  "endMs": 21504,
+  "timestampMs": 21026,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "every",
+  "startMs": 21624,
+  "endMs": 21906,
+  "timestampMs": 21624,
+  "confidence": null
+ },
+ {
+  "text": " single",
+  "startMs": 21906,
+  "endMs": 22243,
+  "timestampMs": 21906,
+  "confidence": null
+ },
+ {
+  "text": " day",
+  "startMs": 22243,
+  "endMs": 22743,
+  "timestampMs": 22243,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "up",
+  "startMs": 23326,
+  "endMs": 23478,
+  "timestampMs": 23326,
+  "confidence": null
+ },
+ {
+  "text": " here",
+  "startMs": 23478,
+  "endMs": 23717,
+  "timestampMs": 23478,
+  "confidence": null
+ },
+ {
+  "text": " gravity",
+  "startMs": 23761,
+  "endMs": 24152,
+  "timestampMs": 23761,
+  "confidence": null
+ },
+ {
+  "text": " is",
+  "startMs": 24152,
+  "endMs": 24283,
+  "timestampMs": 24152,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "only",
+  "startMs": 24283,
+  "endMs": 24543,
+  "timestampMs": 24283,
+  "confidence": null
+ },
+ {
+  "text": " one",
+  "startMs": 24543,
+  "endMs": 24750,
+  "timestampMs": 24543,
+  "confidence": null
+ },
+ {
+  "text": " sixth",
+  "startMs": 24750,
+  "endMs": 24989,
+  "timestampMs": 24750,
+  "confidence": null
+ },
+ {
+  "text": " of",
+  "startMs": 24989,
+  "endMs": 25087,
+  "timestampMs": 24989,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "earth's",
+  "startMs": 25087,
+  "endMs": 25587,
+  "timestampMs": 25087,
+  "confidence": null
+ },
+ {
+  "text": " so",
+  "startMs": 25674,
+  "endMs": 25837,
+  "timestampMs": 25674,
+  "confidence": null
+ },
+ {
+  "text": " every",
+  "startMs": 25837,
+  "endMs": 26141,
+  "timestampMs": 25837,
+  "confidence": null
+ },
+ {
+  "text": " step",
+  "startMs": 26141,
+  "endMs": 26435,
+  "timestampMs": 26141,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "is",
+  "startMs": 26435,
+  "endMs": 26532,
+  "timestampMs": 26435,
+  "confidence": null
+ },
+ {
+  "text": " a",
+  "startMs": 26532,
+  "endMs": 26619,
+  "timestampMs": 26532,
+  "confidence": null
+ },
+ {
+  "text": " giant",
+  "startMs": 26619,
+  "endMs": 26913,
+  "timestampMs": 26619,
+  "confidence": null
+ },
+ {
+  "text": " leap",
+  "startMs": 26913,
+  "endMs": 27370,
+  "timestampMs": 26913,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "and",
+  "startMs": 27930,
+  "endMs": 28050,
+  "timestampMs": 27930,
+  "confidence": null
+ },
+ {
+  "text": " there's",
+  "startMs": 28050,
+  "endMs": 28235,
+  "timestampMs": 28050,
+  "confidence": null
+ },
+ {
+  "text": " no",
+  "startMs": 28235,
+  "endMs": 28474,
+  "timestampMs": 28235,
+  "confidence": null
+ },
+ {
+  "text": " air",
+  "startMs": 28474,
+  "endMs": 28865,
+  "timestampMs": 28474,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "so",
+  "startMs": 28952,
+  "endMs": 29104,
+  "timestampMs": 28952,
+  "confidence": null
+ },
+ {
+  "text": " nobody",
+  "startMs": 29104,
+  "endMs": 29409,
+  "timestampMs": 29104,
+  "confidence": null
+ },
+ {
+  "text": " can",
+  "startMs": 29409,
+  "endMs": 29517,
+  "timestampMs": 29409,
+  "confidence": null
+ },
+ {
+  "text": " hear",
+  "startMs": 29517,
+  "endMs": 29680,
+  "timestampMs": 29517,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "a",
+  "startMs": 29680,
+  "endMs": 29745,
+  "timestampMs": 29680,
+  "confidence": null
+ },
+ {
+  "text": " thing",
+  "startMs": 29745,
+  "endMs": 30257,
+  "timestampMs": 29745,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "to",
+  "startMs": 30817,
+  "endMs": 30915,
+  "timestampMs": 30817,
+  "confidence": null
+ },
+ {
+  "text": " shatter",
+  "startMs": 30915,
+  "endMs": 31209,
+  "timestampMs": 30915,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 31209,
+  "endMs": 31317,
+  "timestampMs": 31209,
+  "confidence": null
+ },
+ {
+  "text": " moon",
+  "startMs": 31317,
+  "endMs": 31861,
+  "timestampMs": 31317,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "you'd",
+  "startMs": 31948,
+  "endMs": 32100,
+  "timestampMs": 31948,
+  "confidence": null
+ },
+ {
+  "text": " need",
+  "startMs": 32100,
+  "endMs": 32263,
+  "timestampMs": 32100,
+  "confidence": null
+ },
+ {
+  "text": " about",
+  "startMs": 32263,
+  "endMs": 32523,
+  "timestampMs": 32263,
+  "confidence": null
+ },
+ {
+  "text": " two",
+  "startMs": 32523,
+  "endMs": 32709,
+  "timestampMs": 32523,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "hundred",
+  "startMs": 32709,
+  "endMs": 33013,
+  "timestampMs": 32709,
+  "confidence": null
+ },
+ {
+  "text": " million",
+  "startMs": 33013,
+  "endMs": 33361,
+  "timestampMs": 33013,
+  "confidence": null
+ },
+ {
+  "text": " years",
+  "startMs": 33361,
+  "endMs": 33665,
+  "timestampMs": 33361,
+  "confidence": null
+ },
+ {
+  "text": " of",
+  "startMs": 33665,
+  "endMs": 33784,
+  "timestampMs": 33665,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "all",
+  "startMs": 33784,
+  "endMs": 34002,
+  "timestampMs": 33784,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 34002,
+  "endMs": 34132,
+  "timestampMs": 34002,
+  "confidence": null
+ },
+ {
+  "text": " energy",
+  "startMs": 34132,
+  "endMs": 34513,
+  "timestampMs": 34132,
+  "confidence": null
+ },
+ {
+  "text": " humanity",
+  "startMs": 34513,
+  "endMs": 35013,
+  "timestampMs": 34513,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "uses",
+  "startMs": 35013,
+  "endMs": 35687,
+  "timestampMs": 35013,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "so",
+  "startMs": 36270,
+  "endMs": 36378,
+  "timestampMs": 36270,
+  "confidence": null
+ },
+ {
+  "text": " saitama",
+  "startMs": 36378,
+  "endMs": 36791,
+  "timestampMs": 36378,
+  "confidence": null
+ },
+ {
+  "text": " gets",
+  "startMs": 36791,
+  "endMs": 36965,
+  "timestampMs": 36791,
+  "confidence": null
+ },
+ {
+  "text": " serious",
+  "startMs": 36965,
+  "endMs": 37617,
+  "timestampMs": 36965,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "serious",
+  "startMs": 38222,
+  "endMs": 38548,
+  "timestampMs": 38222,
+  "confidence": null
+ },
+ {
+  "text": " series",
+  "startMs": 38548,
+  "endMs": 38983,
+  "timestampMs": 38548,
+  "confidence": null
+ },
+ {
+  "text": " serious",
+  "startMs": 39091,
+  "endMs": 39461,
+  "timestampMs": 39091,
+  "confidence": null
+ },
+ {
+  "text": " punch",
+  "startMs": 39461,
+  "endMs": 39983,
+  "timestampMs": 39461,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "the",
+  "startMs": 40565,
+  "endMs": 40652,
+  "timestampMs": 40565,
+  "confidence": null
+ },
+ {
+  "text": " moon",
+  "startMs": 40652,
+  "endMs": 40913,
+  "timestampMs": 40652,
+  "confidence": null
+ },
+ {
+  "text": " cracks",
+  "startMs": 40913,
+  "endMs": 41217,
+  "timestampMs": 40913,
+  "confidence": null
+ },
+ {
+  "text": " open",
+  "startMs": 41217,
+  "endMs": 41609,
+  "timestampMs": 41217,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "and",
+  "startMs": 41728,
+  "endMs": 41826,
+  "timestampMs": 41728,
+  "confidence": null
+ },
+ {
+  "text": " breaks",
+  "startMs": 41826,
+  "endMs": 42109,
+  "timestampMs": 41826,
+  "confidence": null
+ },
+ {
+  "text": " apart",
+  "startMs": 42109,
+  "endMs": 42674,
+  "timestampMs": 42109,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "scientists",
+  "startMs": 43278,
+  "endMs": 43713,
+  "timestampMs": 43278,
+  "confidence": null
+ },
+ {
+  "text": " think",
+  "startMs": 43713,
+  "endMs": 43887,
+  "timestampMs": 43713,
+  "confidence": null
+ },
+ {
+  "text": " a",
+  "startMs": 43887,
+  "endMs": 43996,
+  "timestampMs": 43887,
+  "confidence": null
+ },
+ {
+  "text": " shattered",
+  "startMs": 43996,
+  "endMs": 44387,
+  "timestampMs": 43996,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "moon",
+  "startMs": 44387,
+  "endMs": 44670,
+  "timestampMs": 44387,
+  "confidence": null
+ },
+ {
+  "text": " would",
+  "startMs": 44670,
+  "endMs": 44810,
+  "timestampMs": 44670,
+  "confidence": null
+ },
+ {
+  "text": " form",
+  "startMs": 44810,
+  "endMs": 45039,
+  "timestampMs": 44810,
+  "confidence": null
+ },
+ {
+  "text": " a",
+  "startMs": 45039,
+  "endMs": 45137,
+  "timestampMs": 45039,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "ring",
+  "startMs": 45137,
+  "endMs": 45365,
+  "timestampMs": 45137,
+  "confidence": null
+ },
+ {
+  "text": " around",
+  "startMs": 45365,
+  "endMs": 45680,
+  "timestampMs": 45365,
+  "confidence": null
+ },
+ {
+  "text": " earth",
+  "startMs": 45680,
+  "endMs": 46191,
+  "timestampMs": 45680,
+  "confidence": null
+ },
+ {
+  "text": " and",
+  "startMs": 46278,
+  "endMs": 46387,
+  "timestampMs": 46278,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "some",
+  "startMs": 46387,
+  "endMs": 46583,
+  "timestampMs": 46387,
+  "confidence": null
+ },
+ {
+  "text": " pieces",
+  "startMs": 46583,
+  "endMs": 46930,
+  "timestampMs": 46583,
+  "confidence": null
+ },
+ {
+  "text": " would",
+  "startMs": 46930,
+  "endMs": 47061,
+  "timestampMs": 46930,
+  "confidence": null
+ },
+ {
+  "text": " rain",
+  "startMs": 47061,
+  "endMs": 47300,
+  "timestampMs": 47061,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "down",
+  "startMs": 47300,
+  "endMs": 47561,
+  "timestampMs": 47300,
+  "confidence": null
+ },
+ {
+  "text": " for",
+  "startMs": 47561,
+  "endMs": 47702,
+  "timestampMs": 47561,
+  "confidence": null
+ },
+ {
+  "text": " years",
+  "startMs": 47702,
+  "endMs": 48343,
+  "timestampMs": 47702,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "without",
+  "startMs": 48904,
+  "endMs": 49165,
+  "timestampMs": 48904,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 49165,
+  "endMs": 49252,
+  "timestampMs": 49165,
+  "confidence": null
+ },
+ {
+  "text": " moon",
+  "startMs": 49252,
+  "endMs": 49752,
+  "timestampMs": 49252,
+  "confidence": null
+ },
+ {
+  "text": " our",
+  "startMs": 49839,
+  "endMs": 49980,
+  "timestampMs": 49839,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "tides",
+  "startMs": 49980,
+  "endMs": 50350,
+  "timestampMs": 49980,
+  "confidence": null
+ },
+ {
+  "text": " would",
+  "startMs": 50350,
+  "endMs": 50480,
+  "timestampMs": 50350,
+  "confidence": null
+ },
+ {
+  "text": " shrink",
+  "startMs": 50480,
+  "endMs": 50730,
+  "timestampMs": 50480,
+  "confidence": null
+ },
+ {
+  "text": " by",
+  "startMs": 50730,
+  "endMs": 50883,
+  "timestampMs": 50730,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "about",
+  "startMs": 50883,
+  "endMs": 51132,
+  "timestampMs": 50883,
+  "confidence": null
+ },
+ {
+  "text": " two",
+  "startMs": 51132,
+  "endMs": 51328,
+  "timestampMs": 51132,
+  "confidence": null
+ },
+ {
+  "text": " thirds",
+  "startMs": 51328,
+  "endMs": 51883,
+  "timestampMs": 51328,
+  "confidence": null
+ },
+ {
+  "text": " and",
+  "startMs": 51970,
+  "endMs": 52078,
+  "timestampMs": 51970,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "nights",
+  "startMs": 52078,
+  "endMs": 52371,
+  "timestampMs": 52078,
+  "confidence": null
+ },
+ {
+  "text": " would",
+  "startMs": 52371,
+  "endMs": 52470,
+  "timestampMs": 52371,
+  "confidence": null
+ },
+ {
+  "text": " get",
+  "startMs": 52470,
+  "endMs": 52589,
+  "timestampMs": 52470,
+  "confidence": null
+ },
+ {
+  "text": " a",
+  "startMs": 52589,
+  "endMs": 52665,
+  "timestampMs": 52589,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "lot",
+  "startMs": 52665,
+  "endMs": 52904,
+  "timestampMs": 52665,
+  "confidence": null
+ },
+ {
+  "text": " darker",
+  "startMs": 52904,
+  "endMs": 53513,
+  "timestampMs": 52904,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "saitama",
+  "startMs": 54117,
+  "endMs": 54563,
+  "timestampMs": 54117,
+  "confidence": null
+ },
+ {
+  "text": " looks",
+  "startMs": 54563,
+  "endMs": 54758,
+  "timestampMs": 54563,
+  "confidence": null
+ },
+ {
+  "text": " at",
+  "startMs": 54758,
+  "endMs": 54823,
+  "timestampMs": 54758,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 54823,
+  "endMs": 54900,
+  "timestampMs": 54823,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "mess",
+  "startMs": 54900,
+  "endMs": 55117,
+  "timestampMs": 54900,
+  "confidence": null
+ },
+ {
+  "text": " he",
+  "startMs": 55117,
+  "endMs": 55226,
+  "timestampMs": 55117,
+  "confidence": null
+ },
+ {
+  "text": " made",
+  "startMs": 55226,
+  "endMs": 55726,
+  "timestampMs": 55226,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "then",
+  "startMs": 56330,
+  "endMs": 56439,
+  "timestampMs": 56330,
+  "confidence": null
+ },
+ {
+  "text": " remembers",
+  "startMs": 56439,
+  "endMs": 56819,
+  "timestampMs": 56439,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 56819,
+  "endMs": 56906,
+  "timestampMs": 56819,
+  "confidence": null
+ },
+ {
+  "text": " supermarket",
+  "startMs": 56906,
+  "endMs": 57450,
+  "timestampMs": 56906,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "sale",
+  "startMs": 57450,
+  "endMs": 57841,
+  "timestampMs": 57450,
+  "confidence": null
+ },
+ {
+  "text": " ends",
+  "startMs": 57841,
+  "endMs": 58157,
+  "timestampMs": 57841,
+  "confidence": null
+ },
+ {
+  "text": " in",
+  "startMs": 58157,
+  "endMs": 58287,
+  "timestampMs": 58157,
+  "confidence": null
+ },
+ {
+  "text": " ten",
+  "startMs": 58287,
+  "endMs": 58504,
+  "timestampMs": 58287,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "minutes",
+  "startMs": 58504,
+  "endMs": 59048,
+  "timestampMs": 58504,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "so",
+  "startMs": 59609,
+  "endMs": 59739,
+  "timestampMs": 59609,
+  "confidence": null
+ },
+ {
+  "text": " he",
+  "startMs": 59739,
+  "endMs": 59880,
+  "timestampMs": 59739,
+  "confidence": null
+ },
+ {
+  "text": " jumps",
+  "startMs": 59880,
+  "endMs": 60196,
+  "timestampMs": 59880,
+  "confidence": null
+ },
+ {
+  "text": " home",
+  "startMs": 60196,
+  "endMs": 60717,
+  "timestampMs": 60196,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "one",
+  "startMs": 61322,
+  "endMs": 61517,
+  "timestampMs": 61322,
+  "confidence": null
+ },
+ {
+  "text": " punch",
+  "startMs": 61517,
+  "endMs": 61800,
+  "timestampMs": 61517,
+  "confidence": null
+ },
+ {
+  "text": " that's",
+  "startMs": 61887,
+  "endMs": 62104,
+  "timestampMs": 61887,
+  "confidence": null
+ },
+ {
+  "text": " all",
+  "startMs": 62104,
+  "endMs": 62246,
+  "timestampMs": 62104,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "it",
+  "startMs": 62246,
+  "endMs": 62322,
+  "timestampMs": 62246,
+  "confidence": null
+ },
+ {
+  "text": " took",
+  "startMs": 62322,
+  "endMs": 62778,
+  "timestampMs": 62322,
+  "confidence": null,
+  "pageBreakAfter": true
+ }
+]

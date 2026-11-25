@@ -78,6 +78,7 @@ const Actor: React.FC<{ id: CharacterId; t: number; blink: number }> = ({
       headSlot={c.headSlot}
       handLSlot={c.handLSlot}
       handRSlot={c.handRSlot}
+      backSlot={c.backSlot}
     />
   );
 };
