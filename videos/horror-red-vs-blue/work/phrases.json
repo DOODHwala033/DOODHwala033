@@ -1,0 +1,143 @@
+{
+ "duration": 28.703,
+ "frames30": 861,
+ "source": "kokoro-onnx am_onyx (sentence-exact)",
+ "segments": [],
+ "phrases": [
+  {
+   "text": "Tonight,",
+   "s": 0.2,
+   "e": 0.641
+  },
+  {
+   "text": "you are not alone.",
+   "s": 0.751,
+   "e": 1.854
+  },
+  {
+   "text": "Twelve monsters.",
+   "s": 2.008,
+   "e": 3.17
+  },
+  {
+   "text": "Two teams.",
+   "s": 3.324,
+   "e": 4.29
+  },
+  {
+   "text": "One house.",
+   "s": 4.444,
+   "e": 5.299
+  },
+  {
+   "text": "Team red is coming for you.",
+   "s": 5.453,
+   "e": 7.196
+  },
+  {
+   "text": "Slasher.",
+   "s": 7.35,
+   "e": 8.118
+  },
+  {
+   "text": "Butcher.",
+   "s": 8.272,
+   "e": 8.968
+  },
+  {
+   "text": "Trapmaker.",
+   "s": 9.122,
+   "e": 9.987
+  },
+  {
+   "text": "Chudail.",
+   "s": 10.141,
+   "e": 10.915
+  },
+  {
+   "text": "Rakshasa.",
+   "s": 11.069,
+   "e": 12.08
+  },
+  {
+   "text": "Pret.",
+   "s": 12.234,
+   "e": 12.737
+  },
+  {
+   "text": "Team blue guards your door.",
+   "s": 12.891,
+   "e": 14.592
+  },
+  {
+   "text": "Werewolf.",
+   "s": 14.746,
+   "e": 15.615
+  },
+  {
+   "text": "Vampire.",
+   "s": 15.769,
+   "e": 16.643
+  },
+  {
+   "text": "Giant.",
+   "s": 16.797,
+   "e": 17.498
+  },
+  {
+   "text": "Vetala.",
+   "s": 17.652,
+   "e": 18.482
+  },
+  {
+   "text": "Nagin.",
+   "s": 18.636,
+   "e": 19.42
+  },
+  {
+   "text": "Mummy.",
+   "s": 19.574,
+   "e": 20.208
+  },
+  {
+   "text": "Claws.",
+   "s": 20.362,
+   "e": 21.032
+  },
+  {
+   "text": "Chains.",
+   "s": 21.186,
+   "e": 21.933
+  },
+  {
+   "text": "Curses.",
+   "s": 22.087,
+   "e": 22.813
+  },
+  {
+   "text": "Fire.",
+   "s": 22.967,
+   "e": 23.594
+  },
+  {
+   "text": "You are behind that door.",
+   "s": 23.748,
+   "e": 25.301
+  },
+  {
+   "text": "Pick your side.",
+   "s": 25.455,
+   "e": 26.523
+  },
+  {
+   "text": "Red...",
+   "s": 26.677,
+   "e": 27.281
+  },
+  {
+   "text": "or blue?",
+   "s": 27.435,
+   "e": 28.253
+  }
+ ]
+}
