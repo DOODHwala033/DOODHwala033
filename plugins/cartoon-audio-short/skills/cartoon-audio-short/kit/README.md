@@ -8,6 +8,7 @@ Audio in, finished vertical cartoon short out. 2D bean-head cards in an inked, p
 - `tools/` setup.sh (new project), timing.py (word timings), render.mjs (frames), sheet.py (contact sheets),
   mix.py (music + SFX locked at 50 % of the voice), finish.sh (linear loudness gain + limiter, encode, QA),
   setup_voice.sh + kokoro_voice.py (free local Kokoro voice, caption timings, hooks for Chatterbox/Orpheus lines),
+  setup_motion.sh + motion_probe.py (decode a reference video FILE: cuts, camera pan/tilt/zoom, easing, shake, animation cadence, line boil, grain; `--compare ours.mp4`; writes report.md with an engine recipe),
   gen_timing.py (work/*.json -> web/timing.js).
 - `vendor/` three.js r160 `three.module.js` (MIT, mrdoob/three.js) and `toon.ts` from
   github.com/mromidev/claude-animated-shorts (MIT). Licenses alongside. Setup needs no network.
