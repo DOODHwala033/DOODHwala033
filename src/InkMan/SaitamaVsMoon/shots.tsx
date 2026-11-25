@@ -97,8 +97,8 @@ export const Shot02: React.FC<ShotProps> = ({ len }) => {
 };
 
 // 3 · Distance from Earth.
-const EARTH_P: Vec3 = [-5.5, -1.5, 0];
-const MOON_P: Vec3 = [4.5, 2.2, -2];
+const EARTH_P: Vec3 = [-2.4, -2.6, 0];
+const MOON_P: Vec3 = [2.6, 3.4, -2];
 const DIST_CAM: Cam = { p: [0, 0, 17], t: [0, 0.2, 0], fov: 50 };
 export const Shot03: React.FC<ShotProps> = () => {
   const { f, t, w, h } = useT();
@@ -133,7 +133,7 @@ export const Shot03: React.FC<ShotProps> = () => {
         </>
       }
     >
-      <BigEarth position={EARTH_P} r={2.4} spin={t * 0.1} />
+      <BigEarth position={EARTH_P} r={2.0} spin={t * 0.1} />
       <group position={MOON_P} scale={0.11}>
         <mesh>
           <sphereGeometry args={[R, 48, 32]} />
@@ -189,7 +189,7 @@ export const Shot04: React.FC<ShotProps> = ({ len }) => {
         </>
       }
     >
-      <BigEarth position={EARTH_P} r={2.4} spin={t * 0.1} />
+      <BigEarth position={EARTH_P} r={2.0} spin={t * 0.1} />
       <group position={MOON_P} scale={0.11}>
         <mesh>
           <sphereGeometry args={[R, 48, 32]} />
@@ -434,7 +434,7 @@ export const Shot10: React.FC<ShotProps> = ({ len }) => {
         })
       : 0;
   const shake = f >= HIT ? Math.max(0, 1 - (f - HIT) / 20) : 0;
-  const cam: Cam = { p: [2.4, R + 1.2, 3.0], t: [0, R + 0.9, -0.5], fov: 48 };
+  const cam: Cam = { p: [3.4, R + 1.1, 0.2], t: [0, R + 0.8, -1.0], fov: 50 };
   const ground: Vec3 = [0, R, -1.2];
   return (
     <SpaceStage
@@ -451,7 +451,7 @@ export const Shot10: React.FC<ShotProps> = ({ len }) => {
         pose={{
           spineTwist: wind * 0.5 - punch * 0.9,
           armR: {
-            x: lerp(0.6 * wind, -1.6, punch),
+            x: lerp(0.6 * wind, -1.25, punch),
             z: 0.1,
             elbow: lerp(-1.6 * wind, 0, punch),
           },

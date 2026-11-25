@@ -149,8 +149,8 @@ export const RemotionRoot: React.FC = () => {
           height={1920}
           schema={saitamaSchema}
           defaultProps={{
-            voiceFile: "inkman/saitama-vs-moon/voiceover-draft.mp3",
-            captionsFile: "inkman/saitama-vs-moon/voiceover-draft.json",
+            voiceFile: "inkman/saitama-vs-moon/voiceover.mp3",
+            captionsFile: "inkman/saitama-vs-moon/voiceover.json",
           }}
         />
         <Composition
