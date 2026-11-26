@@ -4,7 +4,7 @@ import json, re, math
 P = json.load(open('work/phrases.json')); W = json.load(open('work/words.json'))
 TOTAL = P['frames30']
 ph = [{'a': math.floor(p['s'] * 30), 'b': math.ceil(p['e'] * 30)} for p in P['phrases']]
-wd = [{'t': re.sub(r"[^a-z0-9']", '', w['w'].lower()), 'a': math.floor(w['s'] * 30), 'b': math.ceil(w['e'] * 30)} for w in W]
+wd = [{'t': re.sub(r"[^a-z0-9'\u0900-\u0963\u0966-\u097F]", '', w['w'].lower()), 'a': math.floor(w['s'] * 30), 'b': math.ceil(w['e'] * 30)} for w in W]
 import os
 sent = []
 if os.path.exists('voice/lines.json'): sent = [{'a': math.floor(l['start'] * 30), 'b': math.ceil(l['end'] * 30)} for l in json.load(open('voice/lines.json'))]
