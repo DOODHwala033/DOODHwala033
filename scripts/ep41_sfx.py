@@ -1,6 +1,6 @@
 """EP41 sound design: SFX + drone bed, synthesised and timed to src/EP41/timing.ts.
 
-Usage: python3 scripts/ep41_sfx.py <voice.wav> <out_mix.wav>
+Usage: python3 scripts/ep41_sfx.py <voice.wav|mp3> <out_mix.wav>
 Writes the SFX/drone stems next to the mix, then mixes them under the voice.
 """
 import re, subprocess, sys, wave

@@ -191,7 +191,7 @@ export const RemotionRoot: React.FC = () => {
           height={1920}
           schema={ep41Schema}
           defaultProps={{
-            audioFile: "ep41/voice.wav",
+            audioFile: "ep41/voice.mp3",
             captionsFile: "ep41/voiceover.json",
           }}
         />
