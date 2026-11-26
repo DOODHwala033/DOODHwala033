@@ -434,7 +434,11 @@ export const Shot10: React.FC<ShotProps> = ({ len }) => {
         })
       : 0;
   const shake = f >= HIT ? Math.max(0, 1 - (f - HIT) / 20) : 0;
-  const cam: Cam = { p: [3.1, R + 1.25, 1.1], t: [-0.15, R + 0.95, -0.35], fov: 50 };
+  const cam: Cam = {
+    p: [3.1, R + 1.25, 1.1],
+    t: [-0.15, R + 0.95, -0.35],
+    fov: 50,
+  };
   const ground: Vec3 = [0, R, -1.2];
   return (
     <SpaceStage

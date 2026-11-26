@@ -25,7 +25,7 @@ export const BASE_SKIN: Skin = {
   shoes: "#141416",
 };
 
-type Arm = { x?: number; z?: number; elbow?: number };
+type Arm = { x?: number; z?: number; elbow?: number; curl?: number };
 export type Pose = {
   hipShift?: number; // metres, sideways weight shift
   hipRoll?: number;
@@ -138,6 +138,65 @@ const Leg: React.FC<{ side: 1 | -1; knee: number; thigh: number; s: Skin }> = ({
   </group>
 );
 
+// Hand: palm + four two-segment fingers + thumb. The palm faces the body
+// (inward) when the arm hangs; `curl` 0 = open, 1 = fist.
+const Hand: React.FC<{ side: 1 | -1; curl: number; color: string }> = ({
+  side,
+  curl,
+  color,
+}) => {
+  const fingers = [
+    { z: -0.022, l: 0.05 },
+    { z: -0.0075, l: 0.058 },
+    { z: 0.0075, l: 0.054 },
+    { z: 0.022, l: 0.044 },
+  ];
+  const bend = -side * curl;
+  return (
+    <group>
+      <Block
+        size={[0.03, 0.074, 0.062]}
+        r={0.012}
+        color={color}
+        position={[0, -0.04, 0]}
+      />
+      {fingers.map((f, i) => (
+        <group
+          key={i}
+          position={[0, -0.08, f.z]}
+          rotation={[0, 0, bend * 1.35]}
+        >
+          <mesh position={[0, -f.l * 0.28, 0]} castShadow>
+            <capsuleGeometry args={[0.0085, f.l * 0.5, 4, 8]} />
+            <Plastic color={color} />
+          </mesh>
+          <group position={[0, -f.l * 0.56, 0]} rotation={[0, 0, bend * 1.45]}>
+            <mesh position={[0, -f.l * 0.22, 0]} castShadow>
+              <capsuleGeometry args={[0.0078, f.l * 0.36, 4, 8]} />
+              <Plastic color={color} />
+            </mesh>
+          </group>
+        </group>
+      ))}
+      <group
+        position={[-side * 0.004, -0.03, 0.034]}
+        rotation={[-0.55, 0, bend * 0.7]}
+      >
+        <mesh position={[0, -0.018, 0]} castShadow>
+          <capsuleGeometry args={[0.0095, 0.024, 4, 8]} />
+          <Plastic color={color} />
+        </mesh>
+        <group position={[0, -0.036, 0]} rotation={[0, 0, bend * 0.9]}>
+          <mesh position={[0, -0.014, 0]} castShadow>
+            <capsuleGeometry args={[0.0088, 0.016, 4, 8]} />
+            <Plastic color={color} />
+          </mesh>
+        </group>
+      </group>
+    </group>
+  );
+};
+
 const ArmRig: React.FC<{
   side: 1 | -1;
   a: Arm;
@@ -155,10 +214,10 @@ const ArmRig: React.FC<{
         <cylinderGeometry args={[0.03, 0.03, 0.03, 8]} />
         <Plastic color={s.shirt} />
       </mesh>
-      <group position={[0, -D.forearm - 0.06, 0]}>
-        <Block size={[0.06, 0.1, 0.075]} r={0.026} color={s.skin} />
-        {slot}
+      <group position={[0, -D.forearm, 0]}>
+        <Hand side={side} curl={a.curl ?? 0.2} color={s.skin} />
       </group>
+      <group position={[0, -D.forearm - 0.06, 0]}>{slot}</group>
     </group>
   </group>
 );

@@ -15,6 +15,14 @@ import { alcatrazDefaults, alcatrazSchema } from "./AlcatrazIntro/schema";
 import { DeepDive, DEEP_DIVE_DURATION } from "./DeepDive/DeepDive";
 import { deepDiveDefaults, deepDiveSchema } from "./DeepDive/schema";
 import { HelloWorld } from "./HelloWorld";
+import { EpTest, epTestSchema } from "./InkMan/ep/Test";
+import {
+  BLACK_TAIL,
+  EpisodeGojoMakima,
+  MAKIMA_DURATION,
+  MAKIMA_FPS,
+  makimaSchema,
+} from "./InkMan/ep/EpisodeGojoMakima";
 import {
   SAITAMA_DURATION,
   SAITAMA_FPS,
@@ -152,6 +160,27 @@ export const RemotionRoot: React.FC = () => {
             voiceFile: "inkman/saitama-vs-moon/voiceover.mp3",
             captionsFile: "inkman/saitama-vs-moon/voiceover.json",
           }}
+        />
+        <Composition
+          id="GojoVsMakima"
+          component={EpisodeGojoMakima}
+          durationInFrames={MAKIMA_DURATION + BLACK_TAIL}
+          fps={MAKIMA_FPS}
+          width={1080}
+          height={1920}
+          schema={makimaSchema}
+          defaultProps={{
+            voiceFile: "inkman/gojo-vs-makima/voice.wav",
+            captionsFile: "inkman/gojo-vs-makima/voiceover.json",
+          }}
+        />
+        <Still
+          id="EpTest"
+          component={EpTest}
+          width={1080}
+          height={1920}
+          schema={epTestSchema}
+          defaultProps={{ view: "wide" as const }}
         />
         <Composition
           id="SunEnvironment"

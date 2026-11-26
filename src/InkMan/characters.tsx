@@ -70,7 +70,7 @@ const HairMat: React.FC = () => (
   <meshPhysicalMaterial color="#F2F3F5" roughness={0.6} clearcoat={0.2} />
 );
 
-const GojoHair: React.FC = () => (
+export const GojoHair: React.FC = () => (
   <group position={[0, HEAD_Y, 0]}>
     <mesh
       position={[0, CAP.y, -0.006]}
@@ -90,7 +90,7 @@ const GojoHair: React.FC = () => (
 );
 
 // Prop 1: black blindfold band across the eyes.
-const Blindfold: React.FC = () => (
+export const Blindfold: React.FC = () => (
   <mesh
     position={[0, HEAD_Y + 0.018, 0]}
     scale={[0.1175, 1, 0.1265]}
