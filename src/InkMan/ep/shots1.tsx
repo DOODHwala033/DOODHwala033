@@ -261,7 +261,7 @@ export const E07: React.FC<ShotProps> = ({ len }) => {
 
 // 8 · Makima looks down at the camera.
 export const E08: React.FC<ShotProps> = ({ len }) => {
-  const { t, k, w } = useS(len);
+  const { t, k } = useS(len);
   const cam = handheld(
     push(
       { p: [1.45, 1.1, 1.3], t: [1.3, EYE + 0.05, 0], fov: 30 },
@@ -292,7 +292,6 @@ export const E08: React.FC<ShotProps> = ({ len }) => {
           face={{ mouth: "smirk", lid: 0.32 }}
         />
       </group>
-      <BigText text="" x={w / 2} y={0} at={9999} />
     </EpStage>
   );
 };
@@ -513,6 +512,7 @@ export const E14: React.FC<ShotProps> = ({ len }) => {
         <>
           <Sticker text="!!" x={a.x} y={a.y - 230} at={12} size={140} />
           <Sticker text="!" x={b.x} y={b.y - 230} at={28} size={150} />
+          <SweatDrop x={b.x + 80} y={b.y - 130} at={30} size={60} />
         </>
       }
     >
@@ -550,7 +550,6 @@ export const E14: React.FC<ShotProps> = ({ len }) => {
         pulse={clamp01((f - 14) / 16)}
         sag={0.3}
       />
-      <SweatDrop x={b.x + 80} y={b.y - 130} at={30} size={60} />
     </EpStage>
   );
 };

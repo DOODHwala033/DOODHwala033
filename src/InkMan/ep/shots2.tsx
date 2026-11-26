@@ -375,7 +375,12 @@ export const E26: React.FC<ShotProps> = ({ len }) => {
       t={t}
       rain
       focus={[0, 1.4, 0]}
-      overlay={<Menace x={w - 150} y={560} />}
+      overlay={
+        <>
+          <Menace x={w - 150} y={560} />
+          <Starburst x={sp.x} y={sp.y} at={Math.round(len * 0.55)} size={260} />
+        </>
+      }
     >
       <Duel
         t={t}
@@ -389,7 +394,6 @@ export const E26: React.FC<ShotProps> = ({ len }) => {
         <sphereGeometry args={[1, 24, 24]} />
         <meshBasicMaterial color="#B26BFF" toneMapped={false} />
       </mesh>
-      <Starburst x={sp.x} y={sp.y} at={Math.round(len * 0.55)} size={260} />
     </EpStage>
   );
 };

@@ -170,7 +170,7 @@ export const RemotionRoot: React.FC = () => {
           height={1920}
           schema={makimaSchema}
           defaultProps={{
-            voiceFile: "inkman/gojo-vs-makima/voice.wav",
+            voiceFile: "inkman/gojo-vs-makima/voice.mp3",
             captionsFile: "inkman/gojo-vs-makima/voiceover.json",
           }}
         />
