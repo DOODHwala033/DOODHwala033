@@ -61,7 +61,7 @@ export const handheld = (cam: Cam, t: number, amp = 0.04, seed = 0): Cam => ({
   roll: (cam.roll ?? 0) + Math.sin(t * 0.9 + seed) * amp * 0.12,
 });
 
-const CamRig2: React.FC<{ cam: Cam; shake: number; t: number }> = ({
+export const CamRig2: React.FC<{ cam: Cam; shake: number; t: number }> = ({
   cam,
   shake,
   t,

@@ -66,11 +66,14 @@ const SPIKES = [
   }),
 );
 
-const HairMat: React.FC = () => (
-  <meshPhysicalMaterial color="#F2F3F5" roughness={0.6} clearcoat={0.2} />
+const HairMat: React.FC<{ color?: string }> = ({ color = "#F2F3F5" }) => (
+  <meshPhysicalMaterial color={color} roughness={0.6} clearcoat={0.2} />
 );
 
-export const GojoHair: React.FC = () => (
+export const GojoHair: React.FC<{ color?: string; scale?: number }> = ({
+  color,
+  scale = 1,
+}) => (
   <group position={[0, HEAD_Y, 0]}>
     <mesh
       position={[0, CAP.y, -0.006]}
@@ -78,12 +81,18 @@ export const GojoHair: React.FC = () => (
       castShadow
     >
       <sphereGeometry args={[1, 16, 10, 0, Math.PI * 2, 0, Math.PI * 0.55]} />
-      <HairMat />
+      <HairMat color={color} />
     </mesh>
     {SPIKES.map((sp, i) => (
-      <mesh key={i} position={sp.pos} quaternion={sp.q} castShadow>
+      <mesh
+        key={i}
+        position={sp.pos}
+        quaternion={sp.q}
+        scale={[1, scale, 1]}
+        castShadow
+      >
         <coneGeometry args={[sp.r, sp.len, 5]} />
-        <HairMat />
+        <HairMat color={color} />
       </mesh>
     ))}
   </group>

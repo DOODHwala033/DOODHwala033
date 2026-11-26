@@ -16,6 +16,14 @@ import { DeepDive, DEEP_DIVE_DURATION } from "./DeepDive/DeepDive";
 import { deepDiveDefaults, deepDiveSchema } from "./DeepDive/schema";
 import { HelloWorld } from "./HelloWorld";
 import { EpTest, epTestSchema } from "./InkMan/ep/Test";
+import { Lab, labSchema } from "./EP41/realistic/Lab";
+import {
+  EP41,
+  EP41_DURATION,
+  EP41_FPS,
+  EP41_TAIL,
+  ep41Schema,
+} from "./EP41/Episode";
 import {
   BLACK_TAIL,
   EpisodeGojoMakima,
@@ -173,6 +181,29 @@ export const RemotionRoot: React.FC = () => {
             voiceFile: "inkman/gojo-vs-makima/voice.mp3",
             captionsFile: "inkman/gojo-vs-makima/voiceover.json",
           }}
+        />
+        <Composition
+          id="EP41SukunaShrine"
+          component={EP41}
+          durationInFrames={EP41_DURATION + EP41_TAIL}
+          fps={EP41_FPS}
+          width={1080}
+          height={1920}
+          schema={ep41Schema}
+          defaultProps={{
+            audioFile: "ep41/voice.wav",
+            captionsFile: "ep41/voiceover.json",
+          }}
+        />
+        <Composition
+          id="EP41Lab"
+          component={Lab}
+          durationInFrames={60}
+          fps={30}
+          width={1080}
+          height={1920}
+          schema={labSchema}
+          defaultProps={{ view: "wide" }}
         />
         <Still
           id="EpTest"

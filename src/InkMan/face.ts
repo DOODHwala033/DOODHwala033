@@ -43,6 +43,10 @@ export type FaceState = {
   blush?: number;
   // eyes hidden (blindfold)
   noEyes?: boolean;
+  // Sukuna: black marks under the eyes + on the forehead
+  marks?: boolean;
+  // Sukuna's true form: a second, smaller pair of eyes under the first
+  fourEyes?: boolean;
 };
 
 export const NEUTRAL: FaceState = {
@@ -79,12 +83,14 @@ const paintEye = (
   s: -1 | 1,
   skin: string,
   f: FaceState,
+  dy = 0,
+  k = 1,
 ) => {
   const ex = CX + s * EYE_DX;
-  const ey = EYE_Y;
+  const ey = EYE_Y + dy;
   const openF = Math.max(0.08, (f.eyeOpen ?? 1) * (1 - (f.blink ?? 0)));
-  const rx = 17;
-  const ry = 22 * openF;
+  const rx = 17 * k;
+  const ry = 22 * openF * k;
   const [lx, ly] = f.look ?? [0, 0];
 
   if (f.spiral) {
@@ -111,7 +117,7 @@ const paintEye = (
   g.clip();
 
   // iris + pupil
-  const ir = Math.min(ry, 14);
+  const ir = Math.min(ry, 14 * k);
   const ix = ex + lx * KX;
   const iy = ey + ly + 1;
   const iris = f.six ? "#8FD8FF" : (f.iris ?? "#2A1E18");
@@ -262,6 +268,29 @@ const paintMouth = (
   }
 };
 
+// Sukuna's black marks: a stroke under each eye sweeping out to the cheek,
+// two short strokes on the forehead.
+const paintMarks = (g: CanvasRenderingContext2D, low: boolean) => {
+  g.fillStyle = INK;
+  for (const s of [-1, 1]) {
+    const ex = CX + s * EYE_DX;
+    const y0 = EYE_Y + (low ? 62 : 30);
+    g.beginPath();
+    g.moveTo(ex - s * 14, y0);
+    g.quadraticCurveTo(ex + s * 20, y0 + 6, ex + s * 46, y0 - 10);
+    g.quadraticCurveTo(ex + s * 22, y0 + 14, ex - s * 14, y0 + 7);
+    g.closePath();
+    g.fill();
+    // forehead
+    g.beginPath();
+    g.moveTo(CX + s * 10, EYE_Y - 72);
+    g.lineTo(CX + s * 30, EYE_Y - 100);
+    g.lineTo(CX + s * 22, EYE_Y - 70);
+    g.closePath();
+    g.fill();
+  }
+};
+
 const cache = new Map<string, CanvasTexture>();
 
 export const paintFace = (skin: string, face: FaceState) => {
@@ -307,7 +336,11 @@ export const paintFace = (skin: string, face: FaceState) => {
           ? { ...face, lid: Math.max(face.lid ?? 0.22, 0.34), eyeOpen: 0.9 }
           : face;
       for (const s of [-1, 1] as const) paintEye(g, s, skin, f);
+      if (face.fourEyes)
+        for (const s of [-1, 1] as const)
+          paintEye(g, s, skin, { ...f, lashes: false, lid: 0.3 }, 40, 0.62);
     }
+    if (face.marks) paintMarks(g, !!face.fourEyes);
     for (const s of [-1, 1] as const) paintBrow(g, s, face, rage);
     paintMouth(g, face, rage);
   }

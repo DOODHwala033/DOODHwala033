@@ -1,0 +1,1064 @@
+[
+ {
+  "text": "two",
+  "startMs": 300,
+  "endMs": 475,
+  "timestampMs": 300,
+  "confidence": null
+ },
+ {
+  "text": " hundred",
+  "startMs": 475,
+  "endMs": 825,
+  "timestampMs": 475,
+  "confidence": null
+ },
+ {
+  "text": " meters",
+  "startMs": 825,
+  "endMs": 1475,
+  "timestampMs": 825,
+  "confidence": null
+ },
+ {
+  "text": " that's",
+  "startMs": 1575,
+  "endMs": 1788,
+  "timestampMs": 1575,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "how",
+  "startMs": 1788,
+  "endMs": 1962,
+  "timestampMs": 1788,
+  "confidence": null
+ },
+ {
+  "text": " far",
+  "startMs": 1962,
+  "endMs": 2262,
+  "timestampMs": 1962,
+  "confidence": null
+ },
+ {
+  "text": " sukuna's",
+  "startMs": 2262,
+  "endMs": 2762,
+  "timestampMs": 2262,
+  "confidence": null
+ },
+ {
+  "text": " shrine",
+  "startMs": 2762,
+  "endMs": 3150,
+  "timestampMs": 2762,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "can",
+  "startMs": 3150,
+  "endMs": 3350,
+  "timestampMs": 3150,
+  "confidence": null
+ },
+ {
+  "text": " reach",
+  "startMs": 3350,
+  "endMs": 3975,
+  "timestampMs": 3350,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "the",
+  "startMs": 4670,
+  "endMs": 4782,
+  "timestampMs": 4670,
+  "confidence": null
+ },
+ {
+  "text": " wheel",
+  "startMs": 4782,
+  "endMs": 5095,
+  "timestampMs": 4782,
+  "confidence": null
+ },
+ {
+  "text": " lands",
+  "startMs": 5095,
+  "endMs": 5432,
+  "timestampMs": 5095,
+  "confidence": null
+ },
+ {
+  "text": " on",
+  "startMs": 5432,
+  "endMs": 5570,
+  "timestampMs": 5432,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "malevolent",
+  "startMs": 5570,
+  "endMs": 6132,
+  "timestampMs": 5570,
+  "confidence": null
+ },
+ {
+  "text": " shrine",
+  "startMs": 6132,
+  "endMs": 6770,
+  "timestampMs": 6132,
+  "confidence": null
+ },
+ {
+  "text": " and",
+  "startMs": 6870,
+  "endMs": 6982,
+  "timestampMs": 6870,
+  "confidence": null
+ },
+ {
+  "text": " you're",
+  "startMs": 6982,
+  "endMs": 7095,
+  "timestampMs": 6982,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "standing",
+  "startMs": 7095,
+  "endMs": 7545,
+  "timestampMs": 7095,
+  "confidence": null
+ },
+ {
+  "text": " inside",
+  "startMs": 7545,
+  "endMs": 8020,
+  "timestampMs": 7545,
+  "confidence": null
+ },
+ {
+  "text": " it",
+  "startMs": 8020,
+  "endMs": 8445,
+  "timestampMs": 8020,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "rule",
+  "startMs": 9190,
+  "endMs": 9465,
+  "timestampMs": 9190,
+  "confidence": null
+ },
+ {
+  "text": " one",
+  "startMs": 9465,
+  "endMs": 9640,
+  "timestampMs": 9465,
+  "confidence": null
+ },
+ {
+  "text": " run",
+  "startMs": 9690,
+  "endMs": 9915,
+  "timestampMs": 9690,
+  "confidence": null
+ },
+ {
+  "text": " for",
+  "startMs": 9915,
+  "endMs": 10028,
+  "timestampMs": 9915,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "the",
+  "startMs": 10028,
+  "endMs": 10178,
+  "timestampMs": 10028,
+  "confidence": null
+ },
+ {
+  "text": " edge",
+  "startMs": 10178,
+  "endMs": 10590,
+  "timestampMs": 10178,
+  "confidence": null
+ },
+ {
+  "text": " don't",
+  "startMs": 10715,
+  "endMs": 10940,
+  "timestampMs": 10715,
+  "confidence": null
+ },
+ {
+  "text": " hide",
+  "startMs": 10940,
+  "endMs": 11265,
+  "timestampMs": 10940,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "there's",
+  "startMs": 11302,
+  "endMs": 11515,
+  "timestampMs": 11302,
+  "confidence": null
+ },
+ {
+  "text": " no",
+  "startMs": 11515,
+  "endMs": 11728,
+  "timestampMs": 11515,
+  "confidence": null
+ },
+ {
+  "text": " wall",
+  "startMs": 11728,
+  "endMs": 12140,
+  "timestampMs": 11728,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 12215,
+  "endMs": 12352,
+  "timestampMs": 12215,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "barrier",
+  "startMs": 12352,
+  "endMs": 12865,
+  "timestampMs": 12352,
+  "confidence": null
+ },
+ {
+  "text": " is",
+  "startMs": 12865,
+  "endMs": 13028,
+  "timestampMs": 12865,
+  "confidence": null
+ },
+ {
+  "text": " open",
+  "startMs": 13028,
+  "endMs": 13740,
+  "timestampMs": 13028,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "every",
+  "startMs": 14435,
+  "endMs": 14747,
+  "timestampMs": 14435,
+  "confidence": null
+ },
+ {
+  "text": " step",
+  "startMs": 14747,
+  "endMs": 15097,
+  "timestampMs": 14747,
+  "confidence": null
+ },
+ {
+  "text": " shrinks",
+  "startMs": 15097,
+  "endMs": 15435,
+  "timestampMs": 15097,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 15435,
+  "endMs": 15535,
+  "timestampMs": 15435,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "distance",
+  "startMs": 15535,
+  "endMs": 16310,
+  "timestampMs": 15535,
+  "confidence": null
+ },
+ {
+  "text": " but",
+  "startMs": 16385,
+  "endMs": 16522,
+  "timestampMs": 16385,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 16522,
+  "endMs": 16622,
+  "timestampMs": 16522,
+  "confidence": null
+ },
+ {
+  "text": " slashes",
+  "startMs": 16622,
+  "endMs": 17185,
+  "timestampMs": 16622,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "don't",
+  "startMs": 17185,
+  "endMs": 17410,
+  "timestampMs": 17185,
+  "confidence": null
+ },
+ {
+  "text": " wait",
+  "startMs": 17410,
+  "endMs": 17660,
+  "timestampMs": 17410,
+  "confidence": null
+ },
+ {
+  "text": " for",
+  "startMs": 17660,
+  "endMs": 17822,
+  "timestampMs": 17660,
+  "confidence": null
+ },
+ {
+  "text": " you",
+  "startMs": 17822,
+  "endMs": 18235,
+  "timestampMs": 17822,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "cleave",
+  "startMs": 18397,
+  "endMs": 18735,
+  "timestampMs": 18397,
+  "confidence": null
+ },
+ {
+  "text": " hunts",
+  "startMs": 18735,
+  "endMs": 19072,
+  "timestampMs": 18735,
+  "confidence": null
+ },
+ {
+  "text": " anything",
+  "startMs": 19072,
+  "endMs": 19585,
+  "timestampMs": 19072,
+  "confidence": null
+ },
+ {
+  "text": " with",
+  "startMs": 19585,
+  "endMs": 19772,
+  "timestampMs": 19585,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "cursed",
+  "startMs": 19772,
+  "endMs": 20210,
+  "timestampMs": 19772,
+  "confidence": null
+ },
+ {
+  "text": " energy",
+  "startMs": 20210,
+  "endMs": 20885,
+  "timestampMs": 20210,
+  "confidence": null
+ },
+ {
+  "text": " dismantle",
+  "startMs": 21022,
+  "endMs": 21710,
+  "timestampMs": 21022,
+  "confidence": null
+ },
+ {
+  "text": " shreds",
+  "startMs": 21710,
+  "endMs": 22172,
+  "timestampMs": 21710,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "everything",
+  "startMs": 22172,
+  "endMs": 22685,
+  "timestampMs": 22172,
+  "confidence": null
+ },
+ {
+  "text": " else",
+  "startMs": 22685,
+  "endMs": 23360,
+  "timestampMs": 22685,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "here's",
+  "startMs": 24030,
+  "endMs": 24305,
+  "timestampMs": 24030,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 24305,
+  "endMs": 24418,
+  "timestampMs": 24305,
+  "confidence": null
+ },
+ {
+  "text": " terrifying",
+  "startMs": 24418,
+  "endMs": 25068,
+  "timestampMs": 24418,
+  "confidence": null
+ },
+ {
+  "text": " trade",
+  "startMs": 25068,
+  "endMs": 25880,
+  "timestampMs": 25068,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "sukuna",
+  "startMs": 26030,
+  "endMs": 26542,
+  "timestampMs": 26030,
+  "confidence": null
+ },
+ {
+  "text": " leaves",
+  "startMs": 26542,
+  "endMs": 26868,
+  "timestampMs": 26542,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 26868,
+  "endMs": 27005,
+  "timestampMs": 26868,
+  "confidence": null
+ },
+ {
+  "text": " escape",
+  "startMs": 27005,
+  "endMs": 27480,
+  "timestampMs": 27005,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "route",
+  "startMs": 27480,
+  "endMs": 27705,
+  "timestampMs": 27480,
+  "confidence": null
+ },
+ {
+  "text": " open",
+  "startMs": 27705,
+  "endMs": 28205,
+  "timestampMs": 27705,
+  "confidence": null
+ },
+ {
+  "text": " on",
+  "startMs": 28280,
+  "endMs": 28492,
+  "timestampMs": 28280,
+  "confidence": null
+ },
+ {
+  "text": " purpose",
+  "startMs": 28492,
+  "endMs": 29380,
+  "timestampMs": 28492,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "that",
+  "startMs": 29492,
+  "endMs": 29768,
+  "timestampMs": 29492,
+  "confidence": null
+ },
+ {
+  "text": " binding",
+  "startMs": 29768,
+  "endMs": 30268,
+  "timestampMs": 29768,
+  "confidence": null
+ },
+ {
+  "text": " vow",
+  "startMs": 30268,
+  "endMs": 30630,
+  "timestampMs": 30268,
+  "confidence": null
+ },
+ {
+  "text": " is",
+  "startMs": 30630,
+  "endMs": 30780,
+  "timestampMs": 30630,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "what",
+  "startMs": 30780,
+  "endMs": 30955,
+  "timestampMs": 30780,
+  "confidence": null
+ },
+ {
+  "text": " stretches",
+  "startMs": 30955,
+  "endMs": 31455,
+  "timestampMs": 30955,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 31455,
+  "endMs": 31592,
+  "timestampMs": 31455,
+  "confidence": null
+ },
+ {
+  "text": " sure-hit",
+  "startMs": 31592,
+  "endMs": 32068,
+  "timestampMs": 31592,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "range",
+  "startMs": 32068,
+  "endMs": 32468,
+  "timestampMs": 32068,
+  "confidence": null
+ },
+ {
+  "text": " all",
+  "startMs": 32468,
+  "endMs": 32730,
+  "timestampMs": 32468,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 32730,
+  "endMs": 32830,
+  "timestampMs": 32730,
+  "confidence": null
+ },
+ {
+  "text": " way",
+  "startMs": 32830,
+  "endMs": 33030,
+  "timestampMs": 32830,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "to",
+  "startMs": 33030,
+  "endMs": 33180,
+  "timestampMs": 33030,
+  "confidence": null
+ },
+ {
+  "text": " two",
+  "startMs": 33180,
+  "endMs": 33455,
+  "timestampMs": 33180,
+  "confidence": null
+ },
+ {
+  "text": " hundred",
+  "startMs": 33455,
+  "endMs": 33805,
+  "timestampMs": 33455,
+  "confidence": null
+ },
+ {
+  "text": " meters",
+  "startMs": 33805,
+  "endMs": 34555,
+  "timestampMs": 33805,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "in",
+  "startMs": 34668,
+  "endMs": 34842,
+  "timestampMs": 34668,
+  "confidence": null
+ },
+ {
+  "text": " shibuya",
+  "startMs": 34842,
+  "endMs": 35555,
+  "timestampMs": 34842,
+  "confidence": null
+ },
+ {
+  "text": " he",
+  "startMs": 35655,
+  "endMs": 35805,
+  "timestampMs": 35655,
+  "confidence": null
+ },
+ {
+  "text": " deliberately",
+  "startMs": 35805,
+  "endMs": 36455,
+  "timestampMs": 35805,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "shrank",
+  "startMs": 36455,
+  "endMs": 36880,
+  "timestampMs": 36455,
+  "confidence": null
+ },
+ {
+  "text": " it",
+  "startMs": 36880,
+  "endMs": 37005,
+  "timestampMs": 36880,
+  "confidence": null
+ },
+ {
+  "text": " to",
+  "startMs": 37005,
+  "endMs": 37130,
+  "timestampMs": 37005,
+  "confidence": null
+ },
+ {
+  "text": " one",
+  "startMs": 37130,
+  "endMs": 37305,
+  "timestampMs": 37130,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "hundred",
+  "startMs": 37305,
+  "endMs": 37692,
+  "timestampMs": 37305,
+  "confidence": null
+ },
+ {
+  "text": " forty",
+  "startMs": 37692,
+  "endMs": 38055,
+  "timestampMs": 37692,
+  "confidence": null
+ },
+ {
+  "text": " meters",
+  "startMs": 38055,
+  "endMs": 38830,
+  "timestampMs": 38055,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "you're",
+  "startMs": 39525,
+  "endMs": 39650,
+  "timestampMs": 39525,
+  "confidence": null
+ },
+ {
+  "text": " running",
+  "startMs": 39650,
+  "endMs": 40000,
+  "timestampMs": 39650,
+  "confidence": null
+ },
+ {
+  "text": " two",
+  "startMs": 40062,
+  "endMs": 40275,
+  "timestampMs": 40062,
+  "confidence": null
+ },
+ {
+  "text": " hundred",
+  "startMs": 40275,
+  "endMs": 40775,
+  "timestampMs": 40275,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "one",
+  "startMs": 40900,
+  "endMs": 41125,
+  "timestampMs": 40900,
+  "confidence": null
+ },
+ {
+  "text": " hundred",
+  "startMs": 41125,
+  "endMs": 41600,
+  "timestampMs": 41125,
+  "confidence": null
+ },
+ {
+  "text": " fifty",
+  "startMs": 41738,
+  "endMs": 42375,
+  "timestampMs": 41738,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 42550,
+  "endMs": 42712,
+  "timestampMs": 42550,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "exit",
+  "startMs": 42712,
+  "endMs": 43100,
+  "timestampMs": 42712,
+  "confidence": null
+ },
+ {
+  "text": " is",
+  "startMs": 43100,
+  "endMs": 43262,
+  "timestampMs": 43100,
+  "confidence": null
+ },
+ {
+  "text": " right",
+  "startMs": 43262,
+  "endMs": 43575,
+  "timestampMs": 43262,
+  "confidence": null
+ },
+ {
+  "text": " there",
+  "startMs": 43575,
+  "endMs": 43850,
+  "timestampMs": 43575,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "and",
+  "startMs": 43900,
+  "endMs": 44025,
+  "timestampMs": 43900,
+  "confidence": null
+ },
+ {
+  "text": " one",
+  "startMs": 44025,
+  "endMs": 44262,
+  "timestampMs": 44025,
+  "confidence": null
+ },
+ {
+  "text": " slash",
+  "startMs": 44262,
+  "endMs": 44700,
+  "timestampMs": 44262,
+  "confidence": null
+ },
+ {
+  "text": " can",
+  "startMs": 44700,
+  "endMs": 44850,
+  "timestampMs": 44700,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "still",
+  "startMs": 44850,
+  "endMs": 45137,
+  "timestampMs": 44850,
+  "confidence": null
+ },
+ {
+  "text": " end",
+  "startMs": 45137,
+  "endMs": 45400,
+  "timestampMs": 45137,
+  "confidence": null
+ },
+ {
+  "text": " it",
+  "startMs": 45400,
+  "endMs": 45825,
+  "timestampMs": 45400,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "you",
+  "startMs": 46520,
+  "endMs": 46620,
+  "timestampMs": 46520,
+  "confidence": null
+ },
+ {
+  "text": " cross",
+  "startMs": 46620,
+  "endMs": 46945,
+  "timestampMs": 46620,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 46945,
+  "endMs": 47045,
+  "timestampMs": 46945,
+  "confidence": null
+ },
+ {
+  "text": " line",
+  "startMs": 47045,
+  "endMs": 47445,
+  "timestampMs": 47045,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "silence",
+  "startMs": 47570,
+  "endMs": 48370,
+  "timestampMs": 47570,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "then",
+  "startMs": 49540,
+  "endMs": 49715,
+  "timestampMs": 49540,
+  "confidence": null
+ },
+ {
+  "text": " behind",
+  "startMs": 49752,
+  "endMs": 50215,
+  "timestampMs": 49752,
+  "confidence": null
+ },
+ {
+  "text": " you",
+  "startMs": 50215,
+  "endMs": 50515,
+  "timestampMs": 50215,
+  "confidence": null
+ },
+ {
+  "text": " another",
+  "startMs": 50690,
+  "endMs": 51027,
+  "timestampMs": 50690,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "shrine",
+  "startMs": 51027,
+  "endMs": 51415,
+  "timestampMs": 51027,
+  "confidence": null
+ },
+ {
+  "text": " opens",
+  "startMs": 51415,
+  "endMs": 52190,
+  "timestampMs": 51415,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "was",
+  "startMs": 52885,
+  "endMs": 53035,
+  "timestampMs": 52885,
+  "confidence": null
+ },
+ {
+  "text": " that",
+  "startMs": 53035,
+  "endMs": 53197,
+  "timestampMs": 53035,
+  "confidence": null
+ },
+ {
+  "text": " escape",
+  "startMs": 53197,
+  "endMs": 53647,
+  "timestampMs": 53197,
+  "confidence": null
+ },
+ {
+  "text": " route",
+  "startMs": 53647,
+  "endMs": 53885,
+  "timestampMs": 53647,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "mercy",
+  "startMs": 53885,
+  "endMs": 54385,
+  "timestampMs": 53885,
+  "confidence": null
+ },
+ {
+  "text": " or",
+  "startMs": 54460,
+  "endMs": 54572,
+  "timestampMs": 54460,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 54572,
+  "endMs": 54660,
+  "timestampMs": 54572,
+  "confidence": null
+ },
+ {
+  "text": " most",
+  "startMs": 54660,
+  "endMs": 54947,
+  "timestampMs": 54660,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "vicious",
+  "startMs": 54947,
+  "endMs": 55372,
+  "timestampMs": 54947,
+  "confidence": null
+ },
+ {
+  "text": " upgrade",
+  "startMs": 55372,
+  "endMs": 55872,
+  "timestampMs": 55372,
+  "confidence": null
+ },
+ {
+  "text": " in",
+  "startMs": 55872,
+  "endMs": 55960,
+  "timestampMs": 55872,
+  "confidence": null
+ },
+ {
+  "text": " jujutsu",
+  "startMs": 55960,
+  "endMs": 56472,
+  "timestampMs": 55960,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "kaisen",
+  "startMs": 56472,
+  "endMs": 57160,
+  "timestampMs": 56472,
+  "confidence": null
+ },
+ {
+  "text": " spin",
+  "startMs": 57310,
+  "endMs": 57660,
+  "timestampMs": 57310,
+  "confidence": null
+ },
+ {
+  "text": " again",
+  "startMs": 57660,
+  "endMs": 58335,
+  "timestampMs": 57660,
+  "confidence": null
+ },
+ {
+  "text": " comment",
+  "startMs": 58472,
+  "endMs": 58935,
+  "timestampMs": 58472,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "the",
+  "startMs": 58935,
+  "endMs": 59035,
+  "timestampMs": 58935,
+  "confidence": null
+ },
+ {
+  "text": " next",
+  "startMs": 59035,
+  "endMs": 59335,
+  "timestampMs": 59035,
+  "confidence": null
+ },
+ {
+  "text": " character",
+  "startMs": 59335,
+  "endMs": 60135,
+  "timestampMs": 59335,
+  "confidence": null,
+  "pageBreakAfter": true
+ }
+]

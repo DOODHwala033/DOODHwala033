@@ -25,7 +25,7 @@ export const BASE_SKIN: Skin = {
   shoes: "#141416",
 };
 
-type Arm = { x?: number; z?: number; elbow?: number; curl?: number };
+export type Arm = { x?: number; z?: number; elbow?: number; curl?: number };
 export type Pose = {
   hipShift?: number; // metres, sideways weight shift
   hipRoll?: number;
@@ -197,14 +197,26 @@ const Hand: React.FC<{ side: 1 | -1; curl: number; color: string }> = ({
   );
 };
 
-const ArmRig: React.FC<{
+export const ArmRig: React.FC<{
   side: 1 | -1;
   a: Arm;
   s: Skin;
   slot?: React.ReactNode;
-}> = ({ side, a, s, slot }) => (
+  // shoulder height offset (Sukuna's lower arm pair sits lower on the ribs)
+  dy?: number;
+  // place the shoulder at the origin (for POV arms parented to the camera)
+  free?: boolean;
+}> = ({ side, a, s, slot, dy = 0, free = false }) => (
   <group
-    position={[side * D.shoulderW, D.torsoH - 0.05, 0]}
+    position={
+      free
+        ? [0, 0, 0]
+        : [
+            side * (D.shoulderW - (dy ? 0.02 : 0)),
+            D.torsoH - 0.05 + dy,
+            dy ? -0.02 : 0,
+          ]
+    }
     rotation={[a.x ?? 0, 0, side * (0.1 + (a.z ?? 0))]}
   >
     <Seg len={D.upperArm} r0={0.046} r1={0.038} color={s.jacket} />
@@ -230,6 +242,8 @@ export const BaseCharacter: React.FC<{
   handLSlot?: React.ReactNode;
   handRSlot?: React.ReactNode;
   backSlot?: React.ReactNode;
+  // optional second, lower pair of arms (Sukuna's true form only)
+  armsLower?: { l: Arm; r: Arm };
 }> = ({
   skin = BASE_SKIN,
   pose = {},
@@ -238,6 +252,7 @@ export const BaseCharacter: React.FC<{
   handLSlot,
   handRSlot,
   backSlot,
+  armsLower,
 }) => {
   const s = skin;
   const headGeo = useMemo(() => new SphereGeometry(1, 28, 18), []);
@@ -320,6 +335,12 @@ export const BaseCharacter: React.FC<{
           </group>
           <ArmRig side={1} a={pose.armL ?? {}} s={s} slot={handLSlot} />
           <ArmRig side={-1} a={pose.armR ?? {}} s={s} slot={handRSlot} />
+          {armsLower ? (
+            <>
+              <ArmRig side={1} a={armsLower.l} s={s} dy={-0.16} />
+              <ArmRig side={-1} a={armsLower.r} s={s} dy={-0.16} />
+            </>
+          ) : null}
           <mesh position={[0, D.torsoH + D.neckH / 2, 0]} castShadow>
             <cylinderGeometry args={[0.045, 0.05, D.neckH + 0.04, 12]} />
             <Plastic color={s.skin} />
