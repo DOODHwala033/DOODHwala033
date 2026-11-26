@@ -1,6 +1,7 @@
 import { Composition, Folder } from "remotion";
 import { AiTakeover, AI_TAKEOVER_DURATION } from "./AiTakeover/AiTakeover";
 import { AleyaEp06, ALEYA_DURATION, ALEYA_FPS } from "./AleyaEp06/AleyaEp06";
+import { NightmareSpin, NSPIN_DURATION, NSPIN_FPS } from "./NightmareSpin/NightmareSpin";
 import { aiTakeoverDefaults, aiTakeoverSchema } from "./AiTakeover/schema";
 import { HelloWorld } from "./HelloWorld";
 import { Logo } from "./HelloWorld/Logo";
@@ -68,6 +69,14 @@ export const RemotionRoot: React.FC = () => {
         component={AleyaEp06}
         durationInFrames={ALEYA_DURATION}
         fps={ALEYA_FPS}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="NightmareSpin"
+        component={NightmareSpin}
+        durationInFrames={NSPIN_DURATION}
+        fps={NSPIN_FPS}
         width={1080}
         height={1920}
       />
