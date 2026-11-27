@@ -174,8 +174,14 @@ export const S21: React.FC<ShotProps> = ({ len, from }) => {
   const pose = overlap(
     (ff) =>
       keys(ff, [
-        { f: 0, pose: { ground: true, armR: { x: -0.3, curl: 0.6 } } },
-        { f: 12, pose: TWO, ease: back },
+        {
+          f: 0,
+          pose: {
+            ground: true,
+            armR: { x: -1.25, z: 0.15, elbow: -0.35, curl: 0.7 },
+          },
+        },
+        { f: 9, pose: TWO, ease: back },
       ]),
     f,
     { hand: 4 },
