@@ -266,7 +266,7 @@ write("/tmp/wb2_sfx.wav", norm(sfx, 0.9))
 voice, out = sys.argv[1], sys.argv[2]
 subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", voice, "-i", "/tmp/wb2_music.wav", "-i", "/tmp/wb2_sfx.wav", "-filter_complex",
     f"[0:a]aresample={SR},aformat=channel_layouts=stereo,apad=whole_dur={T}[v];[1:a]aformat=channel_layouts=stereo,volume=0.32[m];"
-    f"[2:a]aformat=channel_layouts=stereo,volume=0.5[s];[m][v]sidechaincompress=threshold=0.05:ratio=4:attack=20:release=300[md];"
+    f"[2:a]aformat=channel_layouts=stereo,volume=0.8[s];[m][v]sidechaincompress=threshold=0.05:ratio=4:attack=20:release=300[md];"
     f"[0:a]aresample={SR},aformat=channel_layouts=stereo,apad=whole_dur={T}[v2];"
     f"[v2][md][s]amix=inputs=3:normalize=0:duration=first,atrim=0:{T},loudnorm=I=-14.8:TP=-1.0:LRA=11",
     "-ar", str(SR), out], check=True)

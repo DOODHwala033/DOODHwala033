@@ -198,8 +198,8 @@ export const RemotionRoot: React.FC = () => {
           height={1920}
           schema={wb2Schema}
           defaultProps={{
-            audioFile: "wb2/voice.mp3",
-            captionsFile: "wb2/voiceover.json",
+            audioFile: "wb2/v2/voice.wav",
+            captionsFile: "wb2/v2/voiceover.json",
           }}
         />
         <Composition

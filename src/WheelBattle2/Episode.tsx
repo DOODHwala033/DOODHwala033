@@ -119,7 +119,7 @@ const Hud: React.FC = () => {
 };
 
 // Wheel Battle Ep2 · Protector Wheel: Yamcha protects you, Mahoraga hunts you.
-// One shot per line of public/wb2/script.txt; cuts from timing.ts.
+// One shot per line of public/wb2/v2/script.txt; cuts from timing.ts.
 export const WheelBattle2: React.FC<z.infer<typeof wb2Schema>> = ({
   audioFile,
   captionsFile,

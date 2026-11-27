@@ -1,0 +1,12 @@
+{ex=0.8,cfg=0.35,pause=0.15} Wheel verdict: you've been scammed. Your protector? Yamcha. And the thing hunting you... is Mahoraga.
+{ex=0.6,cfg=0.45,pause=0.15} But you asked Yamcha for an autograph, and called Wolf Fang Fist cool. Nobody has ever said that. So now? You're family.
+{ex=0.7,cfg=0.35,pause=0.15} Then the ground shakes. Yamcha looks up... and up... this fight has a height requirement.
+{ex=0.85,cfg=0.35,pause=0.15,seed=4,say=Wolf Fang Fist! Everything he's got... all at once... and Mahoraga... feels a massage.} Wolf Fang Fist! Everything he's got... all at once... and Mahoraga feels... a massage.
+{ex=0.6,cfg=0.4,pause=0.15,seed=22,say=One hit. Crater. Face-down. Sai-ba-man flashbacks. He calls Vegeta.} One hit. Crater. Face-down. Saibaman flashbacks. He calls Vegeta.
+{ex=0.3,cfg=0.6,ref=public/wb2/v2/refs/vegeta.wav,pause=0.3,seed=11,say=I watched you lose... to a plant. No.} I watched you lose to a plant. No.
+{ex=0.9,cfg=0.3,pause=0.15} But Yamcha gets back up. Two fingers. One Spirit Ball. Around the guard... straight into the wheel... Direct hit!
+{ex=0.55,cfg=0.4,pause=0.15} Then the wheel turns. Click. It adapted. He fires again... and it just... fizzles. Same attack. Zero effect.
+{ex=0.5,cfg=0.3,pause=0.15} The wheel turns again. But now, it's looking at you. Your heartbeat. Your breathing. You're teaching it how to find you.
+{ex=0.7,cfg=0.35,pause=0.2} Footsteps. Sukuna.
+{ex=0.45,cfg=0.35,ref=public/wb2/v2/refs/sukuna.wav,pause=0.25,seed=12} Shibuya taught me how to kill you.
+{ex=0.8,cfg=0.35,pause=0.05,seed=9,say=Mahoraga roars... and another shadow... steps in.} Mahoraga roars... and another shadow steps in.
