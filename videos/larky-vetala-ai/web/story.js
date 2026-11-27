@@ -41,8 +41,8 @@ const VH = [2.0, 6.2, -12.3];                                          // the Ve
 const vik = (t) => (t < 0 ? 0 : 0);
 const CAMS = {
   wide: [{ f: SH.wide.a, pos: A(0, 9.5, 9), look: A(1.5, 4.5, -12), fov: 46 }, { f: SH.wide.b, pos: A(0.5, 6.4, -2.5), look: A(2, 5.2, -12.3), fov: 42, ease: 'smooth' }],
-  hang: [{ f: SH.hang.a, pos: A(2.4, 4.6, -7.2), look: A(2, 4.5, -12.3), fov: 26 }, { f: SH.hang.b, pos: A(2.1, 4.55, -9.3), look: A(2, 4.45, -12.3), fov: 21 }],
-  meet: [{ f: SH.meet.a, pos: A(3.6, 4.9, -6.4), look: A(2, 4.9, -12.3), fov: 34 }, { f: SH.meet.b, pos: A(2.7, 4.8, -8.4), look: A(2, 4.75, -12.3), fov: 29 }],
+  hang: [{ f: SH.hang.a, pos: A(2.4, 4.3, -7.2), look: A(2, 4.25, -12.3), fov: 26 }, { f: SH.hang.b, pos: A(2.1, 4.3, -9.3), look: A(2, 4.25, -12.3), fov: 21 }],
+  meet: [{ f: SH.meet.a, pos: A(3.6, 4.5, -6.4), look: A(2, 4.5, -12.3), fov: 34 }, { f: SH.meet.b, pos: A(2.7, 4.35, -8.4), look: A(2, 4.3, -12.3), fov: 29 }],
   gpt: [{ f: SH.gpt.a, pos: B(1.5, 2.6, 4.4), look: B(0, 2.9, -9), fov: 44 }, { f: SH.gpt.b, pos: B(0.4, 2.8, 1.6), look: B(0, 3.2, -9.4), fov: 38 }],
   deal: [{ f: SH.deal.a, pos: A(0.2, 1.4, 5.8), look: A(0, 1.35, 0), fov: 30 }, { f: SH.deal.b, pos: A(0.1, 1.4, 4.6), look: A(0, 1.45, 0), fov: 27 }],
   carry: [{ f: SH.carry.a, pos: A(-2.2, 1.2, 6.6), look: A(-2.2, 1.7, 0), fov: 38 }, { f: SH.carry.b, pos: A(1.8, 1.25, 6.6), look: A(1.8, 1.7, 0), fov: 38 }],
