@@ -14,6 +14,10 @@ export type Skin = {
   shirt: string;
   tie: string | null;
   shoes: string;
+  // v3 (optional): separate upper-arm / forearm / cuff colours
+  upper?: string;
+  forearm?: string;
+  cuff?: string;
 };
 
 export const BASE_SKIN: Skin = {
@@ -261,12 +265,17 @@ export const ArmRig: React.FC<{
     }
     rotation={[a.x ?? 0, a.twist ?? 0, side * (0.1 + (a.z ?? 0))]}
   >
-    <Seg len={D.upperArm} r0={0.046} r1={0.038} color={s.jacket} />
+    <Seg len={D.upperArm} r0={0.046} r1={0.038} color={s.upper ?? s.jacket} />
     <group position={[0, -D.upperArm, 0]} rotation={[a.elbow ?? -0.12, 0, 0]}>
-      <Seg len={D.forearm} r0={0.037} r1={0.031} color={s.jacket} />
+      <Seg
+        len={D.forearm}
+        r0={0.037}
+        r1={0.031}
+        color={s.forearm ?? s.jacket}
+      />
       <mesh position={[0, -D.forearm + 0.005, 0]}>
         <cylinderGeometry args={[0.03, 0.03, 0.03, 8]} />
-        <Plastic color={s.shirt} />
+        <Plastic color={s.cuff ?? s.shirt} />
       </mesh>
       <group position={[0, -D.forearm, 0]} rotation={[a.wrist ?? 0, 0, 0]}>
         <Hand
@@ -292,6 +301,8 @@ export const BaseCharacter: React.FC<{
   backSlot?: React.ReactNode;
   // optional second, lower pair of arms (Sukuna's true form only)
   armsLower?: { l: Arm; r: Arm };
+  // v3: head scale (counter a non-uniform body scale)
+  headScale?: [number, number, number];
 }> = ({
   skin = BASE_SKIN,
   pose = {},
@@ -301,6 +312,7 @@ export const BaseCharacter: React.FC<{
   handRSlot,
   backSlot,
   armsLower,
+  headScale,
 }) => {
   const s = skin;
   const headGeo = useMemo(() => new SphereGeometry(1, 28, 18), []);
@@ -429,6 +441,7 @@ export const BaseCharacter: React.FC<{
               pose.headYaw ?? 0,
               pose.headRoll ?? 0,
             ]}
+            scale={headScale ?? [1, 1, 1]}
           >
             {/* big oval head; the face decal is its texture */}
             <mesh

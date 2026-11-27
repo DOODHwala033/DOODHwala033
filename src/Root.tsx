@@ -1,3 +1,10 @@
+import {
+  EP3_DURATION,
+  EP3_FPS,
+  ep3Schema,
+  WheelBattleEp3,
+} from "./WheelBattleEp3/Episode";
+import { Ep3Lab, ep3LabSchema } from "./WheelBattleEp3/Lab";
 import { Composition, Folder, Still } from "remotion";
 import { AiTakeover, AI_TAKEOVER_DURATION } from "./AiTakeover/AiTakeover";
 import { aiTakeoverDefaults, aiTakeoverSchema } from "./AiTakeover/schema";
@@ -221,6 +228,28 @@ export const RemotionRoot: React.FC = () => {
             audioFile: "wb3/voice.mp3",
             captionsFile: "wb3/voiceover.json",
           }}
+        />
+        <Composition
+          id="WheelBattleEp3"
+          component={WheelBattleEp3}
+          durationInFrames={EP3_DURATION}
+          fps={EP3_FPS}
+          width={1080}
+          height={1920}
+          schema={ep3Schema}
+          defaultProps={{
+            audioFile: "wbep3/bed.mp3",
+            voiceFile: "",
+            captionsFile: "wbep3/placeholder_captions.json",
+          }}
+        />
+        <Still
+          id="Ep3Lab"
+          component={Ep3Lab}
+          width={1080}
+          height={1920}
+          schema={ep3LabSchema}
+          defaultProps={{ view: "line" }}
         />
         <Still
           id="StyleTestYamcha"

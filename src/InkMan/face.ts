@@ -49,6 +49,22 @@ export type FaceState = {
   fourEyes?: boolean;
   // Yamcha: cross-shaped scar on the left cheek
   scar?: boolean;
+
+  // ---- v3 (all optional) ----
+  // eyes shut in happy upward arcs (^ ^)
+  happy?: boolean;
+  // vertical cat-slit pupils (Beerus)
+  slit?: boolean;
+  // iris/pupil size multiplier (0.35 = pinprick terror)
+  pupil?: number;
+  // sparkling star-burst eyes (culinary bliss)
+  stars?: boolean;
+  // glowing iris colour (lethal threat)
+  glow?: string;
+  // featureless head (mannequin)
+  blank?: boolean;
+  // brow stroke width (default 8)
+  browW?: number;
 };
 
 export const NEUTRAL: FaceState = {
@@ -95,6 +111,15 @@ const paintEye = (
   const ry = 22 * openF * k;
   const [lx, ly] = f.look ?? [0, 0];
 
+  if (f.happy) {
+    g.strokeStyle = INK;
+    g.lineWidth = 8;
+    g.lineCap = "round";
+    g.beginPath();
+    g.ellipse(ex, ey + 10 * k, 19 * KX * k, 16 * k, 0, Math.PI * 1.08, Math.PI * 1.92);
+    g.stroke();
+    return;
+  }
   if (f.spiral) {
     g.strokeStyle = INK;
     g.lineWidth = 4;
@@ -119,7 +144,7 @@ const paintEye = (
   g.clip();
 
   // iris + pupil
-  const ir = Math.min(ry, 14 * k);
+  const ir = Math.min(ry, 14 * k) * (f.pupil ?? 1);
   const ix = ex + lx * KX;
   const iy = ey + ly + 1;
   const iris = f.six ? "#8FD8FF" : (f.iris ?? "#2A1E18");
@@ -133,9 +158,33 @@ const paintEye = (
     g.fill();
   } else {
     ell(g, ix, iy, ir, ir);
-    g.fillStyle = iris;
+    if (f.glow) {
+      const gg = g.createRadialGradient(ix, iy, 1, ix, iy, ir * 1.1);
+      gg.addColorStop(0, "#FFF6C0");
+      gg.addColorStop(0.35, f.glow);
+      gg.addColorStop(1, iris);
+      g.fillStyle = gg;
+    } else g.fillStyle = iris;
     g.fill();
-    if (f.ring) {
+    if (f.stars) {
+      const star = (x: number, y: number, r: number) => {
+        g.beginPath();
+        for (let i = 0; i < 8; i++) {
+          const a = (i / 8) * Math.PI * 2 - Math.PI / 2;
+          const rr = i % 2 ? r * 0.28 : r;
+          g.lineTo(x + Math.cos(a) * rr * KX, y + Math.sin(a) * rr);
+        }
+        g.closePath();
+        g.fillStyle = "#FFFFFF";
+        g.fill();
+      };
+      star(ix, iy, ir * 1.05);
+      star(ix + 9, iy - 9, ir * 0.42);
+    } else if (f.slit) {
+      ell(g, ix, iy, ir * 0.16, ir * 0.9);
+      g.fillStyle = "#000";
+      g.fill();
+    } else if (f.ring) {
       for (const k of [0.8, 0.55, 0.3]) {
         ell(g, ix, iy, ir * k, ir * k);
         g.strokeStyle = "#5A3A08";
@@ -195,7 +244,7 @@ const paintBrow = (
   const half = 24 * KX;
   const dy = Math.sin(angry) * 22;
   g.strokeStyle = INK;
-  g.lineWidth = 8;
+  g.lineWidth = f.browW ?? 8;
   g.lineCap = "round";
   g.beginPath();
   g.moveTo(ex - s * half, by + dy);
@@ -308,6 +357,12 @@ export const paintFace = (skin: string, face: FaceState) => {
     g.fillStyle = skin;
     g.fillRect(0, 0, W, H);
     const rage = face.rage ?? 0;
+    if (face.blank) {
+      const tex0 = new CanvasTexture(c);
+      tex0.colorSpace = SRGBColorSpace;
+      cache.set(key, tex0);
+      return tex0;
+    }
 
     if (rage > 0) {
       // red mask over the face with a darker lower half, like the reference
