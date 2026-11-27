@@ -1,0 +1,143 @@
+{
+ "duration": 42.495,
+ "frames30": 1275,
+ "source": "kokoro-onnx am_michael (sentence-exact)",
+ "segments": [],
+ "phrases": [
+  {
+   "text": "What if the first AI chatbot was a ghost hanging from a tree?",
+   "s": 0.2,
+   "e": 3.624
+  },
+  {
+   "text": "Meet the Vetala.",
+   "s": 3.816,
+   "e": 4.86
+  },
+  {
+   "text": "About a thousand years of folklore,",
+   "s": 5.028,
+   "e": 6.808
+  },
+  {
+   "text": "and he's basically ChatGPT.",
+   "s": 7.208,
+   "e": 9.163
+  },
+  {
+   "text": "Here's the deal.",
+   "s": 9.331,
+   "e": 10.253
+  },
+  {
+   "text": "A king carries him on his back,",
+   "s": 10.421,
+   "e": 11.931
+  },
+  {
+   "text": "across a cremation ground.",
+   "s": 12.351,
+   "e": 13.868
+  },
+  {
+   "text": "Every night,",
+   "s": 14.036,
+   "e": 14.606
+  },
+  {
+   "text": "the ghost tells a story...",
+   "s": 14.676,
+   "e": 15.889
+  },
+  {
+   "text": "then asks one question.",
+   "s": 16.057,
+   "e": 17.444
+  },
+  {
+   "text": "Wait,",
+   "s": 17.612,
+   "e": 17.814
+  },
+  {
+   "text": "so who's the assistant here?",
+   "s": 17.924,
+   "e": 19.336
+  },
+  {
+   "text": "Stay silent,",
+   "s": 19.528,
+   "e": 20.298
+  },
+  {
+   "text": "and your head shatters.",
+   "s": 20.398,
+   "e": 21.33
+  },
+  {
+   "text": "Answer,",
+   "s": 21.498,
+   "e": 21.962
+  },
+  {
+   "text": "and the ghost flies back to his tree.",
+   "s": 22.072,
+   "e": 23.928
+  },
+  {
+   "text": "Twenty-four questions.",
+   "s": 24.096,
+   "e": 25.378
+  },
+  {
+   "text": "Twenty-four right answers.",
+   "s": 25.546,
+   "e": 27.009
+  },
+  {
+   "text": "Twenty-four trips back to the tree.",
+   "s": 27.177,
+   "e": 28.956
+  },
+  {
+   "text": "That's not folklore.",
+   "s": 29.124,
+   "e": 30.294
+  },
+  {
+   "text": "That's a subscription.",
+   "s": 30.462,
+   "e": 31.617
+  },
+  {
+   "text": "But on question twenty-five,",
+   "s": 31.785,
+   "e": 33.145
+  },
+  {
+   "text": "the king finally stays silent.",
+   "s": 33.525,
+   "e": 35.242
+  },
+  {
+   "text": "And that's when the ghost helps him.",
+   "s": 35.41,
+   "e": 36.997
+  },
+  {
+   "text": "Maybe the only way to beat an AI...",
+   "s": 37.165,
+   "e": 39.246
+  },
+  {
+   "text": "is a question it can't answer.",
+   "s": 39.414,
+   "e": 40.95
+  },
+  {
+   "text": "Comment yours.",
+   "s": 41.118,
+   "e": 42.044
+  }
+ ]
+}
