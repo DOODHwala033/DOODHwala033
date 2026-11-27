@@ -7,6 +7,8 @@ Writes <out_basename>.wav and <out_basename>.json (Remotion Caption[] with
 pageBreakAfter on punctuation / every 4 words), ready for the Captions component.
 Voices: am_michael, am_adam, am_fenrir, af_heart, af_bella, bm_george, ... (see
 the Kokoro-82M model card). Model files download from Hugging Face on first run.
+A line may start with "@<voice>:" to speak that line in another voice (e.g. a
+quoted character line); captions are unaffected by the prefix.
 """
 
 import argparse
@@ -28,7 +30,13 @@ def main() -> None:
     a = ap.parse_args()
 
     text = open(a.script, encoding="utf-8").read().strip()
-    pipe = KPipeline(lang_code="a" if a.voice[0] == "a" else "b")
+    pipes: dict[str, KPipeline] = {}
+
+    def pipe_for(voice: str) -> KPipeline:
+        code = "a" if voice[0] == "a" else "b"
+        if code not in pipes:
+            pipes[code] = KPipeline(lang_code=code)
+        return pipes[code]
 
     audio: list[np.ndarray] = []
     captions = []
@@ -36,7 +44,11 @@ def main() -> None:
     n_in_page = 0
     # one chunk per script line keeps sentence pauses natural
     for line in [l for l in text.splitlines() if l.strip()]:
-        for result in pipe(line, voice=a.voice, speed=a.speed):
+        voice = a.voice
+        if line.startswith("@") and ":" in line:
+            voice, line = line[1:].split(":", 1)
+            voice, line = voice.strip(), line.strip()
+        for result in pipe_for(voice)(line, voice=voice, speed=a.speed):
             chunk = result.audio.numpy() if hasattr(result.audio, "numpy") else np.asarray(result.audio)
             for tok in result.tokens or []:
                 if tok.start_ts is None or not tok.text.strip() or not any(c.isalnum() for c in tok.text):

@@ -1,0 +1,1102 @@
+[
+ {
+  "text": "wheel",
+  "startMs": 300,
+  "endMs": 500,
+  "timestampMs": 300,
+  "confidence": null
+ },
+ {
+  "text": " verdict",
+  "startMs": 500,
+  "endMs": 875,
+  "timestampMs": 500,
+  "confidence": null
+ },
+ {
+  "text": " you've",
+  "startMs": 925,
+  "endMs": 1062,
+  "timestampMs": 925,
+  "confidence": null
+ },
+ {
+  "text": " been",
+  "startMs": 1062,
+  "endMs": 1225,
+  "timestampMs": 1062,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "scammed",
+  "startMs": 1225,
+  "endMs": 1900,
+  "timestampMs": 1225,
+  "confidence": null
+ },
+ {
+  "text": " yamcha",
+  "startMs": 2038,
+  "endMs": 2400,
+  "timestampMs": 2038,
+  "confidence": null
+ },
+ {
+  "text": " protects",
+  "startMs": 2400,
+  "endMs": 2825,
+  "timestampMs": 2400,
+  "confidence": null
+ },
+ {
+  "text": " you",
+  "startMs": 2825,
+  "endMs": 3075,
+  "timestampMs": 2825,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "mahoraga",
+  "startMs": 3175,
+  "endMs": 3675,
+  "timestampMs": 3175,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 3712,
+  "endMs": 3850,
+  "timestampMs": 3712,
+  "confidence": null
+ },
+ {
+  "text": " adapting",
+  "startMs": 3850,
+  "endMs": 4300,
+  "timestampMs": 3850,
+  "confidence": null
+ },
+ {
+  "text": " monster",
+  "startMs": 4300,
+  "endMs": 4675,
+  "timestampMs": 4300,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "hunts",
+  "startMs": 4725,
+  "endMs": 5050,
+  "timestampMs": 4725,
+  "confidence": null
+ },
+ {
+  "text": " you",
+  "startMs": 5050,
+  "endMs": 5325,
+  "timestampMs": 5050,
+  "confidence": null
+ },
+ {
+  "text": " request",
+  "startMs": 5475,
+  "endMs": 5888,
+  "timestampMs": 5475,
+  "confidence": null
+ },
+ {
+  "text": " a",
+  "startMs": 5888,
+  "endMs": 5975,
+  "timestampMs": 5888,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "refund",
+  "startMs": 5975,
+  "endMs": 6675,
+  "timestampMs": 5975,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "you",
+  "startMs": 7295,
+  "endMs": 7420,
+  "timestampMs": 7295,
+  "confidence": null
+ },
+ {
+  "text": " asked",
+  "startMs": 7420,
+  "endMs": 7695,
+  "timestampMs": 7420,
+  "confidence": null
+ },
+ {
+  "text": " yamcha",
+  "startMs": 7695,
+  "endMs": 8045,
+  "timestampMs": 7695,
+  "confidence": null
+ },
+ {
+  "text": " for",
+  "startMs": 8045,
+  "endMs": 8158,
+  "timestampMs": 8045,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "an",
+  "startMs": 8158,
+  "endMs": 8245,
+  "timestampMs": 8158,
+  "confidence": null
+ },
+ {
+  "text": " autograph",
+  "startMs": 8245,
+  "endMs": 8732,
+  "timestampMs": 8245,
+  "confidence": null
+ },
+ {
+  "text": " and",
+  "startMs": 8732,
+  "endMs": 8845,
+  "timestampMs": 8732,
+  "confidence": null
+ },
+ {
+  "text": " called",
+  "startMs": 8845,
+  "endMs": 9145,
+  "timestampMs": 8845,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "wolf",
+  "startMs": 9145,
+  "endMs": 9395,
+  "timestampMs": 9145,
+  "confidence": null
+ },
+ {
+  "text": " fang",
+  "startMs": 9395,
+  "endMs": 9683,
+  "timestampMs": 9395,
+  "confidence": null
+ },
+ {
+  "text": " fist",
+  "startMs": 9683,
+  "endMs": 9970,
+  "timestampMs": 9683,
+  "confidence": null
+ },
+ {
+  "text": " cool",
+  "startMs": 9970,
+  "endMs": 10570,
+  "timestampMs": 9970,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "he",
+  "startMs": 10670,
+  "endMs": 10782,
+  "timestampMs": 10670,
+  "confidence": null
+ },
+ {
+  "text": " has",
+  "startMs": 10782,
+  "endMs": 10933,
+  "timestampMs": 10782,
+  "confidence": null
+ },
+ {
+  "text": " a",
+  "startMs": 10933,
+  "endMs": 11008,
+  "timestampMs": 10933,
+  "confidence": null
+ },
+ {
+  "text": " fan",
+  "startMs": 11008,
+  "endMs": 11520,
+  "timestampMs": 11008,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "you're",
+  "startMs": 11620,
+  "endMs": 11782,
+  "timestampMs": 11620,
+  "confidence": null
+ },
+ {
+  "text": " family",
+  "startMs": 11782,
+  "endMs": 12495,
+  "timestampMs": 11782,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "mahoraga",
+  "startMs": 13115,
+  "endMs": 13640,
+  "timestampMs": 13115,
+  "confidence": null
+ },
+ {
+  "text": " steps",
+  "startMs": 13640,
+  "endMs": 13965,
+  "timestampMs": 13640,
+  "confidence": null
+ },
+ {
+  "text": " closer",
+  "startMs": 13965,
+  "endMs": 14540,
+  "timestampMs": 13965,
+  "confidence": null
+ },
+ {
+  "text": " yamcha",
+  "startMs": 14652,
+  "endMs": 15015,
+  "timestampMs": 14652,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "looks",
+  "startMs": 15015,
+  "endMs": 15265,
+  "timestampMs": 15015,
+  "confidence": null
+ },
+ {
+  "text": " up",
+  "startMs": 15265,
+  "endMs": 15665,
+  "timestampMs": 15265,
+  "confidence": null
+ },
+ {
+  "text": " and",
+  "startMs": 15778,
+  "endMs": 15878,
+  "timestampMs": 15778,
+  "confidence": null
+ },
+ {
+  "text": " discovers",
+  "startMs": 15878,
+  "endMs": 16390,
+  "timestampMs": 15878,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "this",
+  "startMs": 16390,
+  "endMs": 16590,
+  "timestampMs": 16390,
+  "confidence": null
+ },
+ {
+  "text": " fight",
+  "startMs": 16590,
+  "endMs": 16840,
+  "timestampMs": 16590,
+  "confidence": null
+ },
+ {
+  "text": " has",
+  "startMs": 16840,
+  "endMs": 17002,
+  "timestampMs": 16840,
+  "confidence": null
+ },
+ {
+  "text": " a",
+  "startMs": 17002,
+  "endMs": 17065,
+  "timestampMs": 17002,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "height",
+  "startMs": 17065,
+  "endMs": 17278,
+  "timestampMs": 17065,
+  "confidence": null
+ },
+ {
+  "text": " requirement",
+  "startMs": 17278,
+  "endMs": 18090,
+  "timestampMs": 17278,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "wolf",
+  "startMs": 18735,
+  "endMs": 18985,
+  "timestampMs": 18735,
+  "confidence": null
+ },
+ {
+  "text": " fang",
+  "startMs": 18985,
+  "endMs": 19272,
+  "timestampMs": 18985,
+  "confidence": null
+ },
+ {
+  "text": " fist",
+  "startMs": 19272,
+  "endMs": 19610,
+  "timestampMs": 19272,
+  "confidence": null
+ },
+ {
+  "text": " rapid",
+  "startMs": 19685,
+  "endMs": 20035,
+  "timestampMs": 19685,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "claw-like",
+  "startMs": 20035,
+  "endMs": 20460,
+  "timestampMs": 20035,
+  "confidence": null
+ },
+ {
+  "text": " strikes",
+  "startMs": 20460,
+  "endMs": 21085,
+  "timestampMs": 20460,
+  "confidence": null
+ },
+ {
+  "text": " mahoraga",
+  "startMs": 21185,
+  "endMs": 21710,
+  "timestampMs": 21185,
+  "confidence": null
+ },
+ {
+  "text": " barely",
+  "startMs": 21710,
+  "endMs": 22035,
+  "timestampMs": 21710,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "moves",
+  "startMs": 22035,
+  "endMs": 22435,
+  "timestampMs": 22035,
+  "confidence": null
+ },
+ {
+  "text": " that's",
+  "startMs": 22485,
+  "endMs": 22760,
+  "timestampMs": 22485,
+  "confidence": null
+ },
+ {
+  "text": " not",
+  "startMs": 22760,
+  "endMs": 22960,
+  "timestampMs": 22760,
+  "confidence": null
+ },
+ {
+  "text": " damage",
+  "startMs": 22960,
+  "endMs": 23335,
+  "timestampMs": 22960,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "that's",
+  "startMs": 23372,
+  "endMs": 23572,
+  "timestampMs": 23372,
+  "confidence": null
+ },
+ {
+  "text": " a",
+  "startMs": 23572,
+  "endMs": 23622,
+  "timestampMs": 23572,
+  "confidence": null
+ },
+ {
+  "text": " massage",
+  "startMs": 23622,
+  "endMs": 24360,
+  "timestampMs": 23622,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "one",
+  "startMs": 25030,
+  "endMs": 25255,
+  "timestampMs": 25030,
+  "confidence": null
+ },
+ {
+  "text": " hit",
+  "startMs": 25255,
+  "endMs": 25430,
+  "timestampMs": 25255,
+  "confidence": null
+ },
+ {
+  "text": " crater",
+  "startMs": 25480,
+  "endMs": 25780,
+  "timestampMs": 25480,
+  "confidence": null
+ },
+ {
+  "text": " face-down",
+  "startMs": 25830,
+  "endMs": 26405,
+  "timestampMs": 25830,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "saibaman",
+  "startMs": 26492,
+  "endMs": 26955,
+  "timestampMs": 26492,
+  "confidence": null
+ },
+ {
+  "text": " flashbacks",
+  "startMs": 26955,
+  "endMs": 27705,
+  "timestampMs": 26955,
+  "confidence": null
+ },
+ {
+  "text": " yamcha",
+  "startMs": 27818,
+  "endMs": 28180,
+  "timestampMs": 27818,
+  "confidence": null
+ },
+ {
+  "text": " calls",
+  "startMs": 28180,
+  "endMs": 28480,
+  "timestampMs": 28180,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "vegeta",
+  "startMs": 28480,
+  "endMs": 29130,
+  "timestampMs": 28480,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "i",
+  "startMs": 29600,
+  "endMs": 29725,
+  "timestampMs": 29600,
+  "confidence": null
+ },
+ {
+  "text": " watched",
+  "startMs": 29725,
+  "endMs": 29963,
+  "timestampMs": 29725,
+  "confidence": null
+ },
+ {
+  "text": " you",
+  "startMs": 29963,
+  "endMs": 30050,
+  "timestampMs": 29963,
+  "confidence": null
+ },
+ {
+  "text": " lose",
+  "startMs": 30050,
+  "endMs": 30238,
+  "timestampMs": 30050,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "to",
+  "startMs": 30238,
+  "endMs": 30312,
+  "timestampMs": 30238,
+  "confidence": null
+ },
+ {
+  "text": " a",
+  "startMs": 30312,
+  "endMs": 30375,
+  "timestampMs": 30312,
+  "confidence": null
+ },
+ {
+  "text": " plant",
+  "startMs": 30375,
+  "endMs": 30750,
+  "timestampMs": 30375,
+  "confidence": null
+ },
+ {
+  "text": " no",
+  "startMs": 30825,
+  "endMs": 31275,
+  "timestampMs": 30825,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "yamcha",
+  "startMs": 31945,
+  "endMs": 32295,
+  "timestampMs": 31945,
+  "confidence": null
+ },
+ {
+  "text": " locks",
+  "startMs": 32295,
+  "endMs": 32620,
+  "timestampMs": 32295,
+  "confidence": null
+ },
+ {
+  "text": " in",
+  "startMs": 32620,
+  "endMs": 33095,
+  "timestampMs": 32620,
+  "confidence": null
+ },
+ {
+  "text": " two",
+  "startMs": 33208,
+  "endMs": 33420,
+  "timestampMs": 33208,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "fingers",
+  "startMs": 33420,
+  "endMs": 33795,
+  "timestampMs": 33420,
+  "confidence": null
+ },
+ {
+  "text": " steer",
+  "startMs": 33795,
+  "endMs": 34033,
+  "timestampMs": 33795,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 34033,
+  "endMs": 34120,
+  "timestampMs": 34033,
+  "confidence": null
+ },
+ {
+  "text": " spirit",
+  "startMs": 34120,
+  "endMs": 34520,
+  "timestampMs": 34120,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "ball",
+  "startMs": 34520,
+  "endMs": 34820,
+  "timestampMs": 34520,
+  "confidence": null
+ },
+ {
+  "text": " around",
+  "startMs": 34820,
+  "endMs": 35120,
+  "timestampMs": 34820,
+  "confidence": null
+ },
+ {
+  "text": " mahoraga's",
+  "startMs": 35120,
+  "endMs": 35720,
+  "timestampMs": 35120,
+  "confidence": null
+ },
+ {
+  "text": " guard",
+  "startMs": 35720,
+  "endMs": 36070,
+  "timestampMs": 35720,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "straight",
+  "startMs": 36120,
+  "endMs": 36408,
+  "timestampMs": 36120,
+  "confidence": null
+ },
+ {
+  "text": " into",
+  "startMs": 36408,
+  "endMs": 36582,
+  "timestampMs": 36408,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 36582,
+  "endMs": 36670,
+  "timestampMs": 36582,
+  "confidence": null
+ },
+ {
+  "text": " wheel",
+  "startMs": 36670,
+  "endMs": 37170,
+  "timestampMs": 36670,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "direct",
+  "startMs": 37270,
+  "endMs": 37620,
+  "timestampMs": 37270,
+  "confidence": null
+ },
+ {
+  "text": " hit",
+  "startMs": 37620,
+  "endMs": 38145,
+  "timestampMs": 37620,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "mahoraga",
+  "startMs": 38790,
+  "endMs": 39315,
+  "timestampMs": 38790,
+  "confidence": null
+ },
+ {
+  "text": " adapts",
+  "startMs": 39315,
+  "endMs": 39940,
+  "timestampMs": 39315,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 40015,
+  "endMs": 40140,
+  "timestampMs": 40015,
+  "confidence": null
+ },
+ {
+  "text": " wheel",
+  "startMs": 40140,
+  "endMs": 40390,
+  "timestampMs": 40140,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "completes",
+  "startMs": 40390,
+  "endMs": 40802,
+  "timestampMs": 40390,
+  "confidence": null
+ },
+ {
+  "text": " its",
+  "startMs": 40802,
+  "endMs": 40965,
+  "timestampMs": 40802,
+  "confidence": null
+ },
+ {
+  "text": " turn",
+  "startMs": 40965,
+  "endMs": 41515,
+  "timestampMs": 40965,
+  "confidence": null
+ },
+ {
+  "text": " yamcha",
+  "startMs": 41628,
+  "endMs": 42003,
+  "timestampMs": 41628,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "fires",
+  "startMs": 42003,
+  "endMs": 42378,
+  "timestampMs": 42003,
+  "confidence": null
+ },
+ {
+  "text": " again",
+  "startMs": 42378,
+  "endMs": 42640,
+  "timestampMs": 42378,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 42678,
+  "endMs": 42765,
+  "timestampMs": 42678,
+  "confidence": null
+ },
+ {
+  "text": " spirit",
+  "startMs": 42765,
+  "endMs": 43140,
+  "timestampMs": 42765,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "ball",
+  "startMs": 43140,
+  "endMs": 43428,
+  "timestampMs": 43140,
+  "confidence": null
+ },
+ {
+  "text": " fizzles",
+  "startMs": 43428,
+  "endMs": 43965,
+  "timestampMs": 43428,
+  "confidence": null
+ },
+ {
+  "text": " learned",
+  "startMs": 44078,
+  "endMs": 44390,
+  "timestampMs": 44078,
+  "confidence": null
+ },
+ {
+  "text": " immunity",
+  "startMs": 44390,
+  "endMs": 45165,
+  "timestampMs": 44390,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "then",
+  "startMs": 45785,
+  "endMs": 45898,
+  "timestampMs": 45785,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 45898,
+  "endMs": 45985,
+  "timestampMs": 45898,
+  "confidence": null
+ },
+ {
+  "text": " wheel",
+  "startMs": 45985,
+  "endMs": 46235,
+  "timestampMs": 45985,
+  "confidence": null
+ },
+ {
+  "text": " turns",
+  "startMs": 46235,
+  "endMs": 46548,
+  "timestampMs": 46235,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "again",
+  "startMs": 46548,
+  "endMs": 47085,
+  "timestampMs": 46548,
+  "confidence": null
+ },
+ {
+  "text": " new",
+  "startMs": 47198,
+  "endMs": 47385,
+  "timestampMs": 47198,
+  "confidence": null
+ },
+ {
+  "text": " target",
+  "startMs": 47385,
+  "endMs": 47735,
+  "timestampMs": 47385,
+  "confidence": null
+ },
+ {
+  "text": " you",
+  "startMs": 47798,
+  "endMs": 48085,
+  "timestampMs": 47798,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "it",
+  "startMs": 48222,
+  "endMs": 48335,
+  "timestampMs": 48222,
+  "confidence": null
+ },
+ {
+  "text": " has",
+  "startMs": 48335,
+  "endMs": 48497,
+  "timestampMs": 48335,
+  "confidence": null
+ },
+ {
+  "text": " your",
+  "startMs": 48497,
+  "endMs": 48610,
+  "timestampMs": 48497,
+  "confidence": null
+ },
+ {
+  "text": " heartbeat",
+  "startMs": 48610,
+  "endMs": 49035,
+  "timestampMs": 48610,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "your",
+  "startMs": 49072,
+  "endMs": 49185,
+  "timestampMs": 49072,
+  "confidence": null
+ },
+ {
+  "text": " breathing",
+  "startMs": 49185,
+  "endMs": 49685,
+  "timestampMs": 49185,
+  "confidence": null
+ },
+ {
+  "text": " you're",
+  "startMs": 49760,
+  "endMs": 49922,
+  "timestampMs": 49760,
+  "confidence": null
+ },
+ {
+  "text": " showing",
+  "startMs": 49922,
+  "endMs": 50222,
+  "timestampMs": 49922,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "it",
+  "startMs": 50222,
+  "endMs": 50298,
+  "timestampMs": 50222,
+  "confidence": null
+ },
+ {
+  "text": " where",
+  "startMs": 50298,
+  "endMs": 50422,
+  "timestampMs": 50298,
+  "confidence": null
+ },
+ {
+  "text": " to",
+  "startMs": 50422,
+  "endMs": 50510,
+  "timestampMs": 50422,
+  "confidence": null
+ },
+ {
+  "text": " find",
+  "startMs": 50510,
+  "endMs": 50810,
+  "timestampMs": 50510,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "you",
+  "startMs": 50810,
+  "endMs": 51185,
+  "timestampMs": 50810,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "sukuna",
+  "startMs": 51880,
+  "endMs": 52255,
+  "timestampMs": 51880,
+  "confidence": null
+ },
+ {
+  "text": " arrives",
+  "startMs": 52255,
+  "endMs": 52930,
+  "timestampMs": 52255,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "shibuya",
+  "startMs": 53475,
+  "endMs": 53850,
+  "timestampMs": 53475,
+  "confidence": null
+ },
+ {
+  "text": " taught",
+  "startMs": 53850,
+  "endMs": 54088,
+  "timestampMs": 53850,
+  "confidence": null
+ },
+ {
+  "text": " me",
+  "startMs": 54088,
+  "endMs": 54200,
+  "timestampMs": 54088,
+  "confidence": null
+ },
+ {
+  "text": " how",
+  "startMs": 54200,
+  "endMs": 54338,
+  "timestampMs": 54200,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "to",
+  "startMs": 54338,
+  "endMs": 54450,
+  "timestampMs": 54338,
+  "confidence": null
+ },
+ {
+  "text": " kill",
+  "startMs": 54450,
+  "endMs": 54700,
+  "timestampMs": 54450,
+  "confidence": null
+ },
+ {
+  "text": " you",
+  "startMs": 54700,
+  "endMs": 55200,
+  "timestampMs": 54700,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "mahoraga",
+  "startMs": 55945,
+  "endMs": 56470,
+  "timestampMs": 55945,
+  "confidence": null
+ },
+ {
+  "text": " roars",
+  "startMs": 56470,
+  "endMs": 56970,
+  "timestampMs": 56470,
+  "confidence": null
+ },
+ {
+  "text": " another",
+  "startMs": 57070,
+  "endMs": 57320,
+  "timestampMs": 57070,
+  "confidence": null
+ },
+ {
+  "text": " shadow",
+  "startMs": 57320,
+  "endMs": 57620,
+  "timestampMs": 57320,
+  "confidence": null,
+  "pageBreakAfter": true
+ },
+ {
+  "text": "steps",
+  "startMs": 57620,
+  "endMs": 57957,
+  "timestampMs": 57620,
+  "confidence": null
+ },
+ {
+  "text": " in",
+  "startMs": 57957,
+  "endMs": 58420,
+  "timestampMs": 57957,
+  "confidence": null,
+  "pageBreakAfter": true
+ }
+]

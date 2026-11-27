@@ -25,7 +25,18 @@ export const BASE_SKIN: Skin = {
   shoes: "#141416",
 };
 
-export type Arm = { x?: number; z?: number; elbow?: number; curl?: number };
+export type Arm = {
+  x?: number;
+  z?: number;
+  elbow?: number;
+  curl?: number;
+  // v3 (all optional): upper-arm twist, wrist bend, per-finger curls
+  // [index, middle, ring, pinky] and thumb curl
+  twist?: number;
+  wrist?: number;
+  fingers?: [number, number, number, number];
+  thumb?: number;
+};
 export type Pose = {
   hipShift?: number; // metres, sideways weight shift
   hipRoll?: number;
@@ -41,6 +52,17 @@ export type Pose = {
   // hip swing; negative = leg forward
   thighL?: number;
   thighR?: number;
+  // ---- v3 (all optional; defaults keep older episodes identical) ----
+  // torso bend at the waist (+ = forward) and sideways (+ = toward the left)
+  lean?: number;
+  leanSide?: number;
+  // shoulders up (0..1)
+  shrug?: number;
+  // ankle pitch (+ = toes up)
+  footL?: number;
+  footR?: number;
+  // drop the hips so the straighter leg's foot stays on the floor
+  ground?: boolean;
 };
 
 // Proportions: 1.80 m tall, head 0.28 m → ~6.4 heads.
@@ -118,40 +140,59 @@ const Seg: React.FC<{
   </group>
 );
 
-const Leg: React.FC<{ side: 1 | -1; knee: number; thigh: number; s: Skin }> = ({
-  side,
-  knee,
-  thigh,
-  s,
-}) => (
+const Leg: React.FC<{
+  side: 1 | -1;
+  knee: number;
+  thigh: number;
+  foot?: number;
+  s: Skin;
+}> = ({ side, knee, thigh, foot = 0, s }) => (
   <group position={[side * 0.092, D.hipY, 0]} rotation={[thigh, 0, 0]}>
     <Seg len={D.thigh} r0={0.068} r1={0.054} color={s.pants} />
     <group position={[0, -D.thigh, 0]} rotation={[knee, 0, 0]}>
       <Seg len={D.shin} r0={0.052} r1={0.042} color={s.pants} />
-      <Block
-        size={[0.11, D.footH, 0.27]}
-        r={0.03}
-        color={s.shoes}
-        position={[0, -D.shin - D.footH / 2 + 0.005, 0.055]}
-      />
+      {/* foot pivots at the ankle */}
+      <group position={[0, -D.shin, 0]} rotation={[-foot, 0, 0]}>
+        <Block
+          size={[0.11, D.footH, 0.27]}
+          r={0.03}
+          color={s.shoes}
+          position={[0, -D.footH / 2 + 0.005, 0.055]}
+        />
+      </group>
     </group>
   </group>
 );
 
+// How far the hips must drop so the straighter leg's foot touches the floor.
+export const groundDrop = (p: Pose) => {
+  const ext = (th: number, kn: number) =>
+    D.thigh * Math.cos(th) + D.shin * Math.cos(th + kn);
+  const full = D.thigh + D.shin;
+  return (
+    full -
+    Math.max(ext(p.thighL ?? 0, p.kneeL ?? 0), ext(p.thighR ?? 0, p.kneeR ?? 0))
+  );
+};
+
 // Hand: palm + four two-segment fingers + thumb. The palm faces the body
 // (inward) when the arm hangs; `curl` 0 = open, 1 = fist.
-const Hand: React.FC<{ side: 1 | -1; curl: number; color: string }> = ({
-  side,
-  curl,
-  color,
-}) => {
+const Hand: React.FC<{
+  side: 1 | -1;
+  curl: number;
+  color: string;
+  fingerCurls?: [number, number, number, number];
+  thumb?: number;
+}> = ({ side, curl, color, fingerCurls, thumb }) => {
   const fingers = [
     { z: -0.022, l: 0.05 },
     { z: -0.0075, l: 0.058 },
     { z: 0.0075, l: 0.054 },
     { z: 0.022, l: 0.044 },
   ];
-  const bend = -side * curl;
+  // per-finger bend: fingerCurls is [index, middle, ring, pinky] in z order
+  const fb = (i: number) => -side * (fingerCurls ? fingerCurls[i] : curl);
+  const tb = -side * (thumb ?? curl);
   return (
     <group>
       <Block
@@ -164,13 +205,13 @@ const Hand: React.FC<{ side: 1 | -1; curl: number; color: string }> = ({
         <group
           key={i}
           position={[0, -0.08, f.z]}
-          rotation={[0, 0, bend * 1.35]}
+          rotation={[0, 0, fb(i) * 1.35]}
         >
           <mesh position={[0, -f.l * 0.28, 0]} castShadow>
             <capsuleGeometry args={[0.0085, f.l * 0.5, 4, 8]} />
             <Plastic color={color} />
           </mesh>
-          <group position={[0, -f.l * 0.56, 0]} rotation={[0, 0, bend * 1.45]}>
+          <group position={[0, -f.l * 0.56, 0]} rotation={[0, 0, fb(i) * 1.45]}>
             <mesh position={[0, -f.l * 0.22, 0]} castShadow>
               <capsuleGeometry args={[0.0078, f.l * 0.36, 4, 8]} />
               <Plastic color={color} />
@@ -180,13 +221,13 @@ const Hand: React.FC<{ side: 1 | -1; curl: number; color: string }> = ({
       ))}
       <group
         position={[-side * 0.004, -0.03, 0.034]}
-        rotation={[-0.55, 0, bend * 0.7]}
+        rotation={[-0.55, 0, tb * 0.7]}
       >
         <mesh position={[0, -0.018, 0]} castShadow>
           <capsuleGeometry args={[0.0095, 0.024, 4, 8]} />
           <Plastic color={color} />
         </mesh>
-        <group position={[0, -0.036, 0]} rotation={[0, 0, bend * 0.9]}>
+        <group position={[0, -0.036, 0]} rotation={[0, 0, tb * 0.9]}>
           <mesh position={[0, -0.014, 0]} castShadow>
             <capsuleGeometry args={[0.0088, 0.016, 4, 8]} />
             <Plastic color={color} />
@@ -206,18 +247,19 @@ export const ArmRig: React.FC<{
   dy?: number;
   // place the shoulder at the origin (for POV arms parented to the camera)
   free?: boolean;
-}> = ({ side, a, s, slot, dy = 0, free = false }) => (
+  shrug?: number;
+}> = ({ side, a, s, slot, dy = 0, free = false, shrug = 0 }) => (
   <group
     position={
       free
         ? [0, 0, 0]
         : [
             side * (D.shoulderW - (dy ? 0.02 : 0)),
-            D.torsoH - 0.05 + dy,
+            D.torsoH - 0.05 + dy + shrug * 0.045,
             dy ? -0.02 : 0,
           ]
     }
-    rotation={[a.x ?? 0, 0, side * (0.1 + (a.z ?? 0))]}
+    rotation={[a.x ?? 0, a.twist ?? 0, side * (0.1 + (a.z ?? 0))]}
   >
     <Seg len={D.upperArm} r0={0.046} r1={0.038} color={s.jacket} />
     <group position={[0, -D.upperArm, 0]} rotation={[a.elbow ?? -0.12, 0, 0]}>
@@ -226,8 +268,14 @@ export const ArmRig: React.FC<{
         <cylinderGeometry args={[0.03, 0.03, 0.03, 8]} />
         <Plastic color={s.shirt} />
       </mesh>
-      <group position={[0, -D.forearm, 0]}>
-        <Hand side={side} curl={a.curl ?? 0.2} color={s.skin} />
+      <group position={[0, -D.forearm, 0]} rotation={[a.wrist ?? 0, 0, 0]}>
+        <Hand
+          side={side}
+          curl={a.curl ?? 0.2}
+          color={s.skin}
+          fingerCurls={a.fingers}
+          thumb={a.thumb}
+        />
       </group>
       <group position={[0, -D.forearm - 0.06, 0]}>{slot}</group>
     </group>
@@ -269,10 +317,23 @@ export const BaseCharacter: React.FC<{
   const faceTex = useMemo(() => paintFace(s.skin, face), [s.skin, faceKey]);
   const breathe = pose.breathe ?? 0;
 
+  const drop = pose.ground ? groundDrop(pose) : 0;
   return (
-    <group>
-      <Leg side={1} knee={pose.kneeL ?? 0} thigh={pose.thighL ?? 0} s={s} />
-      <Leg side={-1} knee={pose.kneeR ?? 0} thigh={pose.thighR ?? 0} s={s} />
+    <group position={[0, -drop, 0]}>
+      <Leg
+        side={1}
+        knee={pose.kneeL ?? 0}
+        thigh={pose.thighL ?? 0}
+        foot={pose.footL}
+        s={s}
+      />
+      <Leg
+        side={-1}
+        knee={pose.kneeR ?? 0}
+        thigh={pose.thighR ?? 0}
+        foot={pose.footR}
+        s={s}
+      />
       {/* hips carry the weight shift; everything above follows */}
       <group
         position={[pose.hipShift ?? 0, D.hipY, 0]}
@@ -284,7 +345,11 @@ export const BaseCharacter: React.FC<{
         </mesh>
         <group
           position={[0, D.pelvisH / 2 - 0.01, 0]}
-          rotation={[0, pose.spineTwist ?? 0, -(pose.hipRoll ?? 0) * 0.6]}
+          rotation={[
+            pose.lean ?? 0,
+            pose.spineTwist ?? 0,
+            -(pose.hipRoll ?? 0) * 0.6 + (pose.leanSide ?? 0),
+          ]}
         >
           {/* chest expands slightly on the in-breath */}
           <group
@@ -333,8 +398,20 @@ export const BaseCharacter: React.FC<{
             ) : null}
             {backSlot}
           </group>
-          <ArmRig side={1} a={pose.armL ?? {}} s={s} slot={handLSlot} />
-          <ArmRig side={-1} a={pose.armR ?? {}} s={s} slot={handRSlot} />
+          <ArmRig
+            side={1}
+            a={pose.armL ?? {}}
+            s={s}
+            slot={handLSlot}
+            shrug={pose.shrug}
+          />
+          <ArmRig
+            side={-1}
+            a={pose.armR ?? {}}
+            s={s}
+            slot={handRSlot}
+            shrug={pose.shrug}
+          />
           {armsLower ? (
             <>
               <ArmRig side={1} a={armsLower.l} s={s} dy={-0.16} />

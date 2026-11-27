@@ -17,6 +17,13 @@ import { deepDiveDefaults, deepDiveSchema } from "./DeepDive/schema";
 import { HelloWorld } from "./HelloWorld";
 import { EpTest, epTestSchema } from "./InkMan/ep/Test";
 import { Lab, labSchema } from "./EP41/realistic/Lab";
+import { WB2Lab, wb2LabSchema } from "./WheelBattle2/Lab";
+import {
+  WB2_DURATION,
+  WB2_FPS,
+  WheelBattle2,
+  wb2Schema,
+} from "./WheelBattle2/Episode";
 import {
   EP41,
   EP41_DURATION,
@@ -181,6 +188,29 @@ export const RemotionRoot: React.FC = () => {
             voiceFile: "inkman/gojo-vs-makima/voice.mp3",
             captionsFile: "inkman/gojo-vs-makima/voiceover.json",
           }}
+        />
+        <Composition
+          id="WheelBattleEp2"
+          component={WheelBattle2}
+          durationInFrames={WB2_DURATION}
+          fps={WB2_FPS}
+          width={1080}
+          height={1920}
+          schema={wb2Schema}
+          defaultProps={{
+            audioFile: "wb2/voice.wav",
+            captionsFile: "wb2/voiceover.json",
+          }}
+        />
+        <Composition
+          id="WB2Lab"
+          component={WB2Lab}
+          durationInFrames={90}
+          fps={30}
+          width={1080}
+          height={1920}
+          schema={wb2LabSchema}
+          defaultProps={{ view: "lineup" }}
         />
         <Composition
           id="EP41SukunaShrine"

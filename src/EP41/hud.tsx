@@ -6,7 +6,10 @@ const RED = "#9F1C25";
 const PAPER = "#D5D7D4";
 
 // Persistent top pill + a status line underneath (top 8% safe zone).
-export const TopPill: React.FC<{ status: string }> = ({ status }) => {
+export const TopPill: React.FC<{ status: string; title?: React.ReactNode }> = ({
+  status,
+  title,
+}) => {
   const { width } = useVideoConfig();
   return (
     <div
@@ -33,8 +36,12 @@ export const TopPill: React.FC<{ status: string }> = ({ status }) => {
           padding: "8px 30px",
         }}
       >
-        POWER ROULETTE <span style={{ color: "#E0303B" }}>·</span> MALEVOLENT
-        SHRINE
+        {title ?? (
+          <>
+            POWER ROULETTE <span style={{ color: "#E0303B" }}>·</span>{" "}
+            MALEVOLENT SHRINE
+          </>
+        )}
       </div>
       {status ? (
         <div

@@ -370,11 +370,17 @@ const SEG_COLORS = [
   "#4A2A5A",
 ];
 
-const wheelTex = (lit: number) => {
+const wheelTex = (
+  lit: number,
+  names: string[] = WHEEL_NAMES,
+  colors: string[] = SEG_COLORS,
+) => {
+  const WHEEL_NAMES_ = names;
+  const SEG_COLORS_ = colors;
   const c = document.createElement("canvas");
   c.width = c.height = 1024;
   const g = c.getContext("2d")!;
-  const n = WHEEL_NAMES.length;
+  const n = WHEEL_NAMES_.length;
   for (let i = 0; i < n; i++) {
     const a0 = -Math.PI / 2 + (i - 0.5) * ((Math.PI * 2) / n);
     const a1 = a0 + (Math.PI * 2) / n;
@@ -382,7 +388,8 @@ const wheelTex = (lit: number) => {
     g.moveTo(512, 512);
     g.arc(512, 512, 500, a0, a1);
     g.closePath();
-    g.fillStyle = i === 0 && lit > 0 ? "#D3303C" : SEG_COLORS[i];
+    g.fillStyle =
+      i === 0 && lit > 0 ? "#D3303C" : SEG_COLORS_[i % SEG_COLORS_.length];
     g.fill();
     g.strokeStyle = "#0A0A0C";
     g.lineWidth = 10;
@@ -394,7 +401,7 @@ const wheelTex = (lit: number) => {
     g.font = "bold 62px Anton, Impact, sans-serif";
     g.textAlign = "right";
     g.textBaseline = "middle";
-    g.fillText(WHEEL_NAMES[i], 460, 0);
+    g.fillText(WHEEL_NAMES_[i], 460, 0);
     g.restore();
   }
   g.beginPath();
@@ -413,9 +420,21 @@ export const Wheel: React.FC<{
   lit?: number;
   position?: Vec3;
   scale?: number;
-}> = ({ angle, lit = 0, position = [0, 0, 0], scale = 1 }) => {
-  const texOff = useMemo(() => wheelTex(0), []);
-  const texOn = useMemo(() => wheelTex(1), []);
+  names?: string[];
+  colors?: string[];
+}> = ({
+  angle,
+  lit = 0,
+  position = [0, 0, 0],
+  scale = 1,
+  names = WHEEL_NAMES,
+  colors = SEG_COLORS,
+}) => {
+  const key = names.join("|") + colors.join("|");
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const texOff = useMemo(() => wheelTex(0, names, colors), [key]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const texOn = useMemo(() => wheelTex(1, names, colors), [key]);
   return (
     <group position={position} scale={scale}>
       <group rotation={[0, 0, angle]}>
@@ -435,8 +454,8 @@ export const Wheel: React.FC<{
             clearcoat={0.4}
           />
         </mesh>
-        {WHEEL_NAMES.map((_, i) => {
-          const a = (i + 0.5) * ((Math.PI * 2) / WHEEL_NAMES.length);
+        {names.map((_, i) => {
+          const a = (i + 0.5) * ((Math.PI * 2) / names.length);
           return (
             <mesh
               key={i}

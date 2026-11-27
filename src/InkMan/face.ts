@@ -47,6 +47,8 @@ export type FaceState = {
   marks?: boolean;
   // Sukuna's true form: a second, smaller pair of eyes under the first
   fourEyes?: boolean;
+  // Yamcha: cross-shaped scar on the left cheek
+  scar?: boolean;
 };
 
 export const NEUTRAL: FaceState = {
@@ -341,6 +343,19 @@ export const paintFace = (skin: string, face: FaceState) => {
           paintEye(g, s, skin, { ...f, lashes: false, lid: 0.3 }, 40, 0.62);
     }
     if (face.marks) paintMarks(g, !!face.fourEyes);
+    if (face.scar) {
+      g.strokeStyle = "#B4574A";
+      g.lineWidth = 5;
+      g.lineCap = "round";
+      const sx = CX + EYE_DX + 14;
+      const sy = EYE_Y + 50;
+      g.beginPath();
+      g.moveTo(sx - 22, sy - 16);
+      g.lineTo(sx + 22, sy + 16);
+      g.moveTo(sx + 22, sy - 16);
+      g.lineTo(sx - 22, sy + 16);
+      g.stroke();
+    }
     for (const s of [-1, 1] as const) paintBrow(g, s, face, rage);
     paintMouth(g, face, rage);
   }
