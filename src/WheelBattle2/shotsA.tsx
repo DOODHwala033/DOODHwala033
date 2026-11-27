@@ -598,7 +598,7 @@ export const S11: React.FC<ShotProps> = ({ len, from }) => {
 };
 
 // ---------------- Beat 4 · The massage ----------------
-const STANCE: Pose = {
+export const STANCE: Pose = {
   ground: true,
   lean: 0.28,
   thighL: -0.55,

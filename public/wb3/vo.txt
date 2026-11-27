@@ -1,0 +1,10 @@
+{ex=0.8,cfg=0.35,pause=0.2} Mahoraga adapts to everything. So how do you beat it?
+{ex=0.55,cfg=0.4,pause=0.15} Rule one: it learns one move at a time. Yamcha throws Wolf Fang Fist. The wheel turns... and it adapts. Now that move is useless.
+{ex=0.6,cfg=0.4,pause=0.15} Rule two: never repeat yourself. Doctors beat bacteria the same way. One antibiotic, and bacteria adapt. Two at once, and they can't keep up.
+{ex=0.7,cfg=0.35,pause=0.15} So Yamcha stops using one move. He combines two.
+{ex=0.55,cfg=0.4,pause=0.15} Rule three: attack inside the delay. Every adapting thing has a delay. Even your brain needs a quarter of a second to react. The wheel needs time to turn.
+{ex=0.85,cfg=0.3,pause=0.15,seed=33,say=Yamcha waits for the click... Then he goes. Wolf Fang Fist, and Spirit Ball, at once!} Yamcha waits for the click... Then he goes. Wolf Fang Fist and Spirit Ball, at once.
+{ex=0.9,cfg=0.3,pause=0.15} Two attacks. One wheel. The wheel stalls. Mahoraga can't answer both. Direct hit!
+{ex=0.7,cfg=0.4,pause=0.15} Yamcha's first real win. The wheel cracks... and Mahoraga dissolves into gold light. No, really.
+{ex=0.5,cfg=0.3,pause=0.15} But the ground is still shaking. Sukuna watched all of it... and he's smiling.
+{ex=0.6,cfg=0.4,pause=0.05} Now you know the rule. Who should face the wheel next? Comment it.

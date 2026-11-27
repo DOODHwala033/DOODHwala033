@@ -19,6 +19,12 @@ import { EpTest, epTestSchema } from "./InkMan/ep/Test";
 import { Lab, labSchema } from "./EP41/realistic/Lab";
 import { WB2Lab, wb2LabSchema } from "./WheelBattle2/Lab";
 import {
+  WB3_DURATION,
+  WB3_FPS,
+  WheelBattle3,
+  wb3Schema,
+} from "./WheelBattle3/Episode";
+import {
   WB2_DURATION,
   WB2_FPS,
   WheelBattle2,
@@ -200,6 +206,19 @@ export const RemotionRoot: React.FC = () => {
           defaultProps={{
             audioFile: "wb2/v2/voice.mp3",
             captionsFile: "wb2/v2/voiceover.json",
+          }}
+        />
+        <Composition
+          id="WheelBattlePart2"
+          component={WheelBattle3}
+          durationInFrames={WB3_DURATION}
+          fps={WB3_FPS}
+          width={1080}
+          height={1920}
+          schema={wb3Schema}
+          defaultProps={{
+            audioFile: "wb3/voice.wav",
+            captionsFile: "wb3/voiceover.json",
           }}
         />
         <Composition
