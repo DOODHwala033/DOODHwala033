@@ -66,8 +66,9 @@ const caps = words.map((w, i) => {
     confidence: null,
   };
 });
+// a word that starts a new page ends the previous one
 caps.forEach((c, i) => {
-  if (/[.?!…]$/.test(words[i]) || words[i].endsWith("...")) c.pageBreakAfter = true;
+  if (i + 1 < caps.length && !caps[i + 1].text.startsWith(" ")) c.pageBreakAfter = true;
 });
 fs.writeFileSync(outPath, JSON.stringify(caps, null, 1));
 const missing = charMs.filter((x) => x === null).length;

@@ -25,7 +25,8 @@
   "startMs": 1160,
   "endMs": 1380,
   "timestampMs": 1160,
-  "confidence": null
+  "confidence": null,
+  "pageBreakAfter": true
  },
  {
   "text": "scammed",
@@ -84,7 +85,8 @@
   "startMs": 4240,
   "endMs": 4730,
   "timestampMs": 4240,
-  "confidence": null
+  "confidence": null,
+  "pageBreakAfter": true
  },
  {
   "text": "you",
@@ -135,7 +137,8 @@
   "startMs": 6320,
   "endMs": 6700,
   "timestampMs": 6320,
-  "confidence": null
+  "confidence": null,
+  "pageBreakAfter": true
  },
  {
   "text": "for",
@@ -156,7 +159,8 @@
   "startMs": 7050,
   "endMs": 7640,
   "timestampMs": 7050,
-  "confidence": null
+  "confidence": null,
+  "pageBreakAfter": true
  },
  {
   "text": "and",
@@ -184,7 +188,8 @@
   "startMs": 8470,
   "endMs": 8730,
   "timestampMs": 8470,
-  "confidence": null
+  "confidence": null,
+  "pageBreakAfter": true
  },
  {
   "text": "fist",
@@ -227,7 +232,8 @@
   "startMs": 10270,
   "endMs": 10520,
   "timestampMs": 10270,
-  "confidence": null
+  "confidence": null,
+  "pageBreakAfter": true
  },
  {
   "text": "that",
@@ -359,7 +365,8 @@
   "startMs": 16430,
   "endMs": 16500,
   "timestampMs": 16430,
-  "confidence": null
+  "confidence": null,
+  "pageBreakAfter": true
  },
  {
   "text": "height",
@@ -573,7 +580,8 @@
   "startMs": 27970,
   "endMs": 28120,
   "timestampMs": 27970,
-  "confidence": null
+  "confidence": null,
+  "pageBreakAfter": true
  },
  {
   "text": "to",
@@ -631,7 +639,8 @@
   "startMs": 30200,
   "endMs": 30450,
   "timestampMs": 30200,
-  "confidence": null
+  "confidence": null,
+  "pageBreakAfter": true
  },
  {
   "text": "up",
@@ -919,7 +928,8 @@
   "startMs": 47600,
   "endMs": 48110,
   "timestampMs": 47600,
-  "confidence": null
+  "confidence": null,
+  "pageBreakAfter": true
  },
  {
   "text": "it's",
@@ -1006,7 +1016,8 @@
   "startMs": 51960,
   "endMs": 52140,
   "timestampMs": 51960,
-  "confidence": null
+  "confidence": null,
+  "pageBreakAfter": true
  },
  {
   "text": "to",
@@ -1072,7 +1083,8 @@
   "startMs": 55000,
   "endMs": 55140,
   "timestampMs": 55000,
-  "confidence": null
+  "confidence": null,
+  "pageBreakAfter": true
  },
  {
   "text": "to",
@@ -1137,14 +1149,14 @@
   "startMs": 58020,
   "endMs": 58450,
   "timestampMs": 58020,
-  "confidence": null
+  "confidence": null,
+  "pageBreakAfter": true
  },
  {
   "text": "in",
   "startMs": 58450,
   "endMs": 58900,
   "timestampMs": 58450,
-  "confidence": null,
-  "pageBreakAfter": true
+  "confidence": null
  }
 ]
