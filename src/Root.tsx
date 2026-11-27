@@ -18,6 +18,7 @@ import { HelloWorld } from "./HelloWorld";
 import { EpTest, epTestSchema } from "./InkMan/ep/Test";
 import { Lab, labSchema } from "./EP41/realistic/Lab";
 import { WB2Lab, wb2LabSchema } from "./WheelBattle2/Lab";
+import { StyleTest, styleSchema } from "./StyleTest/StyleTest";
 import {
   WB3_DURATION,
   WB3_FPS,
@@ -220,6 +221,14 @@ export const RemotionRoot: React.FC = () => {
             audioFile: "wb3/voice.mp3",
             captionsFile: "wb3/voiceover.json",
           }}
+        />
+        <Still
+          id="StyleTestYamcha"
+          component={StyleTest}
+          width={1080}
+          height={1920}
+          schema={styleSchema}
+          defaultProps={{ view: "rage" }}
         />
         <Composition
           id="WB2Lab"
